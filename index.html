@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Nieves | CV Interface</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <canvas id="bg-canvas"></canvas>
+    <header class="animus-navbar">
+        <div class="nav-left">
+            <span class="diamond-icon">◆</span>
+            <span class="brand">EXP-92 // <strong>NEURAL DOSSIER</strong></span>
+        </div>
+        <nav class="nav-center">
+            <a href="#sujeto" class="active">[01] RUNNER</a>
+            <a href="#skills">[02] CYBERWARE SKILLS</a>
+            <a href="#memorias">[03] ENGRAMS</a>
+            <a href="#arquitectura">[04] CHASSIS</a>
+            <a href="#protocolo">[05] ICE</a>
+            <a href="#contacto">[06] NETLINK</a>
+        </nav>
+        <div class="nav-right">
+            <button class="nav-btn" id="audio-btn">[ 🔊 SFX: ON ]</button>
+            <button class="nav-btn" id="theme-btn">[ 🌙 ARASAKA DARK ]</button>
+            <button class="nav-btn" id="cli-btn">[ &gt;_ TERMINAL]</button>
+        </div>
+    </header>
+
+    <main class="hero-section" id="sujeto">
+        <div class="hero-left">
+            <div class="status-badge">
+                <span class="badge-icon">⬡</span>
+                <span>BIO-DATA LOADED // UPLINK COMPLETE</span>
+            </div>
+
+            <h1 class="hero-title">CARLOS NIEVES</h1>
+            <h2 class="hero-subtitle">Senior L3 Application Support Engineer | Linux & Middleware Specialist</h2>
+
+            <p class="hero-description">
+                Especializado en la gestión y diagnóstico de entornos de alta disponibilidad, resolución de incidencias
+                L3 en arquitecturas SOAP/REST, automatización de sistemas Linux mediante Bash y garantía de continuidad
+                operativa en plataformas bancarias y telecomunicaciones[cite: 1, 2].
+            </p>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <span class="metric-value">8+</span>
+                    <span class="metric-label">AÑOS SOPORTE L3</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-value">100%</span>
+                    <span class="metric-label">UPTIME EDICONTROLLER</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-value">Linux</span>
+                    <span class="metric-label">ENTORNOS CRÍTICOS</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-value">B1</span>
+                    <span class="metric-label">INGLÉS TÉCNICO</span>
+                </div>
+            </div>
+
+            <div class="action-bar">
+                <a href="#contacto" class="btn btn-primary">⚡ INICIAR TRANSMISIÓN / CONTACTO</a>
+                <a href="https://github.com/Snow20" target="_blank" class="btn btn-secondary">📄 VER GITHUB (MD)</a>
+                <a href="assets/docs/Carlos Nieves CV 2026 ENG Galicia V2.pdf" download="Carlos_Nieves_CV.pdf" class="btn btn-secondary">
+                    📄 DESCARGAR CV Carlos Nieves ENG (PDF)
+                </a>
+                <a href="assets/docs/Carlos Nieves CV 2026 ESP Galicia V2.pdf" download="Carlos_Nieves_CV.pdf" class="btn btn-secondary">
+                    📄 DESCARGAR CV Carlos Nieves ESP (PDF)
+                </a>
+                <button class="btn btn-tertiary" id="open-cli">&gt;_ ABRIR TERMINAL</button>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <div class="avatar-frame">
+                <div class="hologram-overlay"></div>
+                <img src="assets/img/cyberpunk1.jpeg" alt="Carlos Nieves Hologram" class="avatar-img">
+            </div>
+        </div>
+    </main>
+
+    <section class="section-divider">
+        <!-- SECCIÓN SKILLS -->
+        <!-- SECCIÓN SKILLS -->
+        <section class="content-block" id="skills">
+            <div class="block-container">
+                <h3>[02] MATRIZ SKILLS</h3>
+                <div class="skills-wrapper">
+                    <div class="skill-category">
+                        <h4>Sistemas & Scripting</h4>
+                        <p>Linux/Unix, Bash Shell, Systemd, Journalctl, SecureCRT, TLP Power Management[cite: 1, 2].</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>APIs & Middleware</h4>
+                        <p>SOAP, REST, Clústeres Redundantes, HikariCP, Nginx, Spring Boot[cite: 1, 2].</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Observabilidad & DevOps</h4>
+                        <p>Splunk (SPL), ELK Stack, Docker, Kubernetes, Git, GitHub, Terraform IaC[cite: 1, 2].</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN MEMORIAS (EXPERIENCIA) -->
+        <section class="content-block" id="memorias">
+            <div class="block-container">
+                <h3>[03] MEMORIAS (EXPERIENCIA & CERTIFICACIONES)</h3>
+                <article class="timeline-item">
+                    <span class="timeline-date">12/2017 - 01/2025</span>
+                    <h4>Especialista de Soporte L3 - Movilnet C.A.[cite: 1, 2]</h4>
+                    <p>Resolución de incidencias críticas sobre aplicaciones SOAP/REST en Linux y automatización
+                        mediante scripts Bash[cite: 1, 2].</p>
+                </article>
+                <article class="timeline-item">
+                    <span class="timeline-date">2024 - PRESENTE</span>
+                    <h4>Fundador & Lead Developer - Fenrirsoft Digital Agency[cite: 1, 2]</h4>
+                    <p>Dirección técnica en desarrollo web, consultoría IT y despliegue de soluciones para pymes[cite:
+                        1, 2].</p>
+                </article>
+                <article class="timeline-item">
+                    <span class="timeline-date">ACREDITACIONES OFICIALES</span>
+                    <h4>Certificaciones IT & Desarrollo</h4>
+                    <p>SEPE: Certificado de Profesionalidad en Confección y Publicación de Páginas Web (IFCD0110,
+                        560h)[cite: 1, 2].</p>
+                    <p>freeCodeCamp: Developer Certification Suite (Python, JavaScript, Front-End Libraries, Responsive
+                        Web Design)[cite: 1, 2].</p>
+                    <p>FreeCodeCamp: B1 English for Developers[cite: 1, 2].</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECCIÓN ARQUITECTURA (PROYECTOS DESTACADOS DE GITHUB Y AGENCIA) -->
+        <section class="content-block" id="arquitectura">
+            <div class="block-container">
+                <h3>[04] ARQUITECTURA & REPOSITORIOS (GITHUB // SNOW20)</h3>
+                <div class="projects-grid">
+
+                    <div class="project-card">
+                        <span class="project-type">ENTERPRISE CRITICAL</span>
+                        <h4>Proyecto EDIController</h4>
+                        <p>Actualización de la plataforma de transporte de archivos bancarios con clúster redundante,
+                            garantizando 100% de continuidad[cite: 1, 2].</p>
+                        <span class="tech-stack">Linux | Bash | Cluster | Middleware</span>
+                    </div>
+
+                    <div class="project-card">
+                        <span class="project-type">GITHUB REPOSITORY</span>
+                        <h4>Proyecto Fontanería FLD</h4>
+                        <p>Aplicación web optimizada y desplegada en Cloudflare Pages con auditoría de accesibilidad y
+                            pipeline sincronizado con GitHub.</p>
+                        <a href="https://github.com/Snow20" target="_blank" class="project-link">&gt; VER CÓDIGO
+                            FUENTE</a>
+                    </div>
+
+                    <div class="project-card">
+                        <span class="project-type">AGENCY PORTFOLIO</span>
+                        <h4>Fenrirsoft Web Engine</h4>
+                        <p>Desarrollo de sitios corporativos y plataformas de servicios (Spazioholistic, Handy Friends,
+                            MR Abogados Asesores)[cite: 1, 2].</p>
+                        <a href="https://linktr.ee/FenrirsoftDigitalAgency" target="_blank" class="project-link">&gt;
+                            VER PROYECTOS AGENCIA</a>
+                    </div>
+
+                    <div class="project-card">
+                        <span class="project-type">GITHUB REPOSITORY</span>
+                        <h4>SlytherinGamerRetroCafe</h4>
+                        <p>Proyecto web interactivo con gestión de estados e interfaz personalizada.</p>
+                        <a href="https://github.com/Snow20" target="_blank" class="project-link">&gt; VER EN GITHUB</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CANAL LINK (CONTACTO Y REDES OFICIALES) -->
+        <footer class="content-block" id="contacto">
+            <div class="block-container">
+                <h3>[06] CANAL LINK // CONEXIÓN DIRECTA</h3>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <p><strong>Ubicación:</strong> Carballo, A Coruña, Galicia, España[cite: 1, 2]</p>
+                        <p><strong>Email:</strong> carlos.a.n.batatimo@gmail.com[cite: 1, 2]</p>
+                        <p><strong>Teléfono:</strong> +34 633 191 597[cite: 1, 2]</p>
+                    </div>
+                    <div class="contact-links">
+                        <a href="https://www.linkedin.com/in/carlos-nievesb/" target="_blank"
+                            class="btn btn-primary">&gt; LINKEDIN PROFILE</a>
+                        <a href="https://github.com/Snow20" target="_blank" class="btn btn-secondary">&gt; GITHUB
+                            PROFILE</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
