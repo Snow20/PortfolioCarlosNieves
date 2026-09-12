@@ -6,76 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carlos Nieves | CV Interface</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <canvas id="bg-canvas"></canvas>
+
+    <!-- NAVBAR -->
     <header class="animus-navbar">
         <div class="nav-left">
             <span class="diamond-icon">◆</span>
             <span class="brand">EXP-92 // <strong>NEURAL DOSSIER</strong></span>
         </div>
         <nav class="nav-center">
-            <a href="#sujeto" class="active">[01] RUNNER</a>
-            <a href="#skills">[02] CYBERWARE SKILLS</a>
-            <a href="#memorias">[03] ENGRAMS</a>
-            <a href="#arquitectura">[04] CHASSIS</a>
-            <a href="#contacto">[06] NETLINK</a>
+            <a href="#sujeto" class="active" data-i18n="nav_runner">[01] RUNNER</a>
+            <a href="#skills" data-i18n="nav_skills">[02] CYBERWARE SKILLS</a>
+            <a href="#memorias" data-i18n="nav_memorias">[03] ENGRAMS</a>
+            <a href="#arquitectura" data-i18n="nav_arquitectura">[04] CHASSIS</a>
+            <a href="#protocolo" data-i18n="nav_protocolo">[05] CREDENCIALES</a>
+            <a href="#contacto" data-i18n="nav_contacto">[06] NETLINK</a>
         </nav>
         <div class="nav-right">
-            <button class="nav-btn" id="audio-btn">[ 🔊 SFX: ON ]</button>
+            <button class="nav-btn" id="lang-btn">[ 🌐 ES ]</button>
             <button class="nav-btn" id="theme-btn">[ 🌙 ARASAKA DARK ]</button>
-            <button class="nav-btn" id="cli-btn">[ &gt;_ TERMINAL]</button>
+            <button class="nav-btn" id="cli-btn" data-i18n="btn_cli">[ &gt;_ TERMINAL]</button>
         </div>
     </header>
 
+    <!-- HERO SECTION -->
     <main class="hero-section" id="sujeto">
         <div class="hero-left">
             <div class="status-badge">
                 <span class="badge-icon">⬡</span>
-                <span>BIO-DATA LOADED // UPLINK COMPLETE</span>
+                <span data-i18n="hero_badge">BIO-DATA LOADED // UPLINK COMPLETE</span>
             </div>
 
             <h1 class="hero-title">CARLOS NIEVES</h1>
-            <h2 class="hero-subtitle">Senior L3 Application Support Engineer | Linux & Middleware Specialist</h2>
+            <h2 class="hero-subtitle" data-i18n="hero_subtitle">Senior L3 Application Support Engineer | Linux & Middleware Specialist</h2>
 
-            <p class="hero-description">
-                Especializado en la gestión y diagnóstico de entornos de alta disponibilidad, resolución de incidencias
-                L3 en arquitecturas SOAP/REST, automatización de sistemas Linux mediante Bash y garantía de continuidad
-                operativa en plataformas bancarias y telecomunicaciones.
+            <p class="hero-description" data-i18n="hero_desc">
+                Especializado en la gestión y diagnóstico de entornos de alta disponibilidad, resolución de incidencias L3 en arquitecturas SOAP/REST, automatización de sistemas Linux mediante Bash y garantía de continuidad operativa en plataformas bancarias y telecomunicaciones.
             </p>
 
             <div class="metrics-grid">
                 <div class="metric-card">
                     <span class="metric-value">8+</span>
-                    <span class="metric-label">AÑOS SOPORTE L3</span>
+                    <span class="metric-label" data-i18n="metric_l3">AÑOS SOPORTE L3</span>
                 </div>
                 <div class="metric-card">
                     <span class="metric-value">100%</span>
-                    <span class="metric-label">UPTIME EDICONTROLLER</span>
+                    <span class="metric-label" data-i18n="metric_uptime">UPTIME EDICONTROLLER</span>
                 </div>
                 <div class="metric-card">
                     <span class="metric-value">Linux</span>
-                    <span class="metric-label">ENTORNOS CRÍTICOS</span>
+                    <span class="metric-label" data-i18n="metric_critical">ENTORNOS CRÍTICOS</span>
                 </div>
                 <div class="metric-card">
                     <span class="metric-value">B1</span>
-                    <span class="metric-label">INGLÉS TÉCNICO</span>
+                    <span class="metric-label" data-i18n="metric_english">INGLÉS TÉCNICO</span>
                 </div>
             </div>
 
             <div class="action-bar">
-                <a href="#contacto" class="btn btn-primary">⚡ INICIAR TRANSMISIÓN / CONTACTO</a>
-                <a href="https://github.com/Snow20" target="_blank" class="btn btn-secondary">📄 VER GITHUB (MD)</a>
-                <a href="assets/docs/Carlos Nieves CV 2026 ENG Galicia V2.pdf" download="Carlos_Nieves_CV_ENG.pdf" class="btn btn-secondary">
-                    📄 DESCARGAR CV ENG (PDF)
+                <a href="#contacto" class="btn btn-primary" data-i18n="btn_contact">⚡ INICIAR TRANSMISIÓN / CONTACTO</a>
+                <a href="https://github.com/Snow20" target="_blank" class="btn btn-secondary" data-i18n="btn_github">📄 VER GITHUB (MD)</a>
+                <a href="assets/docs/Carlos Nieves CV 2026 ENG Galicia V2.pdf" download="Carlos_Nieves_CV_ENG.pdf" class="btn btn-secondary" data-i18n="btn_cv_eng">
+                    📄 DESCARGAR CV Carlos Nieves ENG (PDF)
                 </a>
-                <a href="assets/docs/Carlos Nieves CV 2026 ESP Galicia V2.pdf" download="Carlos_Nieves_CV_ESP.pdf" class="btn btn-secondary">
-                    📄 DESCARGAR CV ESP (PDF)
+                <a href="assets/docs/Carlos Nieves CV 2026 ESP Galicia V2.pdf" download="Carlos_Nieves_CV_ESP.pdf" class="btn btn-secondary" data-i18n="btn_cv_esp">
+                    📄 DESCARGAR CV Carlos Nieves ESP (PDF)
                 </a>
-                <button class="btn btn-tertiary" id="open-cli">&gt;_ ABRIR TERMINAL</button>
+                <button class="btn btn-tertiary" id="open-cli" data-i18n="btn_cli">&gt;_ ABRIR TERMINAL</button>
             </div>
         </div>
 
@@ -87,34 +88,32 @@
         </div>
     </main>
 
-    <!-- AQUÍ SE COLOCA LA NUEVA SECCIÓN DE SKILLS -->
+    <!-- BLOCK 02: SKILLS -->
     <section class="content-block cyber-skills-section" id="skills">
         <div class="block-container">
-            <h3 class="section-title">[02] MATRIZ DE HABILIDADES NEURALES</h3>
+            <h3 class="section-title" data-i18n="block02_title">[02] MATRIZ DE HABILIDADES NEURALES</h3>
             
             <div class="cyber-control-panel">
                 <div class="cyber-tabs-bar">
-                    <button class="cyber-tab active" data-category="all">TODOS LOS NODOS</button>
-                    <button class="cyber-tab" data-category="sistemas">LINUX & CORE</button>
-                    <button class="cyber-tab" data-category="middleware">MIDDLEWARE & APIS</button>
-                    <button class="cyber-tab" data-category="devops">DEVOPS & OBSERVABILIDAD</button>
-                    <button class="cyber-tab" data-category="backend">DESARROLLO & DB</button>
+                    <button class="cyber-tab active" data-category="all" data-i18n="tab_all">TODOS LOS NODOS</button>
+                    <button class="cyber-tab" data-category="sistemas" data-i18n="tab_sistemas">LINUX & CORE</button>
+                    <button class="cyber-tab" data-category="middleware" data-i18n="tab_middleware">MIDDLEWARE & APIS</button>
+                    <button class="cyber-tab" data-category="devops" data-i18n="tab_devops">DEVOPS & OBSERVABILIDAD</button>
+                    <button class="cyber-tab" data-category="backend" data-i18n="tab_backend">DESARROLLO & DB</button>
                 </div>
                 
                 <div class="cyber-search-container">
                     <span class="search-icon">🔍</span>
-                    <input type="text" id="cyber-search-input" placeholder="Buscar tecnología (ej: Linux, Bash, Splunk)...">
+                    <input type="text" id="cyber-search-input" placeholder="Buscar tecnología (ej: Linux, Bash, Splunk)..." data-i18n-placeholder="search_placeholder">
                 </div>
             </div>
 
             <div class="cyber-cards-grid" id="skills-grid">
-                
                 <div class="cyber-skill-card" data-category="sistemas">
                     <span class="corner-bracket top-left"></span>
                     <span class="corner-bracket top-right"></span>
                     <span class="corner-bracket bottom-left"></span>
                     <span class="corner-bracket bottom-right"></span>
-                    
                     <div class="card-header">
                         <h4>Sistemas Linux & Core</h4>
                         <span class="cyber-badge cyan">+8 AÑOS</span>
@@ -133,7 +132,6 @@
                     <span class="corner-bracket top-right"></span>
                     <span class="corner-bracket bottom-left"></span>
                     <span class="corner-bracket bottom-right"></span>
-                    
                     <div class="card-header">
                         <h4>Middleware & Arquitecturas API</h4>
                         <span class="cyber-badge purple">ENTERPRISE</span>
@@ -152,7 +150,6 @@
                     <span class="corner-bracket top-right"></span>
                     <span class="corner-bracket bottom-left"></span>
                     <span class="corner-bracket bottom-right"></span>
-                    
                     <div class="card-header">
                         <h4>Observabilidad & Logs</h4>
                         <span class="cyber-badge cyan">L3 SUPPORT</span>
@@ -170,7 +167,6 @@
                     <span class="corner-bracket top-right"></span>
                     <span class="corner-bracket bottom-left"></span>
                     <span class="corner-bracket bottom-right"></span>
-                    
                     <div class="card-header">
                         <h4>Contenedores & DevOps</h4>
                         <span class="cyber-badge purple">INFRASTRUCTURE</span>
@@ -189,7 +185,6 @@
                     <span class="corner-bracket top-right"></span>
                     <span class="corner-bracket bottom-left"></span>
                     <span class="corner-bracket bottom-right"></span>
-                    
                     <div class="card-header">
                         <h4>Lenguajes de Programación</h4>
                         <span class="cyber-badge cyan">ADVANCED</span>
@@ -207,7 +202,6 @@
                     <span class="corner-bracket top-right"></span>
                     <span class="corner-bracket bottom-left"></span>
                     <span class="corner-bracket bottom-right"></span>
-                    
                     <div class="card-header">
                         <h4>Desarrollo Web & Frontend</h4>
                         <span class="cyber-badge purple">SEPE / CERT</span>
@@ -226,7 +220,6 @@
                     <span class="corner-bracket top-right"></span>
                     <span class="corner-bracket bottom-left"></span>
                     <span class="corner-bracket bottom-right"></span>
-                    
                     <div class="card-header">
                         <h4>Bases de Datos & Backend</h4>
                         <span class="cyber-badge cyan">CORE</span>
@@ -237,393 +230,292 @@
                         <span class="skill-pill">Spring Boot</span>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOCK 03: MEMORIAS (EXPERIENCIA PROFESIONAL COMPLETA) -->
+    <section class="content-block cyber-memorias-section" id="memorias">
+        <div class="block-container">
+            <div class="block-header">
+                <span class="block-badge">BLOCK 03</span>
+                <h3 class="section-title" data-i18n="block03_title">SECUENCIA DE MEMORIAS (EXPERIENCIA PROFESIONAL)</h3>
+            </div>
+                <!-- 2. MOVILNET -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="marker-node">◆</span>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="cyber-skill-card timeline-card">
+                        <span class="corner-bracket top-left"></span>
+                        <span class="corner-bracket top-right"></span>
+                        <span class="corner-bracket bottom-left"></span>
+                        <span class="corner-bracket bottom-right"></span>
+                        <div class="card-header-row">
+                            <h4>Especialista de Soporte L3 - Aplicaciones y Servicios</h4>
+                            <span class="date-badge">12/2017 - 01/2025 (7 años 2 meses)</span>
+                        </div>
+                        <div class="company-tag">
+                            <span class="company-icon">🏢</span> Telecomunicaciones Movilnet C.A. (Caracas, Venezuela)
+                        </div>
+                        <ul class="engram-bullets">
+                            <li>Resolución de incidencias L3 en entornos Linux de alta disponibilidad sobre arquitecturas <b>SOAP/REST</b>.</li>
+                            <li>Reducción del MTTR mediante automatización con <b>Bash</b>, garantía de continuidad operativa y migración del sistema bancario <b>EDIController</b> con clústeres redundantes al 100% de uptime.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 3. BANESCO -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="marker-node">◆</span>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="cyber-skill-card timeline-card">
+                        <span class="corner-bracket top-left"></span>
+                        <span class="corner-bracket top-right"></span>
+                        <span class="corner-bracket bottom-left"></span>
+                        <span class="corner-bracket bottom-right"></span>
+                        <div class="card-header-row">
+                            <h4>Analista Operación POS</h4>
+                            <span class="date-badge">04/2016 - 06/2017 (1 año 3 meses)</span>
+                        </div>
+                        <div class="company-tag">
+                            <span class="company-icon">🏦</span> Banesco Banco Universal C.A. (Caracas, Venezuela)
+                        </div>
+                        <ul class="engram-bullets">
+                            <li>Gestión de soporte técnico regional, sustitución y retiro de dispositivos POS (Point of Sale).</li>
+                            <li>Atención y resolución de requerimientos operacionales directos para aliados comerciales.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 4. DRIVERS, SYSTEM & PARTS -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="marker-node">◆</span>
+                    </div>
+                    <div class="cyber-skill-card timeline-card">
+                        <span class="corner-bracket top-left"></span>
+                        <span class="corner-bracket top-right"></span>
+                        <span class="corner-bracket bottom-left"></span>
+                        <span class="corner-bracket bottom-right"></span>
+                        <div class="card-header-row">
+                            <h4>Soporte Técnico y Programador (L1/L2)</h4>
+                            <span class="date-badge">02/2014 - 09/2014 (8 meses)</span>
+                        </div>
+                        <div class="company-tag">
+                            <span class="company-icon">🛠️</span> Drivers, System & Parts C.A. (Caracas, Venezuela)
+                        </div>
+                        <ul class="engram-bullets">
+                            <li>Soporte técnico de primer y segundo nivel (L1/L2) presencial y remoto.</li>
+                            <li>Desarrollo de aplicación personalizada en <b>Java/Linux</b> para la gestión del tiempo del personal.</li>
+                        </ul>
+                    </div>
+                </div>
 
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN MEMORIAS (EXPERIENCIA) -->
-   <!-- SECCIÓN MEMORIAS (EXPERIENCIA PROFESIONAL) -->
-<section class="content-block cyber-memorias-section" id="memorias">
-    <div class="block-container">
-        
-        <div class="block-header">
-            <span class="block-badge">BLOCK 03</span>
-            <h3 class="section-title">SECUENCIA DE MEMORIAS (EXPERIENCIA PROFESIONAL)</h3>
-        </div>
+    <!-- BLOCK 04: ARQUITECTURA -->
+    <section class="content-block cyber-architecture-section" id="arquitectura">
+        <div class="block-container">
+            <div class="block-header">
+                <span class="block-badge">BLOCK 04</span>
+                <h3 class="section-title" data-i18n="block04_title">NODOS ARQUITECTÓNICOS (PROYECTOS CLAVE)</h3>
+            </div>
 
-        <div class="cyber-timeline">
-            
-            <!-- ITEM 1: MOVILNET -->
-            <div class="timeline-item">
-                <div class="timeline-marker">
-                    <span class="marker-node">◆</span>
-                    <div class="marker-line"></div>
-                </div>
-                <div class="cyber-skill-card timeline-card">
+            <div class="arch-cards-grid">
+                <div class="cyber-skill-card arch-card">
                     <span class="corner-bracket top-left"></span>
                     <span class="corner-bracket top-right"></span>
                     <span class="corner-bracket bottom-left"></span>
                     <span class="corner-bracket bottom-right"></span>
-
-                    <div class="card-header-row">
-                        <h4>Especialista de Soporte L3 - Aplicaciones y Servicios</h4>
-                        <span class="date-badge">12/2017 - 01/2025 (7 años 2 meses)</span>
+                    <div class="arch-card-header">
+                        <span class="arch-icon">⚡</span>
+                        <h4>Plataforma EDIController</h4>
                     </div>
-                    <div class="company-tag">
-                        <span class="company-icon">🏢</span> Telecomunicaciones Movilnet C.A. (Caracas, Venezuela)
+                    <p class="arch-description">
+                        Arquitectura de alta disponibilidad para transferencia crítica de archivos bancarios. Implementación de clústeres redundantes sobre Linux con tolerancia a fallos y automatización en Bash.
+                    </p>
+                    <div class="pills-container">
+                        <span class="skill-pill">Linux</span>
+                        <span class="skill-pill">Bash</span>
+                        <span class="skill-pill">Clústeres Redundantes</span>
                     </div>
-                    <ul class="engram-bullets">
-                        <li>Resolución de incidencias críticas L3 sobre aplicaciones <b>SOAP/REST</b> en entornos Linux, reduciendo el MTTR mediante automatización con <b>Bash</b>.</li>
-                        <li>Soporte técnico de segundo y tercer nivel para infraestructura crítica y servicios middleware.</li>
-                        <li>Lideré la migración del sistema <b>EDIController</b>, implementando clústeres redundantes que garantizaron el 100% de continuidad del negocio.</li>
-                        <li>Diseño y desarrollo de aplicación interna para la gestión del tiempo del personal.</li>
-                    </ul>
                 </div>
-            </div>
 
-            <!-- ITEM 2: FENRIRSOFT -->
-            <div class="timeline-item">
-                <div class="timeline-marker">
-                    <span class="marker-node">◆</span>
-                    <div class="marker-line"></div>
-                </div>
-                <div class="cyber-skill-card timeline-card">
+                <div class="cyber-skill-card arch-card">
                     <span class="corner-bracket top-left"></span>
                     <span class="corner-bracket top-right"></span>
                     <span class="corner-bracket bottom-left"></span>
                     <span class="corner-bracket bottom-right"></span>
-
-                    <div class="card-header-row">
-                        <h4>Fundador & Lead Developer</h4>
-                        <span class="date-badge">2024 - Presente</span>
+                    <div class="arch-card-header">
+                        <span class="arch-icon">🌐</span>
+                        <h4>Fenrirsoft Web Engine</h4>
                     </div>
-                    <div class="company-tag">
-                        <span class="company-icon">🌐</span> Fenrirsoft Digital Agency (Caracas / Remoto)
+                    <p class="arch-description">
+                        Infraestructura de despliegue continuo en Cloudflare Pages integrada con pipelines sincronizados en GitHub para la entrega de plataformas web empresariales.
+                    </p>
+                    <div class="pills-container">
+                        <span class="skill-pill">Cloudflare Pages</span>
+                        <span class="skill-pill">GitHub</span>
+                        <span class="skill-pill">CI/CD</span>
                     </div>
-                    <ul class="engram-bullets">
-                        <li>Fundación y dirección técnica de startup orientada al desarrollo web, despliegue cloud y marketing digital para pymes.</li>
-                        <li>Diseño, auditoría de accesibilidad y despliegue de aplicaciones web responsivas en <b>Cloudflare Pages</b> con integración CI/CD en <b>GitHub</b>.</li>
-                        <li>Desarrollo de proyectos digitales corporativos (Spazioholistic, Handy Friends, MR Abogados Asesores).</li>
-                    </ul>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- ITEM 3: BANESCO -->
-            <div class="timeline-item">
-                <div class="timeline-marker">
-                    <span class="marker-node">◆</span>
-                    <div class="marker-line"></div>
-                </div>
-                <div class="cyber-skill-card timeline-card">
+    <!-- BLOCK 05: PROTOCOLO -->
+    <section class="content-block cyber-protocol-section" id="protocolo">
+        <div class="block-container">
+            <div class="block-header">
+                <span class="block-badge">BLOCK 05</span>
+                <h3 class="section-title" data-i18n="block05_title">CREDENCIALES Y PROTOCOLOS</h3>
+            </div>
+
+            <div class="protocol-grid">
+                <div class="cyber-skill-card protocol-card">
                     <span class="corner-bracket top-left"></span>
                     <span class="corner-bracket top-right"></span>
                     <span class="corner-bracket bottom-left"></span>
                     <span class="corner-bracket bottom-right"></span>
-
                     <div class="card-header-row">
-                        <h4>Analista Operación POS</h4>
-                        <span class="date-badge">04/2016 - 06/2017 (1 año 3 meses)</span>
+                        <h4 data-i18n="proto_edu">🎓 FORMACIÓN ACADÉMICA</h4>
                     </div>
-                    <div class="company-tag">
-                        <span class="company-icon">🏦</span> Banesco Banco Universal C.A. (Caracas, Venezuela)
+                    <div class="protocol-content">
+                        <div class="edu-item">
+                            <h5>Técnico Superior Universitario (TSU) en Informática</h5>
+                            <p class="institute">Instituto Universitario de Tecnología Venezuela (2015)</p>
+                        </div>
+                        <div class="edu-item">
+                            <h5>Certificado de Profesionalidad: Confección y Publicación de Páginas Web</h5>
+                            <p class="institute">SEPE / Ministerio de Trabajo (España) - 560 horas (2026)</p>
+                        </div>
                     </div>
-                    <ul class="engram-bullets">
-                        <li>Gestión de visita técnica, sustitución y retiro de dispositivos POS (Point of Sale) a nivel regional.</li>
-                        <li>Atención, análisis y resolución de requerimientos operacionales para agentes comerciales.</li>
-                    </ul>
                 </div>
-            </div>
 
-            <!-- ITEM 4: DRIVERS SYSTEM & PARTS -->
-            <div class="timeline-item">
-                <div class="timeline-marker">
-                    <span class="marker-node">◆</span>
-                </div>
-                <div class="cyber-skill-card timeline-card">
+                <div class="cyber-skill-card protocol-card">
                     <span class="corner-bracket top-left"></span>
                     <span class="corner-bracket top-right"></span>
                     <span class="corner-bracket bottom-left"></span>
                     <span class="corner-bracket bottom-right"></span>
-
                     <div class="card-header-row">
-                        <h4>Soporte Técnico y Programador</h4>
-                        <span class="date-badge">02/2014 - 09/2014 (8 meses)</span>
+                        <h4 data-i18n="proto_cert">ORG CERTIFICACIONES DESTACADAS</h4>
                     </div>
-                    <div class="company-tag">
-                        <span class="company-icon">🛠️</span> DRIVERS, SYSTEM & PARTS C.A. (Caracas, Venezuela)
-                    </div>
-                    <ul class="engram-bullets">
-                        <li>Soporte técnico de primer y segundo nivel (L1/L2) y atención presencial al público.</li>
-                        <li>Diseño y desarrollo de aplicación personalizada para gestión de tiempo de personal.</li>
+                    <ul class="cert-list">
+                        <li><b>Developer Certification Suite</b> — freeCodeCamp (2026)</li>
+                        <li><b>B1 English for Developers</b> — freeCodeCamp (2026)</li>
+                        <li><b>Cloud Computing</b> — Google Activate (2024)</li>
+                        <li><b>Fundamentos de Linux</b> — CANTV (2018)</li>
                     </ul>
                 </div>
+
+                <div class="cyber-skill-card protocol-card">
+                    <span class="corner-bracket top-left"></span>
+                    <span class="corner-bracket top-right"></span>
+                    <span class="corner-bracket bottom-left"></span>
+                    <span class="corner-bracket bottom-right"></span>
+                    <div class="card-header-row">
+                        <h4 data-i18n="proto_lang">🗣️ IDIOMAS</h4>
+                    </div>
+                    <div class="lang-list">
+                        <p><b>Español:</b> Nativo</p>
+                        <p><b>Inglés:</b> Nivel B1 Técnico Certificado (freeCodeCamp)</p>
+                        <p><b>Galego:</b> Nivel Básico (Entorno A Coruña / Galicia)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOCK 06: CONTACTO -->
+    <footer class="content-block cyber-contact-section" id="contacto">
+        <div class="block-container">
+            <div class="block-header">
+                <span class="block-badge">BLOCK 06</span>
+                <h3 class="section-title" data-i18n="block06_title">TRANSMISIÓN DE SEÑAL & CONTACTO</h3>
             </div>
 
+            <div class="contact-links-grid">
+                <a href="tel:+34633191597" class="cyber-skill-card contact-card">
+                    <span class="corner-bracket top-left"></span>
+                    <span class="corner-bracket top-right"></span>
+                    <span class="corner-bracket bottom-left"></span>
+                    <span class="corner-bracket bottom-right"></span>
+                    <div class="contact-card-content">
+                        <span class="contact-icon">📱</span>
+                        <div>
+                            <span class="contact-label" data-i18n="contact_whatsapp">WHATSAPP / MÓVIL</span>
+                            <p class="contact-value">+34 633 191 597</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="mailto:carlos.a.n.batatimo@gmail.com" class="cyber-skill-card contact-card">
+                    <span class="corner-bracket top-left"></span>
+                    <span class="corner-bracket top-right"></span>
+                    <span class="corner-bracket bottom-left"></span>
+                    <span class="corner-bracket bottom-right"></span>
+                    <div class="contact-card-content">
+                        <span class="contact-icon">✉️</span>
+                        <div>
+                            <span class="contact-label" data-i18n="contact_email">EMAIL DIRECTO</span>
+                            <p class="contact-value">carlos.a.n.batatimo@gmail.com</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/carlos-nievesb" target="_blank" class="cyber-skill-card contact-card">
+                    <span class="corner-bracket top-left"></span>
+                    <span class="corner-bracket top-right"></span>
+                    <span class="corner-bracket bottom-left"></span>
+                    <span class="corner-bracket bottom-right"></span>
+                    <div class="contact-card-content">
+                        <span class="contact-icon">🔗</span>
+                        <div>
+                            <span class="contact-label" data-i18n="contact_linkedin">PERFIL LINKEDIN</span>
+                            <p class="contact-value">carlos-nievesb</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/Snow20" target="_blank" class="cyber-skill-card contact-card">
+                    <span class="corner-bracket top-left"></span>
+                    <span class="corner-bracket top-right"></span>
+                    <span class="corner-bracket bottom-left"></span>
+                    <span class="corner-bracket bottom-right"></span>
+                    <div class="contact-card-content">
+                        <span class="contact-icon">🐙</span>
+                        <div>
+                            <span class="contact-label" data-i18n="contact_github">REPOSITORIOS GITHUB</span>
+                            <p class="contact-value">github.com/Snow20</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL TERMINAL INTERACTIVA -->
+    <div id="terminal-modal" class="terminal-modal-overlay">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <span class="terminal-title" data-i18n="term_modal_title">EXP-92 CONSOLE // COMMAND TERMINAL</span>
+                <button id="close-terminal-btn" class="terminal-close-btn">[X]</button>
+            </div>
+            <div id="terminal-output" class="terminal-output">
+                <!-- Salida dinámica -->
+            </div>
+            <div class="terminal-input-line">
+                <span class="prompt-user">RUNNER@EXP-92:~$</span>
+                <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" placeholder="Escribe un comando (ej: help, bio, skills)..." data-i18n-placeholder="term_input_placeholder">
+            </div>
         </div>
     </div>
-</section>
-
-    <!-- SECCIÓN ARQUITECTURA -->
-<!-- SECCIÓN ARQUITECTURA (CHASSIS / PROYECTOS CLAVE) -->
-<section class="content-block cyber-architecture-section" id="arquitectura">
-    <div class="block-container">
-        
-        <div class="block-header">
-            <span class="block-badge">BLOCK 04</span>
-            <h3 class="section-title">NODOS ARQUITECTÓNICOS (PROYECTOS CLAVE)</h3>
-        </div>
-
-        <div class="arch-cards-grid">
-            
-            <!-- TARJETA 1: EDICONTROLLER -->
-            <div class="cyber-skill-card arch-card">
-                <span class="corner-bracket top-left"></span>
-                <span class="corner-bracket top-right"></span>
-                <span class="corner-bracket bottom-left"></span>
-                <span class="corner-bracket bottom-right"></span>
-
-                <div class="arch-card-header">
-                    <span class="arch-icon">⚡</span>
-                    <h4>Plataforma EDIController</h4>
-                </div>
-                <p class="arch-description">
-                    Arquitectura de alta disponibilidad para transferencia crítica de archivos bancarios. Implementación de clústeres redundantes sobre Linux con tolerancia a fallos y automatización en Bash, garantizando el 100% de continuidad operativa[cite: 10, 11].
-                </p>
-                <div class="pills-container">
-                    <span class="skill-pill">Linux</span>
-                    <span class="skill-pill">Bash</span>
-                    <span class="skill-pill">Clústeres Redundantes</span>
-                    <span class="skill-pill">Middleware</span>
-                </div>
-            </div>
-
-            <!-- TARJETA 2: FENRIRSOFT ENGINE -->
-            <div class="cyber-skill-card arch-card">
-                <span class="corner-bracket top-left"></span>
-                <span class="corner-bracket top-right"></span>
-                <span class="corner-bracket bottom-left"></span>
-                <span class="corner-bracket bottom-right"></span>
-
-                <div class="arch-card-header">
-                    <span class="arch-icon">🌐</span>
-                    <h4>Fenrirsoft Web Engine</h4>
-                </div>
-                <p class="arch-description">
-                    Infraestructura de despliegue continuo en Cloudflare Pages integrada con pipelines sincronizados en GitHub para la entrega de plataformas web empresariales (Fontanería FLD, Spazioholistic), optimizando accesibilidad y tiempo de carga[cite: 10, 11].
-                </p>
-                <div class="pills-container">
-                    <span class="skill-pill">Cloudflare Pages</span>
-                    <span class="skill-pill">Git / GitHub</span>
-                    <span class="skill-pill">Web Optimization</span>
-                    <span class="skill-pill">CI/CD</span>
-                </div>
-            </div>
-
-            <!-- TARJETA 3: gRQL ENGINE -->
-            <div class="cyber-skill-card arch-card">
-                <span class="corner-bracket top-left"></span>
-                <span class="corner-bracket top-right"></span>
-                <span class="corner-bracket bottom-left"></span>
-                <span class="corner-bracket bottom-right"></span>
-
-                <div class="arch-card-header">
-                    <span class="arch-icon">🔗</span>
-                    <h4>gRQL Engine Architecture</h4>
-                </div>
-                <p class="arch-description">
-                    Evaluación de especificaciones técnicas y arquitectura de alojamiento en la nube para motor de base de datos gráfica nativa, diseñado para optimizar el desacoplamiento de dependencias relacionales y la distribución de datos.
-                </p>
-                <div class="pills-container">
-                    <span class="skill-pill">Graph Engine</span>
-                    <span class="skill-pill">Cloud Architecture</span>
-                    <span class="skill-pill">Backend Specs</span>
-                </div>
-            </div>
-
-            <!-- TARJETA 4: APLICACIÓN GESTIÓN TIEMPOS -->
-            <div class="cyber-skill-card arch-card">
-                <span class="corner-bracket top-left"></span>
-                <span class="corner-bracket top-right"></span>
-                <span class="corner-bracket bottom-left"></span>
-                <span class="corner-bracket bottom-right"></span>
-
-                <div class="arch-card-header">
-                    <span class="arch-icon">📊</span>
-                    <h4>Sistema de Gestión de Personal</h4>
-                </div>
-                <p class="arch-description">
-                    Diseño y desarrollo de aplicación interna para la gestión y control de métricas de jornada de empleados, desplegada en entorno servidor para incrementar la productividad operacional en áreas de Tesorería y Nómina[cite: 10, 11].
-                </p>
-                <div class="pills-container">
-                    <span class="skill-pill">Java</span>
-                    <span class="skill-pill">Linux</span>
-                    <span class="skill-pill">Internal Tooling</span>
-                    <span class="skill-pill">Process Automation</span>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-   <!-- SECCIÓN PROTOCOLO (BLOCK 05: CREDENCIALES Y PROTOCOLOS) -->
-<section class="content-block cyber-protocol-section" id="protocolo">
-    <div class="block-container">
-        
-        <div class="block-header">
-            <span class="block-badge">BLOCK 05</span>
-            <h3 class="section-title">CREDENCIALES Y PROTOCOLOS</h3>
-        </div>
-
-        <div class="protocol-grid">
-            
-            <!-- FORMACIÓN ACADÉMICA -->
-            <div class="cyber-skill-card protocol-card">
-                <span class="corner-bracket top-left"></span>
-                <span class="corner-bracket top-right"></span>
-                <span class="corner-bracket bottom-left"></span>
-                <span class="corner-bracket bottom-right"></span>
-
-                <div class="card-header-row">
-                    <h4><span class="protocol-icon">🎓</span> FORMACIÓN ACADÉMICA</h4>
-                </div>
-                <div class="protocol-content">
-                    <div class="edu-item">
-                        <h5>Técnico Superior Universitario (TSU) en Informática</h5>
-                        <p class="institute">Instituto Universitario de Tecnología Venezuela (2015)[cite: 10, 11]</p>
-                    </div>
-                    <div class="edu-item">
-                        <h5>Certificado de Profesionalidad: Confección y Publicación de Páginas Web</h5>
-                        <p class="institute">SEPE / Ministerio de Trabajo (España) - 560 horas (2026)[cite: 10, 11]</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CERTIFICACIONES DESTACADAS -->
-            <div class="cyber-skill-card protocol-card">
-                <span class="corner-bracket top-left"></span>
-                <span class="corner-bracket top-right"></span>
-                <span class="corner-bracket bottom-left"></span>
-                <span class="corner-bracket bottom-right"></span>
-
-                <div class="card-header-row">
-                    <h4><span class="protocol-icon">🏵️</span> CERTIFICACIONES DESTACADAS</h4>
-                </div>
-                <ul class="cert-list">
-                    <li><b>Developer Certification Suite</b> — freeCodeCamp (2026)<br><span class="cert-sub">(Python, JS, Front-End Libraries, Responsive Web Design)</span>[cite: 10, 11]</li>
-                    <li><b>B1 English for Developers</b> — freeCodeCamp (2026)[cite: 10, 11]</li>
-                    <li><b>Cloud Computing</b> — Google Activate (2024)[cite: 10, 11]</li>
-                    <li><b>Fundamentos de Linux</b> — CANTV (2018)[cite: 10, 11]</li>
-                </ul>
-            </div>
-
-            <!-- IDIOMAS -->
-            <div class="cyber-skill-card protocol-card">
-                <span class="corner-bracket top-left"></span>
-                <span class="corner-bracket top-right"></span>
-                <span class="corner-bracket bottom-left"></span>
-                <span class="corner-bracket bottom-right"></span>
-
-                <div class="card-header-row">
-                    <h4><span class="protocol-icon">🗣️</span> IDIOMAS</h4>
-                </div>
-                <div class="lang-list">
-                    <p><b>Español:</b> Nativo[cite: 10, 11]</p>
-                    <p><b>Inglés:</b> Nivel B1 Técnico Certificado (freeCodeCamp)[cite: 10, 11]</p>
-                    <p><b>Galego:</b> Nivel Básico (Entorno A Coruña / Galicia)</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- SECCIÓN CANAL LINK (BLOCK 06: TRANSMISIÓN DE SEÑAL & CONTACTO) -->
-<footer class="content-block cyber-contact-section" id="contacto">
-    <div class="block-container">
-        
-        <div class="block-header">
-            <span class="block-badge">BLOCK 06</span>
-            <h3 class="section-title">TRANSMISIÓN DE SEÑAL & CONTACTO</h3>
-        </div>
-
-        <div class="contact-links-grid">
-            
-            <a href="tel:+34633191597" class="cyber-skill-card contact-card">
-                <span class="corner-bracket top-left"></span>
-                <span class="corner-bracket top-right"></span>
-                <span class="corner-bracket bottom-left"></span>
-                <span class="corner-bracket bottom-right"></span>
-                <div class="contact-card-content">
-                    <span class="contact-icon">📱</span>
-                    <div>
-                        <span class="contact-label">WHATSAPP / MÓVIL</span>
-                        <p class="contact-value">+34 633 191 597</p>[cite: 10, 11]
-                    </div>
-                </div>
-            </a>
-
-            <a href="mailto:carlos.a.n.batatimo@gmail.com" class="cyber-skill-card contact-card">
-                <span class="corner-bracket top-left"></span>
-                <span class="corner-bracket top-right"></span>
-                <span class="corner-bracket bottom-left"></span>
-                <span class="corner-bracket bottom-right"></span>
-                <div class="contact-card-content">
-                    <span class="contact-icon">✉️</span>
-                    <div>
-                        <span class="contact-label">EMAIL DIRECTO</span>
-                        <p class="contact-value">carlos.a.n.batatimo@gmail.com</p>[cite: 10, 11]
-                    </div>
-                </div>
-            </a>
-
-            <a href="https://www.linkedin.com/in/carlos-nievesb" target="_blank" class="cyber-skill-card contact-card">
-                <span class="corner-bracket top-left"></span>
-                <span class="corner-bracket top-right"></span>
-                <span class="corner-bracket bottom-left"></span>
-                <span class="corner-bracket bottom-right"></span>
-                <div class="contact-card-content">
-                    <span class="contact-icon">🔗</span>
-                    <div>
-                        <span class="contact-label">LINKEDIN PROFILE</span>
-                        <p class="contact-value">carlos-nievesb</p>[cite: 10, 11]
-                    </div>
-                </div>
-            </a>
-
-            <a href="https://github.com/Snow20" target="_blank" class="cyber-skill-card contact-card">
-                <span class="corner-bracket top-left"></span>
-                <span class="corner-bracket top-right"></span>
-                <span class="corner-bracket bottom-left"></span>
-                <span class="corner-bracket bottom-right"></span>
-                <div class="contact-card-content">
-                    <span class="contact-icon">🐙</span>
-                    <div>
-                        <span class="contact-label">GITHUB REPOSITORIES</span>
-                        <p class="contact-value">github.com/Snow20</p>[cite: 10, 11]
-                    </div>
-                </div>
-            </a>
-
-            <a href="https://linktr.ee/FenrirsoftDigitalAgency" target="_blank" class="cyber-skill-card contact-card">
-                <span class="corner-bracket top-left"></span>
-                <span class="corner-bracket top-right"></span>
-                <span class="corner-bracket bottom-left"></span>
-                <span class="corner-bracket bottom-right"></span>
-                <div class="contact-card-content">
-                    <span class="contact-icon">⚡</span>
-                    <div>
-                        <span class="contact-label">AGENCY LINKTREE</span>
-                        <p class="contact-value">FenrirsoftDigitalAgency</p>[cite: 10, 11]
-                    </div>
-                </div>
-            </a>
-
-        </div>
-    </div>
-</footer>
 
     <script src="js/script.js"></script>
 </body>
