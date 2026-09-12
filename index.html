@@ -22,7 +22,6 @@
             <a href="#skills">[02] CYBERWARE SKILLS</a>
             <a href="#memorias">[03] ENGRAMS</a>
             <a href="#arquitectura">[04] CHASSIS</a>
-            <a href="#protocolo">[05] ICE</a>
             <a href="#contacto">[06] NETLINK</a>
         </nav>
         <div class="nav-right">
@@ -45,7 +44,7 @@
             <p class="hero-description">
                 Especializado en la gestión y diagnóstico de entornos de alta disponibilidad, resolución de incidencias
                 L3 en arquitecturas SOAP/REST, automatización de sistemas Linux mediante Bash y garantía de continuidad
-                operativa en plataformas bancarias y telecomunicaciones[cite: 1, 2].
+                operativa en plataformas bancarias y telecomunicaciones.
             </p>
 
             <div class="metrics-grid">
@@ -70,11 +69,11 @@
             <div class="action-bar">
                 <a href="#contacto" class="btn btn-primary">⚡ INICIAR TRANSMISIÓN / CONTACTO</a>
                 <a href="https://github.com/Snow20" target="_blank" class="btn btn-secondary">📄 VER GITHUB (MD)</a>
-                <a href="assets/docs/Carlos Nieves CV 2026 ENG Galicia V2.pdf" download="Carlos_Nieves_CV.pdf" class="btn btn-secondary">
-                    📄 DESCARGAR CV Carlos Nieves ENG (PDF)
+                <a href="assets/docs/Carlos Nieves CV 2026 ENG Galicia V2.pdf" download="Carlos_Nieves_CV_ENG.pdf" class="btn btn-secondary">
+                    📄 DESCARGAR CV ENG (PDF)
                 </a>
-                <a href="assets/docs/Carlos Nieves CV 2026 ESP Galicia V2.pdf" download="Carlos_Nieves_CV.pdf" class="btn btn-secondary">
-                    📄 DESCARGAR CV Carlos Nieves ESP (PDF)
+                <a href="assets/docs/Carlos Nieves CV 2026 ESP Galicia V2.pdf" download="Carlos_Nieves_CV_ESP.pdf" class="btn btn-secondary">
+                    📄 DESCARGAR CV ESP (PDF)
                 </a>
                 <button class="btn btn-tertiary" id="open-cli">&gt;_ ABRIR TERMINAL</button>
             </div>
@@ -88,120 +87,543 @@
         </div>
     </main>
 
-    <section class="section-divider">
-        <!-- SECCIÓN SKILLS -->
-        <!-- SECCIÓN SKILLS -->
-        <section class="content-block" id="skills">
-            <div class="block-container">
-                <h3>[02] MATRIZ SKILLS</h3>
-                <div class="skills-wrapper">
-                    <div class="skill-category">
-                        <h4>Sistemas & Scripting</h4>
-                        <p>Linux/Unix, Bash Shell, Systemd, Journalctl, SecureCRT, TLP Power Management[cite: 1, 2].</p>
-                    </div>
-                    <div class="skill-category">
-                        <h4>APIs & Middleware</h4>
-                        <p>SOAP, REST, Clústeres Redundantes, HikariCP, Nginx, Spring Boot[cite: 1, 2].</p>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Observabilidad & DevOps</h4>
-                        <p>Splunk (SPL), ELK Stack, Docker, Kubernetes, Git, GitHub, Terraform IaC[cite: 1, 2].</p>
-                    </div>
+    <!-- AQUÍ SE COLOCA LA NUEVA SECCIÓN DE SKILLS -->
+    <section class="content-block cyber-skills-section" id="skills">
+        <div class="block-container">
+            <h3 class="section-title">[02] MATRIZ DE HABILIDADES NEURALES</h3>
+            
+            <div class="cyber-control-panel">
+                <div class="cyber-tabs-bar">
+                    <button class="cyber-tab active" data-category="all">TODOS LOS NODOS</button>
+                    <button class="cyber-tab" data-category="sistemas">LINUX & CORE</button>
+                    <button class="cyber-tab" data-category="middleware">MIDDLEWARE & APIS</button>
+                    <button class="cyber-tab" data-category="devops">DEVOPS & OBSERVABILIDAD</button>
+                    <button class="cyber-tab" data-category="backend">DESARROLLO & DB</button>
+                </div>
+                
+                <div class="cyber-search-container">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="cyber-search-input" placeholder="Buscar tecnología (ej: Linux, Bash, Splunk)...">
                 </div>
             </div>
-        </section>
 
-        <!-- SECCIÓN MEMORIAS (EXPERIENCIA) -->
-        <section class="content-block" id="memorias">
-            <div class="block-container">
-                <h3>[03] MEMORIAS (EXPERIENCIA & CERTIFICACIONES)</h3>
-                <article class="timeline-item">
-                    <span class="timeline-date">12/2017 - 01/2025</span>
-                    <h4>Especialista de Soporte L3 - Movilnet C.A.[cite: 1, 2]</h4>
-                    <p>Resolución de incidencias críticas sobre aplicaciones SOAP/REST en Linux y automatización
-                        mediante scripts Bash[cite: 1, 2].</p>
-                </article>
-                <article class="timeline-item">
-                    <span class="timeline-date">2024 - PRESENTE</span>
-                    <h4>Fundador & Lead Developer - Fenrirsoft Digital Agency[cite: 1, 2]</h4>
-                    <p>Dirección técnica en desarrollo web, consultoría IT y despliegue de soluciones para pymes[cite:
-                        1, 2].</p>
-                </article>
-                <article class="timeline-item">
-                    <span class="timeline-date">ACREDITACIONES OFICIALES</span>
-                    <h4>Certificaciones IT & Desarrollo</h4>
-                    <p>SEPE: Certificado de Profesionalidad en Confección y Publicación de Páginas Web (IFCD0110,
-                        560h)[cite: 1, 2].</p>
-                    <p>freeCodeCamp: Developer Certification Suite (Python, JavaScript, Front-End Libraries, Responsive
-                        Web Design)[cite: 1, 2].</p>
-                    <p>FreeCodeCamp: B1 English for Developers[cite: 1, 2].</p>
-                </article>
-            </div>
-        </section>
-
-        <!-- SECCIÓN ARQUITECTURA (PROYECTOS DESTACADOS DE GITHUB Y AGENCIA) -->
-        <section class="content-block" id="arquitectura">
-            <div class="block-container">
-                <h3>[04] ARQUITECTURA & REPOSITORIOS (GITHUB // SNOW20)</h3>
-                <div class="projects-grid">
-
-                    <div class="project-card">
-                        <span class="project-type">ENTERPRISE CRITICAL</span>
-                        <h4>Proyecto EDIController</h4>
-                        <p>Actualización de la plataforma de transporte de archivos bancarios con clúster redundante,
-                            garantizando 100% de continuidad[cite: 1, 2].</p>
-                        <span class="tech-stack">Linux | Bash | Cluster | Middleware</span>
+            <div class="cyber-cards-grid" id="skills-grid">
+                
+                <div class="cyber-skill-card" data-category="sistemas">
+                    <span class="corner-bracket top-left"></span>
+                    <span class="corner-bracket top-right"></span>
+                    <span class="corner-bracket bottom-left"></span>
+                    <span class="corner-bracket bottom-right"></span>
+                    
+                    <div class="card-header">
+                        <h4>Sistemas Linux & Core</h4>
+                        <span class="cyber-badge cyan">+8 AÑOS</span>
                     </div>
-
-                    <div class="project-card">
-                        <span class="project-type">GITHUB REPOSITORY</span>
-                        <h4>Proyecto Fontanería FLD</h4>
-                        <p>Aplicación web optimizada y desplegada en Cloudflare Pages con auditoría de accesibilidad y
-                            pipeline sincronizado con GitHub.</p>
-                        <a href="https://github.com/Snow20" target="_blank" class="project-link">&gt; VER CÓDIGO
-                            FUENTE</a>
-                    </div>
-
-                    <div class="project-card">
-                        <span class="project-type">AGENCY PORTFOLIO</span>
-                        <h4>Fenrirsoft Web Engine</h4>
-                        <p>Desarrollo de sitios corporativos y plataformas de servicios (Spazioholistic, Handy Friends,
-                            MR Abogados Asesores)[cite: 1, 2].</p>
-                        <a href="https://linktr.ee/FenrirsoftDigitalAgency" target="_blank" class="project-link">&gt;
-                            VER PROYECTOS AGENCIA</a>
-                    </div>
-
-                    <div class="project-card">
-                        <span class="project-type">GITHUB REPOSITORY</span>
-                        <h4>SlytherinGamerRetroCafe</h4>
-                        <p>Proyecto web interactivo con gestión de estados e interfaz personalizada.</p>
-                        <a href="https://github.com/Snow20" target="_blank" class="project-link">&gt; VER EN GITHUB</a>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- SECCIÓN CANAL LINK (CONTACTO Y REDES OFICIALES) -->
-        <footer class="content-block" id="contacto">
-            <div class="block-container">
-                <h3>[06] CANAL LINK // CONEXIÓN DIRECTA</h3>
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <p><strong>Ubicación:</strong> Carballo, A Coruña, Galicia, España[cite: 1, 2]</p>
-                        <p><strong>Email:</strong> carlos.a.n.batatimo@gmail.com[cite: 1, 2]</p>
-                        <p><strong>Teléfono:</strong> +34 633 191 597[cite: 1, 2]</p>
-                    </div>
-                    <div class="contact-links">
-                        <a href="https://www.linkedin.com/in/carlos-nievesb/" target="_blank"
-                            class="btn btn-primary">&gt; LINKEDIN PROFILE</a>
-                        <a href="https://github.com/Snow20" target="_blank" class="btn btn-secondary">&gt; GITHUB
-                            PROFILE</a>
+                    <div class="pills-container">
+                        <span class="skill-pill">Linux / Unix</span>
+                        <span class="skill-pill">Bash Shell</span>
+                        <span class="skill-pill">SecureCRT</span>
+                        <span class="skill-pill">Systemd</span>
+                        <span class="skill-pill">Journalctl</span>
                     </div>
                 </div>
+
+                <div class="cyber-skill-card" data-category="middleware">
+                    <span class="corner-bracket top-left"></span>
+                    <span class="corner-bracket top-right"></span>
+                    <span class="corner-bracket bottom-left"></span>
+                    <span class="corner-bracket bottom-right"></span>
+                    
+                    <div class="card-header">
+                        <h4>Middleware & Arquitecturas API</h4>
+                        <span class="cyber-badge purple">ENTERPRISE</span>
+                    </div>
+                    <div class="pills-container">
+                        <span class="skill-pill">SOAP</span>
+                        <span class="skill-pill">REST</span>
+                        <span class="skill-pill">Clústeres Redundantes</span>
+                        <span class="skill-pill">EDIController</span>
+                        <span class="skill-pill">Alta Disponibilidad</span>
+                    </div>
+                </div>
+
+                <div class="cyber-skill-card" data-category="devops">
+                    <span class="corner-bracket top-left"></span>
+                    <span class="corner-bracket top-right"></span>
+                    <span class="corner-bracket bottom-left"></span>
+                    <span class="corner-bracket bottom-right"></span>
+                    
+                    <div class="card-header">
+                        <h4>Observabilidad & Logs</h4>
+                        <span class="cyber-badge cyan">L3 SUPPORT</span>
+                    </div>
+                    <div class="pills-container">
+                        <span class="skill-pill">Splunk (SPL)</span>
+                        <span class="skill-pill">ELK Stack</span>
+                        <span class="skill-pill">Thread Dumps</span>
+                        <span class="skill-pill">Gestión Incidencias</span>
+                    </div>
+                </div>
+
+                <div class="cyber-skill-card" data-category="devops">
+                    <span class="corner-bracket top-left"></span>
+                    <span class="corner-bracket top-right"></span>
+                    <span class="corner-bracket bottom-left"></span>
+                    <span class="corner-bracket bottom-right"></span>
+                    
+                    <div class="card-header">
+                        <h4>Contenedores & DevOps</h4>
+                        <span class="cyber-badge purple">INFRASTRUCTURE</span>
+                    </div>
+                    <div class="pills-container">
+                        <span class="skill-pill">Docker</span>
+                        <span class="skill-pill">Kubernetes</span>
+                        <span class="skill-pill">Git</span>
+                        <span class="skill-pill">GitHub</span>
+                        <span class="skill-pill">Terraform</span>
+                    </div>
+                </div>
+
+                <div class="cyber-skill-card" data-category="backend">
+                    <span class="corner-bracket top-left"></span>
+                    <span class="corner-bracket top-right"></span>
+                    <span class="corner-bracket bottom-left"></span>
+                    <span class="corner-bracket bottom-right"></span>
+                    
+                    <div class="card-header">
+                        <h4>Lenguajes de Programación</h4>
+                        <span class="cyber-badge cyan">ADVANCED</span>
+                    </div>
+                    <div class="pills-container">
+                        <span class="skill-pill">Java</span>
+                        <span class="skill-pill">Python</span>
+                        <span class="skill-pill">JavaScript</span>
+                        <span class="skill-pill">Bash</span>
+                    </div>
+                </div>
+
+                <div class="cyber-skill-card" data-category="backend">
+                    <span class="corner-bracket top-left"></span>
+                    <span class="corner-bracket top-right"></span>
+                    <span class="corner-bracket bottom-left"></span>
+                    <span class="corner-bracket bottom-right"></span>
+                    
+                    <div class="card-header">
+                        <h4>Desarrollo Web & Frontend</h4>
+                        <span class="cyber-badge purple">SEPE / CERT</span>
+                    </div>
+                    <div class="pills-container">
+                        <span class="skill-pill">HTML5</span>
+                        <span class="skill-pill">CSS3</span>
+                        <span class="skill-pill">Angular</span>
+                        <span class="skill-pill">React</span>
+                        <span class="skill-pill">Responsive Design</span>
+                    </div>
+                </div>
+
+                <div class="cyber-skill-card" data-category="backend">
+                    <span class="corner-bracket top-left"></span>
+                    <span class="corner-bracket top-right"></span>
+                    <span class="corner-bracket bottom-left"></span>
+                    <span class="corner-bracket bottom-right"></span>
+                    
+                    <div class="card-header">
+                        <h4>Bases de Datos & Backend</h4>
+                        <span class="cyber-badge cyan">CORE</span>
+                    </div>
+                    <div class="pills-container">
+                        <span class="skill-pill">MySQL</span>
+                        <span class="skill-pill">.NET</span>
+                        <span class="skill-pill">Spring Boot</span>
+                    </div>
+                </div>
+
             </div>
-        </footer>
+        </div>
     </section>
+
+    <!-- SECCIÓN MEMORIAS (EXPERIENCIA) -->
+   <!-- SECCIÓN MEMORIAS (EXPERIENCIA PROFESIONAL) -->
+<section class="content-block cyber-memorias-section" id="memorias">
+    <div class="block-container">
+        
+        <div class="block-header">
+            <span class="block-badge">BLOCK 03</span>
+            <h3 class="section-title">SECUENCIA DE MEMORIAS (EXPERIENCIA PROFESIONAL)</h3>
+        </div>
+
+        <div class="cyber-timeline">
+            
+            <!-- ITEM 1: MOVILNET -->
+            <div class="timeline-item">
+                <div class="timeline-marker">
+                    <span class="marker-node">◆</span>
+                    <div class="marker-line"></div>
+                </div>
+                <div class="cyber-skill-card timeline-card">
+                    <span class="corner-bracket top-left"></span>
+                    <span class="corner-bracket top-right"></span>
+                    <span class="corner-bracket bottom-left"></span>
+                    <span class="corner-bracket bottom-right"></span>
+
+                    <div class="card-header-row">
+                        <h4>Especialista de Soporte L3 - Aplicaciones y Servicios</h4>
+                        <span class="date-badge">12/2017 - 01/2025 (7 años 2 meses)</span>
+                    </div>
+                    <div class="company-tag">
+                        <span class="company-icon">🏢</span> Telecomunicaciones Movilnet C.A. (Caracas, Venezuela)
+                    </div>
+                    <ul class="engram-bullets">
+                        <li>Resolución de incidencias críticas L3 sobre aplicaciones <b>SOAP/REST</b> en entornos Linux, reduciendo el MTTR mediante automatización con <b>Bash</b>.</li>
+                        <li>Soporte técnico de segundo y tercer nivel para infraestructura crítica y servicios middleware.</li>
+                        <li>Lideré la migración del sistema <b>EDIController</b>, implementando clústeres redundantes que garantizaron el 100% de continuidad del negocio.</li>
+                        <li>Diseño y desarrollo de aplicación interna para la gestión del tiempo del personal.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ITEM 2: FENRIRSOFT -->
+            <div class="timeline-item">
+                <div class="timeline-marker">
+                    <span class="marker-node">◆</span>
+                    <div class="marker-line"></div>
+                </div>
+                <div class="cyber-skill-card timeline-card">
+                    <span class="corner-bracket top-left"></span>
+                    <span class="corner-bracket top-right"></span>
+                    <span class="corner-bracket bottom-left"></span>
+                    <span class="corner-bracket bottom-right"></span>
+
+                    <div class="card-header-row">
+                        <h4>Fundador & Lead Developer</h4>
+                        <span class="date-badge">2024 - Presente</span>
+                    </div>
+                    <div class="company-tag">
+                        <span class="company-icon">🌐</span> Fenrirsoft Digital Agency (Caracas / Remoto)
+                    </div>
+                    <ul class="engram-bullets">
+                        <li>Fundación y dirección técnica de startup orientada al desarrollo web, despliegue cloud y marketing digital para pymes.</li>
+                        <li>Diseño, auditoría de accesibilidad y despliegue de aplicaciones web responsivas en <b>Cloudflare Pages</b> con integración CI/CD en <b>GitHub</b>.</li>
+                        <li>Desarrollo de proyectos digitales corporativos (Spazioholistic, Handy Friends, MR Abogados Asesores).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ITEM 3: BANESCO -->
+            <div class="timeline-item">
+                <div class="timeline-marker">
+                    <span class="marker-node">◆</span>
+                    <div class="marker-line"></div>
+                </div>
+                <div class="cyber-skill-card timeline-card">
+                    <span class="corner-bracket top-left"></span>
+                    <span class="corner-bracket top-right"></span>
+                    <span class="corner-bracket bottom-left"></span>
+                    <span class="corner-bracket bottom-right"></span>
+
+                    <div class="card-header-row">
+                        <h4>Analista Operación POS</h4>
+                        <span class="date-badge">04/2016 - 06/2017 (1 año 3 meses)</span>
+                    </div>
+                    <div class="company-tag">
+                        <span class="company-icon">🏦</span> Banesco Banco Universal C.A. (Caracas, Venezuela)
+                    </div>
+                    <ul class="engram-bullets">
+                        <li>Gestión de visita técnica, sustitución y retiro de dispositivos POS (Point of Sale) a nivel regional.</li>
+                        <li>Atención, análisis y resolución de requerimientos operacionales para agentes comerciales.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ITEM 4: DRIVERS SYSTEM & PARTS -->
+            <div class="timeline-item">
+                <div class="timeline-marker">
+                    <span class="marker-node">◆</span>
+                </div>
+                <div class="cyber-skill-card timeline-card">
+                    <span class="corner-bracket top-left"></span>
+                    <span class="corner-bracket top-right"></span>
+                    <span class="corner-bracket bottom-left"></span>
+                    <span class="corner-bracket bottom-right"></span>
+
+                    <div class="card-header-row">
+                        <h4>Soporte Técnico y Programador</h4>
+                        <span class="date-badge">02/2014 - 09/2014 (8 meses)</span>
+                    </div>
+                    <div class="company-tag">
+                        <span class="company-icon">🛠️</span> DRIVERS, SYSTEM & PARTS C.A. (Caracas, Venezuela)
+                    </div>
+                    <ul class="engram-bullets">
+                        <li>Soporte técnico de primer y segundo nivel (L1/L2) y atención presencial al público.</li>
+                        <li>Diseño y desarrollo de aplicación personalizada para gestión de tiempo de personal.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- SECCIÓN ARQUITECTURA -->
+<!-- SECCIÓN ARQUITECTURA (CHASSIS / PROYECTOS CLAVE) -->
+<section class="content-block cyber-architecture-section" id="arquitectura">
+    <div class="block-container">
+        
+        <div class="block-header">
+            <span class="block-badge">BLOCK 04</span>
+            <h3 class="section-title">NODOS ARQUITECTÓNICOS (PROYECTOS CLAVE)</h3>
+        </div>
+
+        <div class="arch-cards-grid">
+            
+            <!-- TARJETA 1: EDICONTROLLER -->
+            <div class="cyber-skill-card arch-card">
+                <span class="corner-bracket top-left"></span>
+                <span class="corner-bracket top-right"></span>
+                <span class="corner-bracket bottom-left"></span>
+                <span class="corner-bracket bottom-right"></span>
+
+                <div class="arch-card-header">
+                    <span class="arch-icon">⚡</span>
+                    <h4>Plataforma EDIController</h4>
+                </div>
+                <p class="arch-description">
+                    Arquitectura de alta disponibilidad para transferencia crítica de archivos bancarios. Implementación de clústeres redundantes sobre Linux con tolerancia a fallos y automatización en Bash, garantizando el 100% de continuidad operativa[cite: 10, 11].
+                </p>
+                <div class="pills-container">
+                    <span class="skill-pill">Linux</span>
+                    <span class="skill-pill">Bash</span>
+                    <span class="skill-pill">Clústeres Redundantes</span>
+                    <span class="skill-pill">Middleware</span>
+                </div>
+            </div>
+
+            <!-- TARJETA 2: FENRIRSOFT ENGINE -->
+            <div class="cyber-skill-card arch-card">
+                <span class="corner-bracket top-left"></span>
+                <span class="corner-bracket top-right"></span>
+                <span class="corner-bracket bottom-left"></span>
+                <span class="corner-bracket bottom-right"></span>
+
+                <div class="arch-card-header">
+                    <span class="arch-icon">🌐</span>
+                    <h4>Fenrirsoft Web Engine</h4>
+                </div>
+                <p class="arch-description">
+                    Infraestructura de despliegue continuo en Cloudflare Pages integrada con pipelines sincronizados en GitHub para la entrega de plataformas web empresariales (Fontanería FLD, Spazioholistic), optimizando accesibilidad y tiempo de carga[cite: 10, 11].
+                </p>
+                <div class="pills-container">
+                    <span class="skill-pill">Cloudflare Pages</span>
+                    <span class="skill-pill">Git / GitHub</span>
+                    <span class="skill-pill">Web Optimization</span>
+                    <span class="skill-pill">CI/CD</span>
+                </div>
+            </div>
+
+            <!-- TARJETA 3: gRQL ENGINE -->
+            <div class="cyber-skill-card arch-card">
+                <span class="corner-bracket top-left"></span>
+                <span class="corner-bracket top-right"></span>
+                <span class="corner-bracket bottom-left"></span>
+                <span class="corner-bracket bottom-right"></span>
+
+                <div class="arch-card-header">
+                    <span class="arch-icon">🔗</span>
+                    <h4>gRQL Engine Architecture</h4>
+                </div>
+                <p class="arch-description">
+                    Evaluación de especificaciones técnicas y arquitectura de alojamiento en la nube para motor de base de datos gráfica nativa, diseñado para optimizar el desacoplamiento de dependencias relacionales y la distribución de datos.
+                </p>
+                <div class="pills-container">
+                    <span class="skill-pill">Graph Engine</span>
+                    <span class="skill-pill">Cloud Architecture</span>
+                    <span class="skill-pill">Backend Specs</span>
+                </div>
+            </div>
+
+            <!-- TARJETA 4: APLICACIÓN GESTIÓN TIEMPOS -->
+            <div class="cyber-skill-card arch-card">
+                <span class="corner-bracket top-left"></span>
+                <span class="corner-bracket top-right"></span>
+                <span class="corner-bracket bottom-left"></span>
+                <span class="corner-bracket bottom-right"></span>
+
+                <div class="arch-card-header">
+                    <span class="arch-icon">📊</span>
+                    <h4>Sistema de Gestión de Personal</h4>
+                </div>
+                <p class="arch-description">
+                    Diseño y desarrollo de aplicación interna para la gestión y control de métricas de jornada de empleados, desplegada en entorno servidor para incrementar la productividad operacional en áreas de Tesorería y Nómina[cite: 10, 11].
+                </p>
+                <div class="pills-container">
+                    <span class="skill-pill">Java</span>
+                    <span class="skill-pill">Linux</span>
+                    <span class="skill-pill">Internal Tooling</span>
+                    <span class="skill-pill">Process Automation</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+   <!-- SECCIÓN PROTOCOLO (BLOCK 05: CREDENCIALES Y PROTOCOLOS) -->
+<section class="content-block cyber-protocol-section" id="protocolo">
+    <div class="block-container">
+        
+        <div class="block-header">
+            <span class="block-badge">BLOCK 05</span>
+            <h3 class="section-title">CREDENCIALES Y PROTOCOLOS</h3>
+        </div>
+
+        <div class="protocol-grid">
+            
+            <!-- FORMACIÓN ACADÉMICA -->
+            <div class="cyber-skill-card protocol-card">
+                <span class="corner-bracket top-left"></span>
+                <span class="corner-bracket top-right"></span>
+                <span class="corner-bracket bottom-left"></span>
+                <span class="corner-bracket bottom-right"></span>
+
+                <div class="card-header-row">
+                    <h4><span class="protocol-icon">🎓</span> FORMACIÓN ACADÉMICA</h4>
+                </div>
+                <div class="protocol-content">
+                    <div class="edu-item">
+                        <h5>Técnico Superior Universitario (TSU) en Informática</h5>
+                        <p class="institute">Instituto Universitario de Tecnología Venezuela (2015)[cite: 10, 11]</p>
+                    </div>
+                    <div class="edu-item">
+                        <h5>Certificado de Profesionalidad: Confección y Publicación de Páginas Web</h5>
+                        <p class="institute">SEPE / Ministerio de Trabajo (España) - 560 horas (2026)[cite: 10, 11]</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CERTIFICACIONES DESTACADAS -->
+            <div class="cyber-skill-card protocol-card">
+                <span class="corner-bracket top-left"></span>
+                <span class="corner-bracket top-right"></span>
+                <span class="corner-bracket bottom-left"></span>
+                <span class="corner-bracket bottom-right"></span>
+
+                <div class="card-header-row">
+                    <h4><span class="protocol-icon">🏵️</span> CERTIFICACIONES DESTACADAS</h4>
+                </div>
+                <ul class="cert-list">
+                    <li><b>Developer Certification Suite</b> — freeCodeCamp (2026)<br><span class="cert-sub">(Python, JS, Front-End Libraries, Responsive Web Design)</span>[cite: 10, 11]</li>
+                    <li><b>B1 English for Developers</b> — freeCodeCamp (2026)[cite: 10, 11]</li>
+                    <li><b>Cloud Computing</b> — Google Activate (2024)[cite: 10, 11]</li>
+                    <li><b>Fundamentos de Linux</b> — CANTV (2018)[cite: 10, 11]</li>
+                </ul>
+            </div>
+
+            <!-- IDIOMAS -->
+            <div class="cyber-skill-card protocol-card">
+                <span class="corner-bracket top-left"></span>
+                <span class="corner-bracket top-right"></span>
+                <span class="corner-bracket bottom-left"></span>
+                <span class="corner-bracket bottom-right"></span>
+
+                <div class="card-header-row">
+                    <h4><span class="protocol-icon">🗣️</span> IDIOMAS</h4>
+                </div>
+                <div class="lang-list">
+                    <p><b>Español:</b> Nativo[cite: 10, 11]</p>
+                    <p><b>Inglés:</b> Nivel B1 Técnico Certificado (freeCodeCamp)[cite: 10, 11]</p>
+                    <p><b>Galego:</b> Nivel Básico (Entorno A Coruña / Galicia)</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SECCIÓN CANAL LINK (BLOCK 06: TRANSMISIÓN DE SEÑAL & CONTACTO) -->
+<footer class="content-block cyber-contact-section" id="contacto">
+    <div class="block-container">
+        
+        <div class="block-header">
+            <span class="block-badge">BLOCK 06</span>
+            <h3 class="section-title">TRANSMISIÓN DE SEÑAL & CONTACTO</h3>
+        </div>
+
+        <div class="contact-links-grid">
+            
+            <a href="tel:+34633191597" class="cyber-skill-card contact-card">
+                <span class="corner-bracket top-left"></span>
+                <span class="corner-bracket top-right"></span>
+                <span class="corner-bracket bottom-left"></span>
+                <span class="corner-bracket bottom-right"></span>
+                <div class="contact-card-content">
+                    <span class="contact-icon">📱</span>
+                    <div>
+                        <span class="contact-label">WHATSAPP / MÓVIL</span>
+                        <p class="contact-value">+34 633 191 597</p>[cite: 10, 11]
+                    </div>
+                </div>
+            </a>
+
+            <a href="mailto:carlos.a.n.batatimo@gmail.com" class="cyber-skill-card contact-card">
+                <span class="corner-bracket top-left"></span>
+                <span class="corner-bracket top-right"></span>
+                <span class="corner-bracket bottom-left"></span>
+                <span class="corner-bracket bottom-right"></span>
+                <div class="contact-card-content">
+                    <span class="contact-icon">✉️</span>
+                    <div>
+                        <span class="contact-label">EMAIL DIRECTO</span>
+                        <p class="contact-value">carlos.a.n.batatimo@gmail.com</p>[cite: 10, 11]
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/carlos-nievesb" target="_blank" class="cyber-skill-card contact-card">
+                <span class="corner-bracket top-left"></span>
+                <span class="corner-bracket top-right"></span>
+                <span class="corner-bracket bottom-left"></span>
+                <span class="corner-bracket bottom-right"></span>
+                <div class="contact-card-content">
+                    <span class="contact-icon">🔗</span>
+                    <div>
+                        <span class="contact-label">LINKEDIN PROFILE</span>
+                        <p class="contact-value">carlos-nievesb</p>[cite: 10, 11]
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://github.com/Snow20" target="_blank" class="cyber-skill-card contact-card">
+                <span class="corner-bracket top-left"></span>
+                <span class="corner-bracket top-right"></span>
+                <span class="corner-bracket bottom-left"></span>
+                <span class="corner-bracket bottom-right"></span>
+                <div class="contact-card-content">
+                    <span class="contact-icon">🐙</span>
+                    <div>
+                        <span class="contact-label">GITHUB REPOSITORIES</span>
+                        <p class="contact-value">github.com/Snow20</p>[cite: 10, 11]
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://linktr.ee/FenrirsoftDigitalAgency" target="_blank" class="cyber-skill-card contact-card">
+                <span class="corner-bracket top-left"></span>
+                <span class="corner-bracket top-right"></span>
+                <span class="corner-bracket bottom-left"></span>
+                <span class="corner-bracket bottom-right"></span>
+                <div class="contact-card-content">
+                    <span class="contact-icon">⚡</span>
+                    <div>
+                        <span class="contact-label">AGENCY LINKTREE</span>
+                        <p class="contact-value">FenrirsoftDigitalAgency</p>[cite: 10, 11]
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</footer>
 
     <script src="js/script.js"></script>
 </body>

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Desplazamiento suave para la barra de navegación
+    // 1. Navegación suave
     const navAnchors = document.querySelectorAll('a[href^="#"]');
     navAnchors.forEach(anchor => {
         anchor.addEventListener('click', (e) => {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 2. Control de estado para los botones de la barra superior
+    // 2. Control de SFX y Audio
     let audioActive = true;
     const audioBtn = document.getElementById('audio-btn');
     const themeBtn = document.getElementById('theme-btn');
@@ -43,41 +43,37 @@ document.addEventListener('DOMContentLoaded', () => {
             oscillator.start();
             oscillator.stop(context.currentTime + duration);
         } catch (error) {
-            // Contexto bloqueado por políticas de reproducción del navegador
+            // Audio bloqueado
         }
     }
 
     if (audioBtn) {
         audioBtn.addEventListener('click', () => {
             audioActive = !audioActive;
-            audioBtn.textContent = audioActive ? '[ 🔊 AUDIO ON ]' : '[ 🔇 AUDIO OFF ]';
+            audioBtn.textContent = audioActive ? '[ 🔊 SFX: ON ]' : '[ 🔇 SFX: OFF ]';
             triggerAudio(audioActive ? 1200 : 300, 'square', 0.05);
         });
     }
 
-    // Unificación de la lógica de cambio de tema y destello visual
+    // Cambios de tema
     if (themeBtn) {
         themeBtn.addEventListener('click', () => {
             triggerAudio(600, 'triangle', 0.04);
-            
-            // Alternar clase de modo claro/oscuro
             document.body.classList.toggle('light-mode');
             const isLight = document.body.classList.contains('light-mode');
-            themeBtn.textContent = isLight ? '[ ☀️ ANIMUS WHITE ]' : '[ 🌙 ABSTERGO DARK ]';
+            themeBtn.textContent = isLight ? '[ ☀️ ANIMUS WHITE ]' : '[ 🌙 ARASAKA DARK ]';
 
-            // Generar destello animado en el DOM
             const flash = document.createElement('div');
             flash.className = 'theme-switch-flash';
             document.body.appendChild(flash);
 
-            // Eliminar elemento tras la ejecución de la animación CSS
             setTimeout(() => {
                 flash.remove();
             }, 450);
         });
     }
 
-    // 3. Ejecución de la consola CLI
+    // 3. Ejecución de Terminal
     function executeTerminal() {
         triggerAudio(500, 'sawtooth', 0.08);
         alert(
@@ -94,14 +90,51 @@ document.addEventListener('DOMContentLoaded', () => {
     if (cliBtn) cliBtn.addEventListener('click', executeTerminal);
     if (openCliBtn) openCliBtn.addEventListener('click', executeTerminal);
 
-    // 4. Feedback sonoro en botones e interacciones
-    const interactables = document.querySelectorAll('.btn, .nav-center a, .nav-btn');
+    // 4. Lógica de Filtro y Búsqueda para las Habilidades
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const skillCards = document.querySelectorAll('.skill-card');
+    const searchInput = document.getElementById('skills-search-input');
+
+    let currentCategory = 'all';
+
+    function filterSkills() {
+        const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
+        skillCards.forEach(card => {
+            const categoryMatch = (currentCategory === 'all') || (card.dataset.category === currentCategory);
+            const textMatch = card.textContent.toLowerCase().includes(query);
+
+            if (categoryMatch && textMatch) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            tabBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentCategory = btn.dataset.category;
+            filterSkills();
+            triggerAudio(1000, 'sine', 0.02);
+        });
+    });
+
+    if (searchInput) {
+        searchInput.addEventListener('input', filterSkills);
+    }
+
+    // Feedback sonoro general
+    const interactables = document.querySelectorAll('.btn, .nav-center a, .nav-btn, .tab-btn');
     interactables.forEach(item => {
         item.addEventListener('mouseenter', () => triggerAudio(1400, 'sine', 0.015));
         item.addEventListener('click', () => triggerAudio(900, 'square', 0.03));
     });
 });
-// Motor de partículas e iconos geométricos en Canvas
+
+// Canvas Background
 const canvas = document.getElementById('bg-canvas');
 if (canvas) {
     const ctx = canvas.getContext('2d');
@@ -165,4 +198,38 @@ if (canvas) {
     }
 
     renderFrame();
+}
+// Lógica de filtrado y búsqueda en tiempo real para Matriz de Habilidades
+const tabs = document.querySelectorAll('.cyber-tab');
+const cards = document.querySelectorAll('.cyber-skill-card');
+const searchInput = document.getElementById('cyber-search-input');
+
+let activeCategory = 'all';
+
+function updateSkillsFilter() {
+    const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
+    cards.forEach(card => {
+        const categoryMatches = (activeCategory === 'all') || (card.dataset.category === activeCategory);
+        const textMatches = card.textContent.toLowerCase().includes(query);
+
+        if (categoryMatches && textMatches) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        activeCategory = tab.dataset.category;
+        updateSkillsFilter();
+    });
+});
+
+if (searchInput) {
+    searchInput.addEventListener('input', updateSkillsFilter);
 }
