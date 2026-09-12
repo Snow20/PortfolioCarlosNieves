@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentLang = 'ES';
 
     // ==========================================
-    // 1. DICCIONARIO TRADUCIDO CON TUS 4 EXPERIENCIAS
+    // DICCIONARIO TRADUCIDO COMPLETO (ES, EN, GL)
     // ==========================================
     const translations = {
         ES: {
@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_skills: "[02] CYBERWARE SKILLS",
             nav_memorias: "[03] ENGRAMS",
             nav_arquitectura: "[04] CHASSIS",
+            nav_protocolo: "[05] CREDENCIALES",
             nav_contacto: "[06] NETLINK",
             
             // Hero
@@ -26,11 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // Botones Hero
             btn_contact: "⚡ INICIAR TRANSMISIÓN / CONTACTO",
             btn_github: "📄 VER GITHUB (MD)",
-            btn_cv_eng: "📄 DESCARGAR CV ENG (PDF)",
-            btn_cv_esp: "📄 DESCARGAR CV ESP (PDF)",
+            btn_cv_eng: "📄 DESCARGAR CV Carlos Nieves ENG (PDF)",
+            btn_cv_esp: "📄 DESCARGAR CV Carlos Nieves ESP (PDF)",
             btn_cli: ">_ ABRIR TERMINAL",
             
-            // Secciones UI
+            // Skills Secciones y Tarjetas
             block02_title: "[02] MATRIZ DE HABILIDADES NEURALES",
             tab_all: "TODOS LOS NODOS",
             tab_sistemas: "LINUX & CORE",
@@ -38,12 +39,142 @@ document.addEventListener('DOMContentLoaded', () => {
             tab_devops: "DEVOPS & OBSERVABILIDAD",
             tab_backend: "DESARROLLO & DB",
             search_placeholder: "Buscar tecnología (ej: Linux, Bash, Splunk)...",
+            skill_card_sistemas: "Sistemas Linux & Core",
+            badge_8years: "+8 AÑOS",
+            skill_card_middleware: "Middleware & Arquitecturas API",
+            pill_clusters: "Clústeres Redundantes",
+            pill_ha: "Alta Disponibilidad",
+            skill_card_obs: "Observabilidad & Logs",
+            pill_incidents: "Gestión Incidencias",
+            skill_card_devops: "Contenedores & DevOps",
+            skill_card_langs: "Lenguajes de Programación",
+            skill_card_web: "Desarrollo Web & Frontend",
+            skill_card_db: "Bases de Datos & Backend",
+
+            // Bloque 03 - Memorias Timeline
             block03_title: "SECUENCIA DE MEMORIAS (EXPERIENCIA PROFESIONAL)",
+            timeline_html: `
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="marker-node">◆</span>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="cyber-skill-card timeline-card">
+                        <span class="corner-bracket top-left"></span>
+                        <span class="corner-bracket top-right"></span>
+                        <span class="corner-bracket bottom-left"></span>
+                        <span class="corner-bracket bottom-right"></span>
+                        
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="marker-node">◆</span>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="cyber-skill-card timeline-card">
+                        <span class="corner-bracket top-left"></span>
+                        <span class="corner-bracket top-right"></span>
+                        <span class="corner-bracket bottom-left"></span>
+                        <span class="corner-bracket bottom-right"></span>
+                        <div class="card-header-row">
+                            <h4>Especialista de Soporte L3 - Aplicaciones y Servicios</h4>
+                            <span class="date-badge">12/2017 - 01/2025 (7 años 2 meses)</span>
+                        </div>
+                        <div class="company-tag">
+                            <span class="company-icon">🏢</span> Telecomunicaciones Movilnet C.A. (Caracas, Venezuela)
+                        </div>
+                        <ul class="engram-bullets">
+                            <li>Resolución de incidencias L3 en entornos Linux de alta disponibilidad sobre arquitecturas <b>SOAP/REST</b>.</li>
+                            <li>Reducción del MTTR mediante automatización con <b>Bash</b>, garantía de continuidad operativa y migración del sistema bancario <b>EDIController</b> con clústeres redundantes al 100% de uptime.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="marker-node">◆</span>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="cyber-skill-card timeline-card">
+                        <span class="corner-bracket top-left"></span>
+                        <span class="corner-bracket top-right"></span>
+                        <span class="corner-bracket bottom-left"></span>
+                        <span class="corner-bracket bottom-right"></span>
+                        <div class="card-header-row">
+                            <h4>Analista Operación POS</h4>
+                            <span class="date-badge">04/2016 - 06/2017 (1 año 3 meses)</span>
+                        </div>
+                        <div class="company-tag">
+                            <span class="company-icon">🏦</span> Banesco Banco Universal C.A. (Caracas, Venezuela)
+                        </div>
+                        <ul class="engram-bullets">
+                            <li>Gestión de soporte técnico regional, sustitución y retiro de dispositivos POS (Point of Sale).</li>
+                            <li>Atención y resolución de requerimientos operacionales directos para aliados comerciales.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="marker-node">◆</span>
+                    </div>
+                    <div class="cyber-skill-card timeline-card">
+                        <span class="corner-bracket top-left"></span>
+                        <span class="corner-bracket top-right"></span>
+                        <span class="corner-bracket bottom-left"></span>
+                        <span class="corner-bracket bottom-right"></span>
+                        <div class="card-header-row">
+                            <h4>Soporte Técnico y Programador (L1/L2)</h4>
+                            <span class="date-badge">02/2014 - 09/2014 (8 meses)</span>
+                        </div>
+                        <div class="company-tag">
+                            <span class="company-icon">🛠️</span> Drivers, System & Parts C.A. (Caracas, Venezuela)
+                        </div>
+                        <ul class="engram-bullets">
+                            <li>Soporte técnico de primer y segundo nivel (L1/L2) presencial y remoto.</li>
+                            <li>Desarrollo de aplicación personalizada en <b>Java/Linux</b> para la gestión del tiempo del personal.</li>
+                        </ul>
+                    </div>
+                </div>
+            `,
+
+            // Bloque 04 - Arquitectura
             block04_title: "NODOS ARQUITECTÓNICOS (PROYECTOS CLAVE)",
+            proj1_title: "Plataforma EDIController",
+            proj1_desc: "Arquitectura de alta disponibilidad para transferencia crítica de archivos bancarios. Implementación de clústeres redundantes sobre Linux con tolerancia a fallos y automatización en Bash.",
+            proj2_title: "Fenrirsoft Web Engine",
+            proj2_desc: "Infraestructura de despliegue continuo en Cloudflare Pages integrada con pipelines sincronizados en GitHub para la entrega de plataformas web empresariales.",
+
+            // Bloque 05 - Protocolos
             block05_title: "CREDENCIALES Y PROTOCOLOS",
             proto_edu: "🎓 FORMACIÓN ACADÉMICA",
+            proto_edu_content: `
+                <div class="edu-item">
+                    <h5>Técnico Superior Universitario (TSU) en Informática</h5>
+                    <p class="institute">Instituto Universitario de Tecnología Venezuela (2015)</p>
+                </div>
+                <div class="edu-item">
+                    <h5>Certificado de Profesionalidad: Confección y Publicación de Páginas Web</h5>
+                    <p class="institute">SEPE / Ministerio de Trabajo (España) - 560 horas (2026)</p>
+                </div>
+            `,
             proto_cert: "ORG CERTIFICACIONES DESTACADAS",
+            proto_cert_content: `
+                <li><b>Developer Certification Suite</b> — freeCodeCamp (2026)</li>
+                <li><b>B1 English for Developers</b> — freeCodeCamp (2026)</li>
+                <li><b>Cloud Computing</b> — Google Activate (2024)</li>
+                <li><b>Fundamentos de Linux</b> — CANTV (2018)</li>
+            `,
             proto_lang: "🗣️ IDIOMAS",
+            proto_lang_content: `
+                <p><b>Español:</b> Nativo</p>
+                <p><b>Inglés:</b> Nivel B1 Técnico Certificado (freeCodeCamp)</p>
+                <p><b>Galego:</b> Nivel Básico (Entorno A Coruña / Galicia)</p>
+            `,
+
+            // Bloque 06 - Contacto
             block06_title: "TRANSMISIÓN DE SEÑAL & CONTACTO",
             contact_whatsapp: "WHATSAPP / MÓVIL",
             contact_email: "EMAIL DIRECTO",
@@ -109,6 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_skills: "[02] CYBERWARE SKILLS",
             nav_memorias: "[03] ENGRAMS",
             nav_arquitectura: "[04] CHASSIS",
+            nav_protocolo: "[05] CREDENTIALS",
             nav_contacto: "[06] NETLINK",
             
             // Hero
@@ -123,11 +255,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // Botones Hero
             btn_contact: "⚡ START TRANSMISSION / CONTACT",
             btn_github: "📄 VIEW GITHUB (MD)",
-            btn_cv_eng: "📄 DOWNLOAD CV ENG (PDF)",
-            btn_cv_esp: "📄 DOWNLOAD CV ESP (PDF)",
+            btn_cv_eng: "📄 DOWNLOAD CV Carlos Nieves ENG (PDF)",
+            btn_cv_esp: "📄 DOWNLOAD CV Carlos Nieves ESP (PDF)",
             btn_cli: ">_ OPEN TERMINAL",
             
-            // Secciones UI
+            // Skills Secciones y Tarjetas
             block02_title: "[02] NEURAL SKILLS MATRIX",
             tab_all: "ALL NODES",
             tab_sistemas: "LINUX & CORE",
@@ -135,12 +267,152 @@ document.addEventListener('DOMContentLoaded', () => {
             tab_devops: "DEVOPS & OBSERVABILITY",
             tab_backend: "DEVELOPMENT & DB",
             search_placeholder: "Search technology (e.g. Linux, Bash, Splunk)...",
+            skill_card_sistemas: "Linux & Core Systems",
+            badge_8years: "+8 YEARS",
+            skill_card_middleware: "Middleware & API Architectures",
+            pill_clusters: "Redundant Clusters",
+            pill_ha: "High Availability",
+            skill_card_obs: "Observability & Logs",
+            pill_incidents: "Incident Management",
+            skill_card_devops: "Containers & DevOps",
+            skill_card_langs: "Programming Languages",
+            skill_card_web: "Web Development & Frontend",
+            skill_card_db: "Databases & Backend",
+
+            // Bloque 03 - Memorias Timeline
             block03_title: "MEMORY SEQUENCE (PROFESSIONAL EXPERIENCE)",
+            timeline_html: `
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="marker-node">◆</span>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="cyber-skill-card timeline-card">
+                        <span class="corner-bracket top-left"></span>
+                        <span class="corner-bracket top-right"></span>
+                        <span class="corner-bracket bottom-left"></span>
+                        <span class="corner-bracket bottom-right"></span>
+                        <div class="card-header-row">
+                            <h4>Founder & Lead Developer (CEO)</h4>
+                            <span class="date-badge">2024 - Present</span>
+                        </div>
+                        <div class="company-tag">
+                            <span class="company-icon">🌐</span> Fenrirsoft Digital Agency (Remote / Galicia)
+                        </div>
+                        <ul class="engram-bullets">
+                            <li>Technical leadership in web development, IT consulting, and cloud deployments for SMEs.</li>
+                            <li>Deployment of web applications on <b>Cloudflare Pages</b> with CI/CD pipelines in <b>GitHub</b>, web optimization, and accessibility audits.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="marker-node">◆</span>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="cyber-skill-card timeline-card">
+                        <span class="corner-bracket top-left"></span>
+                        <span class="corner-bracket top-right"></span>
+                        <span class="corner-bracket bottom-left"></span>
+                        <span class="corner-bracket bottom-right"></span>
+                        <div class="card-header-row">
+                            <h4>L3 Support Specialist - Applications & Services</h4>
+                            <span class="date-badge">12/2017 - 01/2025 (7 yrs 2 mos)</span>
+                        </div>
+                        <div class="company-tag">
+                            <span class="company-icon">🏢</span> Telecomunicaciones Movilnet C.A. (Caracas, Venezuela)
+                        </div>
+                        <ul class="engram-bullets">
+                            <li>L3 incident resolution in high-availability Linux environments over <b>SOAP/REST</b> architectures.</li>
+                            <li>MTTR reduction via <b>Bash</b> automation, operational continuity assurance, and migration of the <b>EDIController</b> banking system with redundant clusters achieving 100% uptime.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="marker-node">◆</span>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="cyber-skill-card timeline-card">
+                        <span class="corner-bracket top-left"></span>
+                        <span class="corner-bracket top-right"></span>
+                        <span class="corner-bracket bottom-left"></span>
+                        <span class="corner-bracket bottom-right"></span>
+                        <div class="card-header-row">
+                            <h4>POS Operations Analyst</h4>
+                            <span class="date-badge">04/2016 - 06/2017 (1 yr 3 mos)</span>
+                        </div>
+                        <div class="company-tag">
+                            <span class="company-icon">🏦</span> Banesco Banco Universal C.A. (Caracas, Venezuela)
+                        </div>
+                        <ul class="engram-bullets">
+                            <li>Management of regional tech support, replacement, and removal of POS (Point of Sale) devices.</li>
+                            <li>Direct handling and resolution of operational requirements for commercial partners.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="marker-node">◆</span>
+                    </div>
+                    <div class="cyber-skill-card timeline-card">
+                        <span class="corner-bracket top-left"></span>
+                        <span class="corner-bracket top-right"></span>
+                        <span class="corner-bracket bottom-left"></span>
+                        <span class="corner-bracket bottom-right"></span>
+                        <div class="card-header-row">
+                            <h4>Technical Support & Developer (L1/L2)</h4>
+                            <span class="date-badge">02/2014 - 09/2014 (8 mos)</span>
+                        </div>
+                        <div class="company-tag">
+                            <span class="company-icon">🛠️</span> Drivers, System & Parts C.A. (Caracas, Venezuela)
+                        </div>
+                        <ul class="engram-bullets">
+                            <li>First and second-level (L1/L2) on-site and remote technical support.</li>
+                            <li>Development of custom <b>Java/Linux</b> application for personnel time tracking.</li>
+                        </ul>
+                    </div>
+                </div>
+            `,
+
+            // Bloque 04 - Arquitectura
             block04_title: "ARCHITECTURAL NODES (KEY PROJECTS)",
+            proj1_title: "EDIController Platform",
+            proj1_desc: "High-availability architecture for critical banking file transfers. Implementation of redundant clusters on Linux with fault tolerance and Bash automation.",
+            proj2_title: "Fenrirsoft Web Engine",
+            proj2_desc: "Continuous deployment infrastructure on Cloudflare Pages integrated with synchronized GitHub pipelines for enterprise web platforms.",
+
+            // Bloque 05 - Protocolos
             block05_title: "CREDENTIALS AND PROTOCOLS",
             proto_edu: "🎓 ACADEMIC EDUCATION",
+            proto_edu_content: `
+                <div class="edu-item">
+                    <h5>Higher University Technician (TSU) in Computer Science</h5>
+                    <p class="institute">Instituto Universitario de Tecnología Venezuela (2015)</p>
+                </div>
+                <div class="edu-item">
+                    <h5>Professional Certificate: Web Page Design and Publishing</h5>
+                    <p class="institute">SEPE / Ministry of Labor (Spain) - 560 hours (2026)</p>
+                </div>
+            `,
             proto_cert: "ORG KEY CERTIFICATIONS",
+            proto_cert_content: `
+                <li><b>Developer Certification Suite</b> — freeCodeCamp (2026)</li>
+                <li><b>B1 English for Developers</b> — freeCodeCamp (2026)</li>
+                <li><b>Cloud Computing</b> — Google Activate (2024)</li>
+                <li><b>Linux Fundamentals</b> — CANTV (2018)</li>
+            `,
             proto_lang: "🗣️ LANGUAGES",
+            proto_lang_content: `
+                <p><b>Spanish:</b> Native</p>
+                <p><b>English:</b> Certified B1 Technical Level (freeCodeCamp)</p>
+                <p><b>Galician:</b> Basic Level (A Coruña / Galicia Region)</p>
+            `,
+
+            // Bloque 06 - Contacto
             block06_title: "SIGNAL TRANSMISSION & CONTACT",
             contact_whatsapp: "WHATSAPP / MOBILE",
             contact_email: "DIRECT EMAIL",
@@ -206,6 +478,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_skills: "[02] CYBERWARE SKILLS",
             nav_memorias: "[03] ENGRAMS",
             nav_arquitectura: "[04] CHASSIS",
+            nav_protocolo: "[05] CREDENCIAS",
             nav_contacto: "[06] NETLINK",
             
             // Hero
@@ -220,11 +493,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // Botones Hero
             btn_contact: "⚡ INICIAR TRANSMISIÓN / CONTACTO",
             btn_github: "📄 VER GITHUB (MD)",
-            btn_cv_eng: "📄 DESCARGAR CV ENG (PDF)",
-            btn_cv_esp: "📄 DESCARGAR CV ESP (PDF)",
+            btn_cv_eng: "📄 DESCARGAR CV Carlos Nieves ENG (PDF)",
+            btn_cv_esp: "📄 DESCARGAR CV Carlos Nieves ESP (PDF)",
             btn_cli: ">_ ABRIR TERMINAL",
             
-            // Secciones UI
+            // Skills Secciones y Tarjetas
             block02_title: "[02] MATRIZ DE HABILIDADES NEURAIS",
             tab_all: "TODOS OS NODOS",
             tab_sistemas: "LINUX & CORE",
@@ -232,12 +505,152 @@ document.addEventListener('DOMContentLoaded', () => {
             tab_devops: "DEVOPS & OBSERVABILIDADE",
             tab_backend: "DESENVOLVEMENTO & BD",
             search_placeholder: "Buscar tecnoloxía (ex: Linux, Bash, Splunk)...",
+            skill_card_sistemas: "Sistemas Linux & Core",
+            badge_8years: "+8 ANOS",
+            skill_card_middleware: "Middleware & Arquitecturas API",
+            pill_clusters: "Clústeres Redundantes",
+            pill_ha: "Alta Dispoñibilidade",
+            skill_card_obs: "Observabilidade & Logs",
+            pill_incidents: "Xestión Incidencias",
+            skill_card_devops: "Contedores & DevOps",
+            skill_card_langs: "Linguaxes de Programación",
+            skill_card_web: "Desenvolvemento Web & Frontend",
+            skill_card_db: "Bases de Datos & Backend",
+
+            // Bloque 03 - Memorias Timeline
             block03_title: "SECUENCIA DE MEMORIAS (EXPERIENCIA PROFESIONAL)",
+            timeline_html: `
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="marker-node">◆</span>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="cyber-skill-card timeline-card">
+                        <span class="corner-bracket top-left"></span>
+                        <span class="corner-bracket top-right"></span>
+                        <span class="corner-bracket bottom-left"></span>
+                        <span class="corner-bracket bottom-right"></span>
+                        <div class="card-header-row">
+                            <h4>Fundador e Lead Developer (CEO)</h4>
+                            <span class="date-badge">2024 - Presente</span>
+                        </div>
+                        <div class="company-tag">
+                            <span class="company-icon">🌐</span> Fenrirsoft Digital Agency (Remoto / Galicia)
+                        </div>
+                        <ul class="engram-bullets">
+                            <li>Dirección técnica en desenvolvemento web, consultoría IT e solucións cloud para pemes.</li>
+                            <li>Despregamento de aplicacións web en <b>Cloudflare Pages</b> con pipelines CI/CD en <b>GitHub</b>, optimización web e auditorías de accesibilidade.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="marker-node">◆</span>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="cyber-skill-card timeline-card">
+                        <span class="corner-bracket top-left"></span>
+                        <span class="corner-bracket top-right"></span>
+                        <span class="corner-bracket bottom-left"></span>
+                        <span class="corner-bracket bottom-right"></span>
+                        <div class="card-header-row">
+                            <h4>Especialista de Soporte L3 - Aplicacións e Servizos</h4>
+                            <span class="date-badge">12/2017 - 01/2025 (7 anos 2 meses)</span>
+                        </div>
+                        <div class="company-tag">
+                            <span class="company-icon">🏢</span> Telecomunicaciones Movilnet C.A. (Caracas, Venezuela)
+                        </div>
+                        <ul class="engram-bullets">
+                            <li>Resolución de incidencias L3 en contornos Linux de alta dispoñibilidade sobre arquitecturas <b>SOAP/REST</b>.</li>
+                            <li>Redución do MTTR mediante automatización con <b>Bash</b>, garantía de continuidade operativa e migración do sistema bancario <b>EDIController</b> con clústeres redundantes ao 100% de uptime.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="marker-node">◆</span>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="cyber-skill-card timeline-card">
+                        <span class="corner-bracket top-left"></span>
+                        <span class="corner-bracket top-right"></span>
+                        <span class="corner-bracket bottom-left"></span>
+                        <span class="corner-bracket bottom-right"></span>
+                        <div class="card-header-row">
+                            <h4>Analista Operación POS</h4>
+                            <span class="date-badge">04/2016 - 06/2017 (1 ano 3 meses)</span>
+                        </div>
+                        <div class="company-tag">
+                            <span class="company-icon">🏦</span> Banesco Banco Universal C.A. (Caracas, Venezuela)
+                        </div>
+                        <ul class="engram-bullets">
+                            <li>Xestión de soporte técnico rexional, substitución e retiro de dispositivos POS (Point of Sale).</li>
+                            <li>Atención e resolución de requirimentos operacionais para aliados comerciais.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="marker-node">◆</span>
+                    </div>
+                    <div class="cyber-skill-card timeline-card">
+                        <span class="corner-bracket top-left"></span>
+                        <span class="corner-bracket top-right"></span>
+                        <span class="corner-bracket bottom-left"></span>
+                        <span class="corner-bracket bottom-right"></span>
+                        <div class="card-header-row">
+                            <h4>Soporte Técnico e Programador (L1/L2)</h4>
+                            <span class="date-badge">02/2014 - 09/2014 (8 meses)</span>
+                        </div>
+                        <div class="company-tag">
+                            <span class="company-icon">🛠️</span> Drivers, System & Parts C.A. (Caracas, Venezuela)
+                        </div>
+                        <ul class="engram-bullets">
+                            <li>Soporte técnico de primeiro e segundo nivel (L1/L2) presencial e remoto.</li>
+                            <li>Desenvolvemento de aplicación personalizada en <b>Java/Linux</b> para a xestión do tempo do persoal.</li>
+                        </ul>
+                    </div>
+                </div>
+            `,
+
+            // Bloque 04 - Arquitectura
             block04_title: "NODOS ARQUITECTÓNICOS (PROXECTOS CLAVE)",
-            block05_title: "CREDENCIAS E PROTOCOLOS",
+            proj1_title: "Plataforma EDIController",
+            proj1_desc: "Arquitectura de alta dispoñibilidade para transferencia crítica de ficheiros bancarios. Implementación de clústeres redundantes sobre Linux con tolerancia a fallos e automatización en Bash.",
+            proj2_title: "Fenrirsoft Web Engine",
+            proj2_desc: "Infraestrutura de despregamento continuo en Cloudflare Pages integrada con pipelines sincronizados en GitHub para a entrega de plataformas web empresariais.",
+
+            // Bloque 05 - Protocolos
+            block05_title: "CREDENCIALES E PROTOCOLOS",
             proto_edu: "🎓 FORMACIÓN ACADÉMICA",
+            proto_edu_content: `
+                <div class="edu-item">
+                    <h5>Técnico Superior Universitario (TSU) en Informática</h5>
+                    <p class="institute">Instituto Universitario de Tecnología Venezuela (2015)</p>
+                </div>
+                <div class="edu-item">
+                    <h5>Certificado de Profesionalidade: Confección e Publicación de Páxinas Web</h5>
+                    <p class="institute">SEPE / Ministerio de Traballo (España) - 560 horas (2026)</p>
+                </div>
+            `,
             proto_cert: "ORG CERTIFICACIÓNS DESTACADAS",
+            proto_cert_content: `
+                <li><b>Developer Certification Suite</b> — freeCodeCamp (2026)</li>
+                <li><b>B1 English for Developers</b> — freeCodeCamp (2026)</li>
+                <li><b>Cloud Computing</b> — Google Activate (2024)</li>
+                <li><b>Fundamentos de Linux</b> — CANTV (2018)</li>
+            `,
             proto_lang: "🗣️ IDIOMAS",
+            proto_lang_content: `
+                <p><b>Español:</b> Nativo</p>
+                <p><b>Inglés:</b> Nivel B1 Técnico Certificado (freeCodeCamp)</p>
+                <p><b>Galego:</b> Nivel Básico (Contorno A Coruña / Galicia)</p>
+            `,
+
+            // Bloque 06 - Contacto
             block06_title: "TRANSMISIÓN DE SINAL E CONTACTO",
             contact_whatsapp: "WHATSAPP / MÓBIL",
             contact_email: "CORREO DIRECTO",
@@ -300,7 +713,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // ==========================================
-    // 2. CONMUTADOR DE IDIOMAS (RE-RENDER DOM)
+    // CONMUTADOR Y RENDERIZADOR DE IDIOMA
     // ==========================================
     const languages = ['ES', 'EN', 'GL'];
     let currentLangIndex = 0;
@@ -311,6 +724,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const langData = translations[langCode];
         if (!langData) return;
 
+        // Traducir elementos simples
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (langData[key] !== undefined) {
@@ -318,12 +732,34 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
+        // Traducir placeholders
         document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
             const key = el.getAttribute('data-i18n-placeholder');
             if (langData[key] !== undefined) {
                 el.placeholder = langData[key];
             }
         });
+
+        // Inyectar HTML traducido para bloques dinámicos
+        const timelineContainer = document.getElementById('timeline-container');
+        if (timelineContainer && langData.timeline_html) {
+            timelineContainer.innerHTML = langData.timeline_html;
+        }
+
+        const protoEduContainer = document.querySelector('[data-i18n="proto_edu_content"]');
+        if (protoEduContainer && langData.proto_edu_content) {
+            protoEduContainer.innerHTML = langData.proto_edu_content;
+        }
+
+        const protoCertContainer = document.querySelector('[data-i18n="proto_cert_content"]');
+        if (protoCertContainer && langData.proto_cert_content) {
+            protoCertContainer.innerHTML = langData.proto_cert_content;
+        }
+
+        const protoLangContainer = document.querySelector('[data-i18n="proto_lang_content"]');
+        if (protoLangContainer && langData.proto_lang_content) {
+            protoLangContainer.innerHTML = langData.proto_lang_content;
+        }
 
         if (langBtn) langBtn.textContent = `[ 🌐 ${langCode} ]`;
 
@@ -332,6 +768,9 @@ document.addEventListener('DOMContentLoaded', () => {
             terminalOutput.innerHTML = `<div>${langData.term_welcome.replace(/\n/g, '<br>')}</div>`;
         }
     }
+
+    // Inicializar idioma al cargar
+    setLanguage('ES');
 
     if (langBtn) {
         langBtn.addEventListener('click', () => {
@@ -342,7 +781,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================
-    // 3. APERTURA Y CONTROL DE TERMINAL BASH
+    // TERMINAL INTERACTIVA
     // ==========================================
     const terminalModal = document.getElementById('terminal-modal');
     const closeTerminalBtn = document.getElementById('close-terminal-btn');
@@ -494,7 +933,7 @@ ${t.term_contact_body}`;
     }
 
     // ==========================================
-    // 4. AUDIO SFX, CAMBIO DE TEMA Y CANVAS
+    // EFECTOS DE AUDIO Y CANVA
     // ==========================================
     let audioActive = true;
     const audioBtn = document.getElementById('audio-btn');
@@ -570,7 +1009,7 @@ ${t.term_contact_body}`;
 
     if (searchInput) searchInput.addEventListener('input', updateSkillsFilter);
 
-    // Feedback sonoro
+    // Audio Hover
     const interactables = document.querySelectorAll('.btn, .nav-center a, .nav-btn, .cyber-tab');
     interactables.forEach(item => {
         item.addEventListener('mouseenter', () => triggerAudio(1400, 'sine', 0.015));
@@ -593,7 +1032,7 @@ ${t.term_contact_body}`;
     });
 });
 
-// Canvas Background
+// Background Particles
 const canvas = document.getElementById('bg-canvas');
 if (canvas) {
     const ctx = canvas.getContext('2d');
