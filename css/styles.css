@@ -836,6 +836,55 @@ body.light-mode {
     word-break: break-all;
 }
 
+/* BOTÓN NEON SCROLL TO TOP */
+.neon-back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 48px;
+    height: 48px;
+    background: rgba(10, 11, 16, 0.9);
+    border: 1px solid var(--fenrir-cyan);
+    border-radius: 4px;
+    color: var(--fenrir-cyan);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.1, 0.9, 0.2, 1);
+    box-shadow: 0 0 10px rgba(0, 210, 211, 0.3);
+}
+
+.neon-back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.neon-back-to-top:hover {
+    background: rgba(0, 210, 211, 0.15);
+    box-shadow: 0 0 20px rgba(0, 210, 211, 0.7), inset 0 0 10px rgba(0, 210, 211, 0.4);
+    transform: translateY(-3px);
+}
+
+.neon-arrow {
+    font-size: 0.9rem;
+    line-height: 1;
+}
+
+.neon-line {
+    width: 14px;
+    height: 2px;
+    background-color: var(--fenrir-cyan);
+    margin-top: 2px;
+    box-shadow: 0 0 6px var(--fenrir-cyan);
+}
+
 /* TERMINAL MODAL */
 .terminal-modal-overlay {
     position: fixed;
@@ -1012,7 +1061,30 @@ body.light-mode {
     }
 }
 
-/* ADAPTACIÓN RESPONSIVE (SMARTPHONES & TABLETS) */
+/* COPYRIGHT FOOTER BAR */
+.cyber-copyright-bar {
+    margin-top: 2rem;
+    padding-top: 1.2rem;
+    border-top: 1px dashed var(--fenrir-border);
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--fenrir-text-muted);
+}
+
+.copyright-link {
+    color: var(--fenrir-cyan);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.copyright-link:hover {
+    color: var(--fenrir-accent);
+    text-shadow: 0 0 8px var(--fenrir-accent);
+}
+
+/* RESPONSIVE */
 @media (max-width: 1024px) {
     .hero-section {
         grid-template-columns: 1fr;
@@ -1108,5 +1180,12 @@ body.light-mode {
 
     .content-block {
         padding: 1.2rem;
+    }
+
+    .neon-back-to-top {
+        bottom: 1.2rem;
+        right: 1.2rem;
+        width: 42px;
+        height: 42px;
     }
 }

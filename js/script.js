@@ -4,10 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ==========================================
     // DICCIONARIO TRADUCIDO COMPLETO (ES, EN, GL)
+    // Sin bloque Fenrirsoft en Experiencia
     // ==========================================
     const translations = {
         ES: {
-            // Navbar
             nav_runner: "[01] RUNNER",
             nav_skills: "[02] CYBERWARE SKILLS",
             nav_memorias: "[03] ENGRAMS",
@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_protocolo: "[05] CREDENCIALES",
             nav_contacto: "[06] NETLINK",
             
-            // Hero
             hero_badge: "BIO-DATA LOADED // UPLINK COMPLETE",
             hero_subtitle: "Senior L3 Application Support Engineer | Linux & Middleware Specialist",
             hero_desc: "Especializado en la gestión y diagnóstico de entornos de alta disponibilidad, resolución de incidencias L3 en arquitecturas SOAP/REST, automatización de sistemas Linux mediante Bash y garantía de continuidad operativa en plataformas bancarias y telecomunicaciones.",
@@ -24,14 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
             metric_critical: "ENTORNOS CRÍTICOS",
             metric_english: "INGLÉS TÉCNICO",
             
-            // Botones Hero
             btn_contact: "⚡ INICIAR TRANSMISIÓN / CONTACTO",
             btn_github: "📄 VER GITHUB (MD)",
             btn_cv_eng: "📄 DESCARGAR CV Carlos Nieves ENG (PDF)",
             btn_cv_esp: "📄 DESCARGAR CV Carlos Nieves ESP (PDF)",
             btn_cli: ">_ ABRIR TERMINAL",
             
-            // Skills Secciones y Tarjetas
             block02_title: "[02] MATRIZ DE HABILIDADES NEURALES",
             tab_all: "TODOS LOS NODOS",
             tab_sistemas: "LINUX & CORE",
@@ -56,33 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
             skill_card_db: "Bases de Datos & Backend",
             badge_core: "NÚCLEO",
 
-            // Bloque 03 - Memorias Timeline
             block03_title: "SECUENCIA DE MEMORIAS (EXPERIENCIA PROFESIONAL)",
             timeline_html: `
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <span class="marker-node">◆</span>
-                        <div class="marker-line"></div>
-                    </div>
-                    <div class="cyber-skill-card timeline-card">
-                        <span class="corner-bracket top-left"></span>
-                        <span class="corner-bracket top-right"></span>
-                        <span class="corner-bracket bottom-left"></span>
-                        <span class="corner-bracket bottom-right"></span>
-                        <div class="card-header-row">
-                            <h4>Fundador y Lead Developer (CEO)</h4>
-                            <span class="date-badge">2024 - Presente</span>
-                        </div>
-                        <div class="company-tag">
-                            <span class="company-icon">🌐</span> Fenrirsoft Digital Agency (Remoto / Galicia)
-                        </div>
-                        <ul class="engram-bullets">
-                            <li>Dirección técnica en desarrollo web, consultoría IT y soluciones cloud para pymes.</li>
-                            <li>Despliegue de aplicaciones web en <b>Cloudflare Pages</b> con pipelines CI/CD en <b>GitHub</b>, optimización web y auditorías de accesibilidad.</li>
-                        </ul>
-                    </div>
-                </div>
-
                 <div class="timeline-item">
                     <div class="timeline-marker">
                         <span class="marker-node">◆</span>
@@ -180,14 +152,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `,
 
-            // Bloque 04 - Arquitectura
             block04_title: "NODOS ARQUITECTÓNICOS (PROYECTOS CLAVE)",
             proj1_title: "Plataforma EDIController",
             proj1_desc: "Arquitectura de alta disponibilidad para transferencia crítica de archivos bancarios. Implementación de clústeres redundantes sobre Linux con tolerancia a fallos y automatización en Bash.",
             proj2_title: "Fenrirsoft Web Engine",
             proj2_desc: "Infraestructura de despliegue continuo en Cloudflare Pages integrada con pipelines sincronizados en GitHub para la entrega de plataformas web empresariales.",
 
-            // Bloque 05 - Protocolos
             block05_title: "CREDENCIALES Y PROTOCOLOS",
             proto_edu: "🎓 FORMACIÓN ACADÉMICA",
             proto_edu_content: `
@@ -201,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p class="institute">Instituto Universitario de Tecnología Venezuela (2015)</p>
                 </div>
             `,
-            proto_cert: "🏵️ CERTIFICACIONES DESTACADAS",
+            proto_cert: "ORG CERTIFICACIONES DESTACADAS",
             proto_cert_content: `
                 <li><b>Developer Certification Suite</b> — freeCodeCamp (08/2026)<br><span class="cert-sub">Python, JavaScript, Front-End Dev Libraries, Responsive Web Design</span></li>
                 <li><b>B1 English for Developers</b> — freeCodeCamp (08/2026)</li>
@@ -215,14 +185,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p><b>Galego:</b> Nivel Básico (Entorno A Coruña / Galicia)</p>
             `,
 
-            // Bloque 06 - Contacto
             block06_title: "TRANSMISIÓN DE SEÑAL & CONTACTO",
             contact_whatsapp: "WHATSAPP / MÓVIL",
             contact_email: "EMAIL DIRECTO",
             contact_linkedin: "PERFIL LINKEDIN",
             contact_github: "REPOSITORIOS GITHUB",
             
-            // Terminal i18n
             term_modal_title: "EXP-92 CONSOLE // COMMAND TERMINAL",
             term_input_placeholder: "Escribe un comando (ej: help, bio, skills)...",
             term_welcome: `==================================================\nEXP-92 CONSOLE // COMMAND TERMINAL\n==================================================\nEscribe <span class="term-highlight">help</span> para desplegar la lista de protocolos disponibles.`,
@@ -246,16 +214,13 @@ document.addEventListener('DOMContentLoaded', () => {
             </ul>`,
             term_exp_title: "SECUENCIA DE MEMORIAS (EXPERIENCIA PROFESIONAL):",
             term_exp_body: `<ul class="term-list">
-                <li>1. <b>2024 - Presente:</b> Fenrirsoft Digital Agency — Fundador & Lead Developer (CEO)<br>
-                &nbsp;&nbsp;&nbsp;• Dirección técnica en desarrollo web, consultoría IT y soluciones cloud.<br>
-                &nbsp;&nbsp;&nbsp;• Despliegues en Cloudflare Pages, pipelines CI/CD en GitHub, auditorías de accesibilidad.</li>
-                <li>2. <b>12/2017 - 01/2025:</b> Telecomunicaciones Movilnet C.A. — Especialista de Soporte L3 (Aplicaciones & Servicios)<br>
+                <li>1. <b>12/2017 - 01/2025:</b> Telecomunicaciones Movilnet C.A. — Especialista de Soporte L3 (Aplicaciones & Servicios)<br>
                 &nbsp;&nbsp;&nbsp;• Incidencias L3 en entornos Linux de alta disponibilidad (SOAP/REST).<br>
                 &nbsp;&nbsp;&nbsp;• Automatización con Bash para reducir MTTR y migración de EDIController con clústeres redundantes (100% Uptime).</li>
-                <li>3. <b>04/2016 - 06/2017:</b> Banesco Banco Universal C.A. — Analista Operación POS<br>
+                <li>2. <b>04/2016 - 06/2017:</b> Banesco Banco Universal C.A. — Analista Operación POS<br>
                 &nbsp;&nbsp;&nbsp;• Soporte técnico regional, gestión, sustitución y retiro de dispositivos POS.<br>
                 &nbsp;&nbsp;&nbsp;• Atención de requerimientos operacionales para aliados comerciales.</li>
-                <li>4. <b>02/2014 - 09/2014:</b> Drivers, System & Parts C.A. — Soporte Técnico L1/L2 & Programador<br>
+                <li>3. <b>02/2014 - 09/2014:</b> Drivers, System & Parts C.A. — Soporte Técnico L1/L2 & Programador<br>
                 &nbsp;&nbsp;&nbsp;• Soporte presencial/remoto L1/L2 y atención al público.<br>
                 &nbsp;&nbsp;&nbsp;• Desarrollo de aplicación personalizada en Java/Linux para gestión de tiempo de personal.</li>
             </ul>`,
@@ -276,7 +241,6 @@ document.addEventListener('DOMContentLoaded', () => {
             term_unknown_cmd: 'Comando no reconocido: "%s". Escribe <span class="term-highlight">help</span> para consultar los comandos disponibles.'
         },
         EN: {
-            // Navbar
             nav_runner: "[01] RUNNER",
             nav_skills: "[02] CYBERWARE SKILLS",
             nav_memorias: "[03] ENGRAMS",
@@ -284,7 +248,6 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_protocolo: "[05] CREDENTIALS",
             nav_contacto: "[06] NETLINK",
             
-            // Hero
             hero_badge: "BIO-DATA LOADED // UPLINK COMPLETE",
             hero_subtitle: "Senior L3 Application Support Engineer | Linux & Middleware Specialist",
             hero_desc: "Specialized in managing and diagnosing high-availability environments, L3 incident resolution on SOAP/REST architectures, Linux automation via Bash, and operational continuity assurance across banking and telecom platforms.",
@@ -293,14 +256,12 @@ document.addEventListener('DOMContentLoaded', () => {
             metric_critical: "CRITICAL ENVIRONMENTS",
             metric_english: "TECHNICAL ENGLISH",
             
-            // Botones Hero
             btn_contact: "⚡ START TRANSMISSION / CONTACT",
             btn_github: "📄 VIEW GITHUB (MD)",
             btn_cv_eng: "📄 DOWNLOAD CV Carlos Nieves ENG (PDF)",
             btn_cv_esp: "📄 DOWNLOAD CV Carlos Nieves ESP (PDF)",
             btn_cli: ">_ OPEN TERMINAL",
             
-            // Skills Secciones y Tarjetas
             block02_title: "[02] NEURAL SKILLS MATRIX",
             tab_all: "ALL NODES",
             tab_sistemas: "LINUX & CORE",
@@ -325,33 +286,8 @@ document.addEventListener('DOMContentLoaded', () => {
             skill_card_db: "Databases & Backend",
             badge_core: "CORE",
 
-            // Bloque 03 - Memorias Timeline
             block03_title: "MEMORY SEQUENCE (PROFESSIONAL EXPERIENCE)",
             timeline_html: `
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <span class="marker-node">◆</span>
-                        <div class="marker-line"></div>
-                    </div>
-                    <div class="cyber-skill-card timeline-card">
-                        <span class="corner-bracket top-left"></span>
-                        <span class="corner-bracket top-right"></span>
-                        <span class="corner-bracket bottom-left"></span>
-                        <span class="corner-bracket bottom-right"></span>
-                        <div class="card-header-row">
-                            <h4>Founder & Lead Developer (CEO)</h4>
-                            <span class="date-badge">2024 - Present</span>
-                        </div>
-                        <div class="company-tag">
-                            <span class="company-icon">🌐</span> Fenrirsoft Digital Agency (Remote / Galicia)
-                        </div>
-                        <ul class="engram-bullets">
-                            <li>Technical leadership in web development, IT consulting, and cloud solutions for SMEs.</li>
-                            <li>Deployment of web applications on <b>Cloudflare Pages</b> with CI/CD pipelines in <b>GitHub</b>, web optimization, and accessibility audits.</li>
-                        </ul>
-                    </div>
-                </div>
-
                 <div class="timeline-item">
                     <div class="timeline-marker">
                         <span class="marker-node">◆</span>
@@ -449,14 +385,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `,
 
-            // Bloque 04 - Arquitectura
             block04_title: "ARCHITECTURAL NODES (KEY PROJECTS)",
             proj1_title: "EDIController Platform",
             proj1_desc: "High-availability architecture for critical banking file transfers. Implementation of redundant clusters on Linux with fault tolerance and Bash automation.",
             proj2_title: "Fenrirsoft Web Engine",
             proj2_desc: "Continuous deployment infrastructure on Cloudflare Pages integrated with synchronized GitHub pipelines for enterprise web platforms.",
 
-            // Bloque 05 - Protocolos
             block05_title: "CREDENTIALS AND PROTOCOLS",
             proto_edu: "🎓 ACADEMIC EDUCATION",
             proto_edu_content: `
@@ -484,14 +418,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p><b>Galician:</b> Basic Level (A Coruña / Galicia Region)</p>
             `,
 
-            // Bloque 06 - Contacto
             block06_title: "SIGNAL TRANSMISSION & CONTACT",
             contact_whatsapp: "WHATSAPP / MOBILE",
             contact_email: "DIRECT EMAIL",
             contact_linkedin: "LINKEDIN PROFILE",
             contact_github: "GITHUB REPOSITORIES",
             
-            // Terminal i18n
             term_modal_title: "EXP-92 CONSOLE // COMMAND TERMINAL",
             term_input_placeholder: "Type a command (e.g. help, bio, skills)...",
             term_welcome: `==================================================\nEXP-92 CONSOLE // COMMAND TERMINAL\n==================================================\nType <span class="term-highlight">help</span> to display available protocols.`,
@@ -515,16 +447,13 @@ document.addEventListener('DOMContentLoaded', () => {
             </ul>`,
             term_exp_title: "MEMORY SEQUENCE (WORK EXPERIENCE):",
             term_exp_body: `<ul class="term-list">
-                <li>1. <b>2024 - Present:</b> Fenrirsoft Digital Agency — Founder & Lead Developer (CEO)<br>
-                &nbsp;&nbsp;&nbsp;• Technical direction in web dev, IT consulting, and cloud solutions.<br>
-                &nbsp;&nbsp;&nbsp;• Deployments on Cloudflare Pages, GitHub CI/CD pipelines, accessibility audits.</li>
-                <li>2. <b>12/2017 - 01/2025:</b> Telecomunicaciones Movilnet C.A. — L3 Support Specialist (Apps & Services)<br>
+                <li>1. <b>12/2017 - 01/2025:</b> Telecomunicaciones Movilnet C.A. — L3 Support Specialist (Apps & Services)<br>
                 &nbsp;&nbsp;&nbsp;• L3 troubleshooting in high-availability Linux environments (SOAP/REST).<br>
                 &nbsp;&nbsp;&nbsp;• Bash automation to reduce MTTR and EDIController migration with redundant clusters (100% Uptime).</li>
-                <li>3. <b>04/2016 - 06/2017:</b> Banesco Banco Universal C.A. — POS Operations Analyst<br>
+                <li>2. <b>04/2016 - 06/2017:</b> Banesco Banco Universal C.A. — POS Operations Analyst<br>
                 &nbsp;&nbsp;&nbsp;• Regional tech support, management, replacement, and removal of POS terminals.<br>
                 &nbsp;&nbsp;&nbsp;• Resolution of operational requirements for commercial partners.</li>
-                <li>4. <b>02/2014 - 09/2014:</b> Drivers, System & Parts C.A. — L1/L2 Tech Support & Developer<br>
+                <li>3. <b>02/2014 - 09/2014:</b> Drivers, System & Parts C.A. — L1/L2 Tech Support & Developer<br>
                 &nbsp;&nbsp;&nbsp;• On-site/remote L1/L2 support and customer assistance.<br>
                 &nbsp;&nbsp;&nbsp;• Custom Java/Linux app development for employee time management.</li>
             </ul>`,
@@ -545,7 +474,6 @@ document.addEventListener('DOMContentLoaded', () => {
             term_unknown_cmd: 'Unrecognized command: "%s". Type <span class="term-highlight">help</span> to view available commands.'
         },
         GL: {
-            // Navbar
             nav_runner: "[01] RUNNER",
             nav_skills: "[02] CYBERWARE SKILLS",
             nav_memorias: "[03] ENGRAMS",
@@ -553,7 +481,6 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_protocolo: "[05] CREDENCIAS",
             nav_contacto: "[06] NETLINK",
             
-            // Hero
             hero_badge: "DATOS BIOLÓXICOS CARGADOS // ENLACE COMPLETO",
             hero_subtitle: "Engenheiro Senior de Soporte L3 | Especialista en Linux e Middleware",
             hero_desc: "Especializado na xestión e diagnóstico de contornos de alta dispoñibilidade, resolución de incidencias L3 en arquitecturas SOAP/REST, automatización de sistemas Linux mediante Bash e garantía de continuidade operativa en plataformas bancarias e telecomunicacións.",
@@ -562,14 +489,12 @@ document.addEventListener('DOMContentLoaded', () => {
             metric_critical: "CONTORNOS CRÍTICOS",
             metric_english: "INGLÉS TÉCNICO",
             
-            // Botones Hero
             btn_contact: "⚡ INICIAR TRANSMISIÓN / CONTACTO",
             btn_github: "📄 VER GITHUB (MD)",
             btn_cv_eng: "📄 DESCARGAR CV Carlos Nieves ENG (PDF)",
             btn_cv_esp: "📄 DESCARGAR CV Carlos Nieves ESP (PDF)",
             btn_cli: ">_ ABRIR TERMINAL",
             
-            // Skills Secciones y Tarjetas
             block02_title: "[02] MATRIZ DE HABILIDADES NEURAIS",
             tab_all: "TODOS OS NODOS",
             tab_sistemas: "LINUX & CORE",
@@ -594,33 +519,8 @@ document.addEventListener('DOMContentLoaded', () => {
             skill_card_db: "Bases de Datos & Backend",
             badge_core: "NÚCLEO",
 
-            // Bloque 03 - Memorias Timeline
             block03_title: "SECUENCIA DE MEMORIAS (EXPERIENCIA PROFESIONAL)",
             timeline_html: `
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <span class="marker-node">◆</span>
-                        <div class="marker-line"></div>
-                    </div>
-                    <div class="cyber-skill-card timeline-card">
-                        <span class="corner-bracket top-left"></span>
-                        <span class="corner-bracket top-right"></span>
-                        <span class="corner-bracket bottom-left"></span>
-                        <span class="corner-bracket bottom-right"></span>
-                        <div class="card-header-row">
-                            <h4>Fundador e Lead Developer (CEO)</h4>
-                            <span class="date-badge">2024 - Presente</span>
-                        </div>
-                        <div class="company-tag">
-                            <span class="company-icon">🌐</span> Fenrirsoft Digital Agency (Remoto / Galicia)
-                        </div>
-                        <ul class="engram-bullets">
-                            <li>Dirección técnica en desenvolvemento web, consultoría IT e solucións cloud para pemes.</li>
-                            <li>Despregamento de aplicacións web en <b>Cloudflare Pages</b> con pipelines CI/CD en <b>GitHub</b>, optimización web e auditorías de accesibilidade.</li>
-                        </ul>
-                    </div>
-                </div>
-
                 <div class="timeline-item">
                     <div class="timeline-marker">
                         <span class="marker-node">◆</span>
@@ -718,14 +618,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `,
 
-            // Bloque 04 - Arquitectura
             block04_title: "NODOS ARQUITECTÓNICOS (PROXECTOS CLAVE)",
             proj1_title: "Plataforma EDIController",
             proj1_desc: "Arquitectura de alta dispoñibilidade para transferencia crítica de ficheiros bancarios. Implementación de clústeres redundantes sobre Linux con tolerancia a fallos e automatización en Bash.",
             proj2_title: "Fenrirsoft Web Engine",
             proj2_desc: "Infraestrutura de despregamento continuo en Cloudflare Pages integrada con pipelines sincronizados en GitHub para a entrega de plataformas web empresariais.",
 
-            // Bloque 05 - Protocolos
             block05_title: "CREDENCIALES E PROTOCOLOS",
             proto_edu: "🎓 FORMACIÓN ACADÉMICA",
             proto_edu_content: `
@@ -753,14 +651,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p><b>Galego:</b> Nivel Básico (Contorno A Coruña / Galicia)</p>
             `,
 
-            // Bloque 06 - Contacto
             block06_title: "TRANSMISIÓN DE SINAL E CONTACTO",
             contact_whatsapp: "WHATSAPP / MÓBIL",
             contact_email: "CORREO DIRECTO",
             contact_linkedin: "PERFIL LINKEDIN",
             contact_github: "REPOSITORIOS GITHUB",
             
-            // Terminal i18n
             term_modal_title: "EXP-92 CONSOLE // COMMAND TERMINAL",
             term_input_placeholder: "Escribe un comando (ex: help, bio, skills)...",
             term_welcome: `==================================================\nEXP-92 CONSOLE // COMMAND TERMINAL\n==================================================\nEscribe <span class="term-highlight">help</span> para despregar os protocolos dispoñibles.`,
@@ -784,16 +680,13 @@ document.addEventListener('DOMContentLoaded', () => {
             </ul>`,
             term_exp_title: "SECUENCIA DE MEMORIAS (EXPERIENCIA LABORAL):",
             term_exp_body: `<ul class="term-list">
-                <li>1. <b>2024 - Presente:</b> Fenrirsoft Digital Agency — Fundador e Lead Developer (CEO)<br>
-                &nbsp;&nbsp;&nbsp;• Dirección técnica en desenvolvemento web, consultoría IT e solucións cloud.<br>
-                &nbsp;&nbsp;&nbsp;• Despregamentos en Cloudflare Pages, pipelines CI/CD en GitHub, auditorías de accesibilidade.</li>
-                <li>2. <b>12/2017 - 01/2025:</b> Telecomunicaciones Movilnet C.A. — Especialista de Soporte L3 (Aplicacións e Servizos)<br>
+                <li>1. <b>12/2017 - 01/2025:</b> Telecomunicaciones Movilnet C.A. — Especialista de Soporte L3 (Aplicacións e Servizos)<br>
                 &nbsp;&nbsp;&nbsp;• Incidencias L3 en contornos Linux de alta dispoñibilidade (SOAP/REST).<br>
                 &nbsp;&nbsp;&nbsp;• Automatización con Bash para reducir MTTR e migración de EDIController con clústeres redundantes (100% Uptime).</li>
-                <li>3. <b>04/2016 - 06/2017:</b> Banesco Banco Universal C.A. — Analista Operación POS<br>
+                <li>2. <b>04/2016 - 06/2017:</b> Banesco Banco Universal C.A. — Analista Operación POS<br>
                 &nbsp;&nbsp;&nbsp;• Soporte técnico rexional, xestión, substitución e retiro de dispositivos POS.<br>
                 &nbsp;&nbsp;&nbsp;• Atención de requirimentos operacionais para aliados comerciais.</li>
-                <li>4. <b>02/2014 - 09/2014:</b> Drivers, System & Parts C.A. — Soporte Técnico L1/L2 e Programador<br>
+                <li>3. <b>02/2014 - 09/2014:</b> Drivers, System & Parts C.A. — Soporte Técnico L1/L2 e Programador<br>
                 &nbsp;&nbsp;&nbsp;• Soporte presencial/remoto L1/L2 e atención ao público.<br>
                 &nbsp;&nbsp;&nbsp;• Desenvolvemento de aplicación personalizada en Java/Linux para xestión de tempo de persoal.</li>
             </ul>`,
@@ -816,6 +709,29 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // ==========================================
+    // BOTÓN NEON SCROLL TOP
+    // ==========================================
+    const backToTopBtn = document.getElementById('back-to-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    });
+
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', () => {
+            triggerAudio(1200, 'sine', 0.03);
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // ==========================================
     // MENÚ HAMBURGUESA RESPONSIVO
     // ==========================================
     const hamburgerBtn = document.getElementById('hamburger-btn');
@@ -828,7 +744,6 @@ document.addEventListener('DOMContentLoaded', () => {
             triggerAudio(1100, 'square', 0.03);
         });
 
-        // Cerrar al pulsar sobre cualquier enlace de navegación
         navCenter.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 hamburgerBtn.classList.remove('active');
@@ -838,7 +753,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================
-    // CONMUTADOR Y RENDERIZADOR DE IDIOMA
+    // CONMUTADOR DE IDIOMA
     // ==========================================
     const languages = ['ES', 'EN', 'GL'];
     let currentLangIndex = 0;
@@ -849,7 +764,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const langData = translations[langCode];
         if (!langData) return;
 
-        // Traducir elementos simples
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (langData[key] !== undefined) {
@@ -857,7 +771,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Traducir placeholders
         document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
             const key = el.getAttribute('data-i18n-placeholder');
             if (langData[key] !== undefined) {
@@ -865,7 +778,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Inyectar HTML traducido para bloques dinámicos
         const timelineContainer = document.getElementById('timeline-container');
         if (timelineContainer && langData.timeline_html) {
             timelineContainer.innerHTML = langData.timeline_html;
@@ -894,7 +806,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Inicializar idioma al cargar
     setLanguage('ES');
 
     if (langBtn) {
@@ -1058,7 +969,7 @@ ${t.term_contact_body}`;
     }
 
     // ==========================================
-    // EFECTOS DE AUDIO Y CANVA
+    // AUDIO & SFX
     // ==========================================
     let audioActive = true;
     const audioBtn = document.getElementById('audio-btn');
@@ -1157,7 +1068,7 @@ ${t.term_contact_body}`;
     });
 });
 
-// Background Particles
+// Partículas de fondo
 const canvas = document.getElementById('bg-canvas');
 if (canvas) {
     const ctx = canvas.getContext('2d');

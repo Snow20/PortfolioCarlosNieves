@@ -4,7 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carlos Nieves | CV Interface</title>
+    <title>Carlos Nieves | Senior L3 Application Support Engineer & Linux Specialist</title>
+    
+    <!-- Meta etiquetas de optimización SEO & ATS Europeos / Gallegos -->
+    <meta name="description" content="Perfil profesional de Carlos Nieves: Senior L3 Application Support Engineer, especialista en Linux, Middleware, SOAP/REST y arquitecturas de alta disponibilidad en A Coruña, Galicia.">
+    <meta name="keywords" content="Carlos Nieves, Soporte L3, Application Support Engineer, Linux Specialist, Middleware, SOAP, REST, Bash Automation, EDIController, High Availability, DevOps Support, A Coruña, Galicia, España">
+    <meta name="author" content="Carlos Nieves">
+    <meta property="og:title" content="Carlos Nieves | Senior L3 Application Support Engineer">
+    <meta property="og:description" content="Especialista L3 en entornos Linux de alta disponibilidad, Middleware y automatización Bash. Residencia en A Coruña, Galicia.">
+    <meta property="og:type" content="profile">
+    
+    <!-- JSON-LD Datos estructurados para ATS y motores de búsqueda -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Carlos Nieves",
+      "jobTitle": "Senior L3 Application Support Engineer",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Carballo / A Coruña",
+        "addressRegion": "Galicia",
+        "addressCountry": "ES"
+      },
+      "email": "carlos.a.n.batatimo@gmail.com",
+      "telephone": "+34633191597",
+      "sameAs": [
+        "https://www.linkedin.com/in/carlos-nievesb",
+        "https://github.com/Snow20"
+      ],
+      "knowsAbout": [
+        "Linux", "Unix", "Bash Scripting", "SOAP", "REST", "Middleware", "High Availability", "L3 Support", "Splunk", "EDIController"
+      ]
+    }
+    </script>
+
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -12,7 +46,7 @@
 <body>
     <canvas id="bg-canvas"></canvas>
 
-    <header class="animus-navbar">
+    <header class="animus-navbar" id="top-navbar">
         <div class="nav-left">
             <span class="diamond-icon">◆</span>
             <span class="brand">EXP-92 // <strong>NEURAL DOSSIER</strong></span>
@@ -75,7 +109,7 @@
 
             <div class="action-bar">
                 <a href="#contacto" class="btn btn-primary" data-i18n="btn_contact">⚡ INICIAR TRANSMISIÓN / CONTACTO</a>
-                <a href="https://github.com/Snow20" target="_blank" class="btn btn-secondary" data-i18n="btn_github">📄 VER GITHUB (MD)</a>
+                <a href="https://github.com/Snow20" target="_blank" rel="noopener" class="btn btn-secondary" data-i18n="btn_github">📄 VER GITHUB (MD)</a>
                 <a href="assets/docs/Carlos Nieves CV 2026 ENG Galicia V2.pdf" download="Carlos_Nieves_CV_ENG.pdf" class="btn btn-secondary" data-i18n="btn_cv_eng">
                     📄 DESCARGAR CV Carlos Nieves ENG (PDF)
                 </a>
@@ -157,7 +191,7 @@
                     <span class="corner-bracket bottom-right"></span>
                     <div class="card-header">
                         <h4 data-i18n="skill_card_obs">Observabilidad & Logs</h4>
-                        <span class="cyber-badge cyan" data-i18n="badge_l3">L3 SUPPORT</span>
+                        <span class="cyber-badge cyan" data-i18n="badge_l3">SOPORTE L3</span>
                     </div>
                     <div class="pills-container">
                         <span class="skill-pill">Splunk (SPL)</span>
@@ -174,7 +208,7 @@
                     <span class="corner-bracket bottom-right"></span>
                     <div class="card-header">
                         <h4 data-i18n="skill_card_devops">Contenedores & DevOps</h4>
-                        <span class="cyber-badge purple" data-i18n="badge_infra">INFRASTRUCTURE</span>
+                        <span class="cyber-badge purple" data-i18n="badge_infra">INFRAESTRUCTURA</span>
                     </div>
                     <div class="pills-container">
                         <span class="skill-pill">Docker</span>
@@ -192,7 +226,7 @@
                     <span class="corner-bracket bottom-right"></span>
                     <div class="card-header">
                         <h4 data-i18n="skill_card_langs">Lenguajes de Programación</h4>
-                        <span class="cyber-badge cyan" data-i18n="badge_advanced">ADVANCED</span>
+                        <span class="cyber-badge cyan" data-i18n="badge_advanced">AVANZADO</span>
                     </div>
                     <div class="pills-container">
                         <span class="skill-pill">Java</span>
@@ -227,7 +261,7 @@
                     <span class="corner-bracket bottom-right"></span>
                     <div class="card-header">
                         <h4 data-i18n="skill_card_db">Bases de Datos & Backend</h4>
-                        <span class="cyber-badge cyan" data-i18n="badge_core">CORE</span>
+                        <span class="cyber-badge cyan" data-i18n="badge_core">NÚCLEO</span>
                     </div>
                     <div class="pills-container">
                         <span class="skill-pill">MySQL</span>
@@ -387,7 +421,7 @@
                     </div>
                 </a>
 
-                <a href="https://www.linkedin.com/in/carlos-nievesb" target="_blank" class="cyber-skill-card contact-card">
+                <a href="https://www.linkedin.com/in/carlos-nievesb" target="_blank" rel="noopener" class="cyber-skill-card contact-card">
                     <span class="corner-bracket top-left"></span>
                     <span class="corner-bracket top-right"></span>
                     <span class="corner-bracket bottom-left"></span>
@@ -401,7 +435,7 @@
                     </div>
                 </a>
 
-                <a href="https://github.com/Snow20" target="_blank" class="cyber-skill-card contact-card">
+                <a href="https://github.com/Snow20" target="_blank" rel="noopener" class="cyber-skill-card contact-card">
                     <span class="corner-bracket top-left"></span>
                     <span class="corner-bracket top-right"></span>
                     <span class="corner-bracket bottom-left"></span>
@@ -415,8 +449,18 @@
                     </div>
                 </a>
             </div>
+            <div class="cyber-copyright-bar">
+                <span data-i18n="copyright_text">© 2026 Carlos Nieves. copyright</span> 
+                <a href="https://linktr.ee/FenrirsoftDigitalAgency" target="_blank" rel="noopener" class="copyright-link">Fenrirsoft Digital Agency</a>
+            </div>
         </div>
     </footer>
+
+    <!-- BOTÓN NEON SCROLL TOP -->
+    <button id="back-to-top" class="neon-back-to-top" aria-label="Volver arriba">
+        <span class="neon-arrow">▲</span>
+        <span class="neon-line"></span>
+    </button>
 
     <div id="terminal-modal" class="terminal-modal-overlay">
         <div class="terminal-window">
