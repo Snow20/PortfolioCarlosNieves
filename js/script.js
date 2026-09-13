@@ -42,14 +42,19 @@ document.addEventListener('DOMContentLoaded', () => {
             skill_card_sistemas: "Sistemas Linux & Core",
             badge_8years: "+8 AÑOS",
             skill_card_middleware: "Middleware & Arquitecturas API",
+            badge_enterprise: "ENTERPRISE",
             pill_clusters: "Clústeres Redundantes",
             pill_ha: "Alta Disponibilidad",
             skill_card_obs: "Observabilidad & Logs",
+            badge_l3: "SOPORTE L3",
             pill_incidents: "Gestión Incidencias",
             skill_card_devops: "Contenedores & DevOps",
+            badge_infra: "INFRAESTRUCTURA",
             skill_card_langs: "Lenguajes de Programación",
+            badge_advanced: "AVANZADO",
             skill_card_web: "Desarrollo Web & Frontend",
             skill_card_db: "Bases de Datos & Backend",
+            badge_core: "NÚCLEO",
 
             // Bloque 03 - Memorias Timeline
             block03_title: "SECUENCIA DE MEMORIAS (EXPERIENCIA PROFESIONAL)",
@@ -64,7 +69,17 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span class="corner-bracket top-right"></span>
                         <span class="corner-bracket bottom-left"></span>
                         <span class="corner-bracket bottom-right"></span>
-                        
+                        <div class="card-header-row">
+                            <h4>Fundador y Lead Developer (CEO)</h4>
+                            <span class="date-badge">2024 - Presente</span>
+                        </div>
+                        <div class="company-tag">
+                            <span class="company-icon">🌐</span> Fenrirsoft Digital Agency (Remoto / Galicia)
+                        </div>
+                        <ul class="engram-bullets">
+                            <li>Dirección técnica en desarrollo web, consultoría IT y soluciones cloud para pymes.</li>
+                            <li>Despliegue de aplicaciones web en <b>Cloudflare Pages</b> con pipelines CI/CD en <b>GitHub</b>, optimización web y auditorías de accesibilidad.</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -86,8 +101,9 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="company-icon">🏢</span> Telecomunicaciones Movilnet C.A. (Caracas, Venezuela)
                         </div>
                         <ul class="engram-bullets">
-                            <li>Resolución de incidencias L3 en entornos Linux de alta disponibilidad sobre arquitecturas <b>SOAP/REST</b>.</li>
+                            <li>Resolución de incidencias críticas L3 sobre aplicaciones <b>SOAP/REST</b> en entornos Linux de alta disponibilidad.</li>
                             <li>Reducción del MTTR mediante automatización con <b>Bash</b>, garantía de continuidad operativa y migración del sistema bancario <b>EDIController</b> con clústeres redundantes al 100% de uptime.</li>
+                            <li>Soporte técnico de segundo nivel de aplicaciones y servicios, asesoramiento y consultoría a clientes.</li>
                         </ul>
                     </div>
                 </div>
@@ -110,8 +126,32 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="company-icon">🏦</span> Banesco Banco Universal C.A. (Caracas, Venezuela)
                         </div>
                         <ul class="engram-bullets">
-                            <li>Gestión de soporte técnico regional, sustitución y retiro de dispositivos POS (Point of Sale).</li>
-                            <li>Atención y resolución de requerimientos operacionales directos para aliados comerciales.</li>
+                            <li>Gestión de visitas técnicas, sustitución y retiro de dispositivos POS a nivel regional.</li>
+                            <li>Atención y análisis directo de requerimientos operacionales para los agentes comerciales.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="marker-node">◆</span>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="cyber-skill-card timeline-card">
+                        <span class="corner-bracket top-left"></span>
+                        <span class="corner-bracket top-right"></span>
+                        <span class="corner-bracket bottom-left"></span>
+                        <span class="corner-bracket bottom-right"></span>
+                        <div class="card-header-row">
+                            <h4>Desarrollador Web Junior</h4>
+                            <span class="date-badge">01/2016 - 04/2016 (4 meses)</span>
+                        </div>
+                        <div class="company-tag">
+                            <span class="company-icon">💻</span> Millennium Web Design C.A. (Caracas, Venezuela)
+                        </div>
+                        <ul class="engram-bullets">
+                            <li>Diseño y desarrollo de páginas web funcionales, estrategias SEO y SEM.</li>
+                            <li>Mantenimiento de sitios web empresariales y gestión de canales de contenido.</li>
                         </ul>
                     </div>
                 </div>
@@ -134,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <ul class="engram-bullets">
                             <li>Soporte técnico de primer y segundo nivel (L1/L2) presencial y remoto.</li>
-                            <li>Desarrollo de aplicación personalizada en <b>Java/Linux</b> para la gestión del tiempo del personal.</li>
+                            <li>Diseño y desarrollo de aplicación personalizada en <b>Java/Linux</b> para la gestión del tiempo del personal.</li>
                         </ul>
                     </div>
                 </div>
@@ -152,20 +192,21 @@ document.addEventListener('DOMContentLoaded', () => {
             proto_edu: "🎓 FORMACIÓN ACADÉMICA",
             proto_edu_content: `
                 <div class="edu-item">
+                    <h5>Certificado de Profesionalidad: Confección y Publicación de Páginas Web</h5>
+                    <p class="institute">SEPE / Ministerio de Trabajo y Economía Social (España) - 560 horas (2026)</p>
+                    <p class="institute" style="font-size:0.8rem; margin-top:0.2rem;">Cualificación oficial con 80h de prácticas en empresa acreditando despliegue en servidor y optimización web.</p>
+                </div>
+                <div class="edu-item" style="margin-top:0.8rem;">
                     <h5>Técnico Superior Universitario (TSU) en Informática</h5>
                     <p class="institute">Instituto Universitario de Tecnología Venezuela (2015)</p>
                 </div>
-                <div class="edu-item">
-                    <h5>Certificado de Profesionalidad: Confección y Publicación de Páginas Web</h5>
-                    <p class="institute">SEPE / Ministerio de Trabajo (España) - 560 horas (2026)</p>
-                </div>
             `,
-            proto_cert: "ORG CERTIFICACIONES DESTACADAS",
+            proto_cert: "🏵️ CERTIFICACIONES DESTACADAS",
             proto_cert_content: `
-                <li><b>Developer Certification Suite</b> — freeCodeCamp (2026)</li>
-                <li><b>B1 English for Developers</b> — freeCodeCamp (2026)</li>
-                <li><b>Cloud Computing</b> — Google Activate (2024)</li>
-                <li><b>Fundamentos de Linux</b> — CANTV (2018)</li>
+                <li><b>Developer Certification Suite</b> — freeCodeCamp (08/2026)<br><span class="cert-sub">Python, JavaScript, Front-End Dev Libraries, Responsive Web Design</span></li>
+                <li><b>B1 English for Developers</b> — freeCodeCamp (08/2026)</li>
+                <li><b>Cloud Computing</b> — Google Activate (08/2024)</li>
+                <li><b>Fundamentos de Linux</b> — CANTV (04/2018)</li>
             `,
             proto_lang: "🗣️ IDIOMAS",
             proto_lang_content: `
@@ -185,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
             term_modal_title: "EXP-92 CONSOLE // COMMAND TERMINAL",
             term_input_placeholder: "Escribe un comando (ej: help, bio, skills)...",
             term_welcome: `==================================================\nEXP-92 CONSOLE // COMMAND TERMINAL\n==================================================\nEscribe <span class="term-highlight">help</span> para desplegar la lista de protocolos disponibles.`,
-            term_help_header: "PROTOCOLOS DE COMANDO DISPONIBLES:",
+            term_help_header: "PROTOCOLOS DE COMANDO DISPOÑIBLES:",
             term_help_bio: "Muestra el resumen profesional del operador.",
             term_help_skills: "Consulta la matriz de habilidades técnicas.",
             term_help_exp: "Lista la secuencia de experiencias laborales.",
@@ -270,14 +311,19 @@ document.addEventListener('DOMContentLoaded', () => {
             skill_card_sistemas: "Linux & Core Systems",
             badge_8years: "+8 YEARS",
             skill_card_middleware: "Middleware & API Architectures",
+            badge_enterprise: "ENTERPRISE",
             pill_clusters: "Redundant Clusters",
             pill_ha: "High Availability",
             skill_card_obs: "Observability & Logs",
+            badge_l3: "L3 SUPPORT",
             pill_incidents: "Incident Management",
             skill_card_devops: "Containers & DevOps",
+            badge_infra: "INFRASTRUCTURE",
             skill_card_langs: "Programming Languages",
+            badge_advanced: "ADVANCED",
             skill_card_web: "Web Development & Frontend",
             skill_card_db: "Databases & Backend",
+            badge_core: "CORE",
 
             // Bloque 03 - Memorias Timeline
             block03_title: "MEMORY SEQUENCE (PROFESSIONAL EXPERIENCE)",
@@ -300,7 +346,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="company-icon">🌐</span> Fenrirsoft Digital Agency (Remote / Galicia)
                         </div>
                         <ul class="engram-bullets">
-                            <li>Technical leadership in web development, IT consulting, and cloud deployments for SMEs.</li>
+                            <li>Technical leadership in web development, IT consulting, and cloud solutions for SMEs.</li>
                             <li>Deployment of web applications on <b>Cloudflare Pages</b> with CI/CD pipelines in <b>GitHub</b>, web optimization, and accessibility audits.</li>
                         </ul>
                     </div>
@@ -324,8 +370,9 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="company-icon">🏢</span> Telecomunicaciones Movilnet C.A. (Caracas, Venezuela)
                         </div>
                         <ul class="engram-bullets">
-                            <li>L3 incident resolution in high-availability Linux environments over <b>SOAP/REST</b> architectures.</li>
+                            <li>Critical L3 incident resolution on <b>SOAP/REST</b> applications in high-availability Linux environments.</li>
                             <li>MTTR reduction via <b>Bash</b> automation, operational continuity assurance, and migration of the <b>EDIController</b> banking system with redundant clusters achieving 100% uptime.</li>
+                            <li>Second-level technical support for applications and services, customer advice and technical consulting.</li>
                         </ul>
                     </div>
                 </div>
@@ -348,8 +395,32 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="company-icon">🏦</span> Banesco Banco Universal C.A. (Caracas, Venezuela)
                         </div>
                         <ul class="engram-bullets">
-                            <li>Management of regional tech support, replacement, and removal of POS (Point of Sale) devices.</li>
+                            <li>Management of regional technical visits, replacement, and removal of POS (Point of Sale) devices.</li>
                             <li>Direct handling and resolution of operational requirements for commercial partners.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="marker-node">◆</span>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="cyber-skill-card timeline-card">
+                        <span class="corner-bracket top-left"></span>
+                        <span class="corner-bracket top-right"></span>
+                        <span class="corner-bracket bottom-left"></span>
+                        <span class="corner-bracket bottom-right"></span>
+                        <div class="card-header-row">
+                            <h4>Junior Web Developer</h4>
+                            <span class="date-badge">01/2016 - 04/2016 (4 mos)</span>
+                        </div>
+                        <div class="company-tag">
+                            <span class="company-icon">💻</span> Millennium Web Design C.A. (Caracas, Venezuela)
+                        </div>
+                        <ul class="engram-bullets">
+                            <li>Design and development of functional web pages, SEO, and SEM strategies.</li>
+                            <li>Maintenance of corporate websites and social media channel management.</li>
                         </ul>
                     </div>
                 </div>
@@ -390,20 +461,21 @@ document.addEventListener('DOMContentLoaded', () => {
             proto_edu: "🎓 ACADEMIC EDUCATION",
             proto_edu_content: `
                 <div class="edu-item">
+                    <h5>Professional Certificate: Web Page Design and Publishing</h5>
+                    <p class="institute">SEPE / Ministry of Labor and Social Economy (Spain) - 560 hours (2026)</p>
+                    <p class="institute" style="font-size:0.8rem; margin-top:0.2rem;">Official qualification including 80h internship in company accrediting server deployment and web optimization.</p>
+                </div>
+                <div class="edu-item" style="margin-top:0.8rem;">
                     <h5>Higher University Technician (TSU) in Computer Science</h5>
                     <p class="institute">Instituto Universitario de Tecnología Venezuela (2015)</p>
-                </div>
-                <div class="edu-item">
-                    <h5>Professional Certificate: Web Page Design and Publishing</h5>
-                    <p class="institute">SEPE / Ministry of Labor (Spain) - 560 hours (2026)</p>
                 </div>
             `,
             proto_cert: "ORG KEY CERTIFICATIONS",
             proto_cert_content: `
-                <li><b>Developer Certification Suite</b> — freeCodeCamp (2026)</li>
-                <li><b>B1 English for Developers</b> — freeCodeCamp (2026)</li>
-                <li><b>Cloud Computing</b> — Google Activate (2024)</li>
-                <li><b>Linux Fundamentals</b> — CANTV (2018)</li>
+                <li><b>Developer Certification Suite</b> — freeCodeCamp (08/2026)<br><span class="cert-sub">Python, JavaScript, Front-End Dev Libraries, Responsive Web Design</span></li>
+                <li><b>B1 English for Developers</b> — freeCodeCamp (08/2026)</li>
+                <li><b>Cloud Computing</b> — Google Activate (08/2024)</li>
+                <li><b>Linux Fundamentals</b> — CANTV (04/2018)</li>
             `,
             proto_lang: "🗣️ LANGUAGES",
             proto_lang_content: `
@@ -508,14 +580,19 @@ document.addEventListener('DOMContentLoaded', () => {
             skill_card_sistemas: "Sistemas Linux & Core",
             badge_8years: "+8 ANOS",
             skill_card_middleware: "Middleware & Arquitecturas API",
+            badge_enterprise: "EMPRESARIAL",
             pill_clusters: "Clústeres Redundantes",
             pill_ha: "Alta Dispoñibilidade",
             skill_card_obs: "Observabilidade & Logs",
+            badge_l3: "SOPORTE L3",
             pill_incidents: "Xestión Incidencias",
             skill_card_devops: "Contedores & DevOps",
+            badge_infra: "INFRAESTRUTURA",
             skill_card_langs: "Linguaxes de Programación",
+            badge_advanced: "AVANZADO",
             skill_card_web: "Desenvolvemento Web & Frontend",
             skill_card_db: "Bases de Datos & Backend",
+            badge_core: "NÚCLEO",
 
             // Bloque 03 - Memorias Timeline
             block03_title: "SECUENCIA DE MEMORIAS (EXPERIENCIA PROFESIONAL)",
@@ -562,8 +639,9 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="company-icon">🏢</span> Telecomunicaciones Movilnet C.A. (Caracas, Venezuela)
                         </div>
                         <ul class="engram-bullets">
-                            <li>Resolución de incidencias L3 en contornos Linux de alta dispoñibilidade sobre arquitecturas <b>SOAP/REST</b>.</li>
+                            <li>Resolución de incidencias críticas L3 sobre aplicacións <b>SOAP/REST</b> en contornos Linux de alta dispoñibilidade.</li>
                             <li>Redución do MTTR mediante automatización con <b>Bash</b>, garantía de continuidade operativa e migración do sistema bancario <b>EDIController</b> con clústeres redundantes ao 100% de uptime.</li>
+                            <li>Soporte técnico de segundo nivel de aplicacións e servizos, asesoramento e consultoría a clientes.</li>
                         </ul>
                     </div>
                 </div>
@@ -586,8 +664,32 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="company-icon">🏦</span> Banesco Banco Universal C.A. (Caracas, Venezuela)
                         </div>
                         <ul class="engram-bullets">
-                            <li>Xestión de soporte técnico rexional, substitución e retiro de dispositivos POS (Point of Sale).</li>
-                            <li>Atención e resolución de requirimentos operacionais para aliados comerciais.</li>
+                            <li>Xestión de visitas técnicas, substitución e retiro de dispositivos POS a nivel rexional.</li>
+                            <li>Atención e resolución directa de requirimentos operacionais para os axentes comerciais.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="marker-node">◆</span>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="cyber-skill-card timeline-card">
+                        <span class="corner-bracket top-left"></span>
+                        <span class="corner-bracket top-right"></span>
+                        <span class="corner-bracket bottom-left"></span>
+                        <span class="corner-bracket bottom-right"></span>
+                        <div class="card-header-row">
+                            <h4>Desenvolvedor Web Junior</h4>
+                            <span class="date-badge">01/2016 - 04/2016 (4 meses)</span>
+                        </div>
+                        <div class="company-tag">
+                            <span class="company-icon">💻</span> Millennium Web Design C.A. (Caracas, Venezuela)
+                        </div>
+                        <ul class="engram-bullets">
+                            <li>Deseño e desenvolvemento de páxinas web funcionais, estratexias SEO e SEM.</li>
+                            <li>Mantemento de sitios web empresariais e xestión de canles de contido.</li>
                         </ul>
                     </div>
                 </div>
@@ -610,7 +712,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <ul class="engram-bullets">
                             <li>Soporte técnico de primeiro e segundo nivel (L1/L2) presencial e remoto.</li>
-                            <li>Desenvolvemento de aplicación personalizada en <b>Java/Linux</b> para a xestión do tempo do persoal.</li>
+                            <li>Deseño e desenvolvemento de aplicación personalizada en <b>Java/Linux</b> para a xestión do tempo do persoal.</li>
                         </ul>
                     </div>
                 </div>
@@ -628,20 +730,21 @@ document.addEventListener('DOMContentLoaded', () => {
             proto_edu: "🎓 FORMACIÓN ACADÉMICA",
             proto_edu_content: `
                 <div class="edu-item">
+                    <h5>Certificado de Profesionalidade: Confección e Publicación de Páxinas Web</h5>
+                    <p class="institute">SEPE / Ministerio de Traballo e Economía Social (España) - 560 horas (2026)</p>
+                    <p class="institute" style="font-size:0.8rem; margin-top:0.2rem;">Cualificación oficial con 80h de prácticas en empresa acreditando despregamento en servidor e optimización web.</p>
+                </div>
+                <div class="edu-item" style="margin-top:0.8rem;">
                     <h5>Técnico Superior Universitario (TSU) en Informática</h5>
                     <p class="institute">Instituto Universitario de Tecnología Venezuela (2015)</p>
-                </div>
-                <div class="edu-item">
-                    <h5>Certificado de Profesionalidade: Confección e Publicación de Páxinas Web</h5>
-                    <p class="institute">SEPE / Ministerio de Traballo (España) - 560 horas (2026)</p>
                 </div>
             `,
             proto_cert: "ORG CERTIFICACIÓNS DESTACADAS",
             proto_cert_content: `
-                <li><b>Developer Certification Suite</b> — freeCodeCamp (2026)</li>
-                <li><b>B1 English for Developers</b> — freeCodeCamp (2026)</li>
-                <li><b>Cloud Computing</b> — Google Activate (2024)</li>
-                <li><b>Fundamentos de Linux</b> — CANTV (2018)</li>
+                <li><b>Developer Certification Suite</b> — freeCodeCamp (08/2026)<br><span class="cert-sub">Python, JavaScript, Front-End Dev Libraries, Responsive Web Design</span></li>
+                <li><b>B1 English for Developers</b> — freeCodeCamp (08/2026)</li>
+                <li><b>Cloud Computing</b> — Google Activate (08/2024)</li>
+                <li><b>Fundamentos de Linux</b> — CANTV (04/2018)</li>
             `,
             proto_lang: "🗣️ IDIOMAS",
             proto_lang_content: `
@@ -711,6 +814,28 @@ document.addEventListener('DOMContentLoaded', () => {
             term_unknown_cmd: 'Comando non recoñecido: "%s". Escribe <span class="term-highlight">help</span> para consultar os comandos dispoñibles.'
         }
     };
+
+    // ==========================================
+    // MENÚ HAMBURGUESA RESPONSIVO
+    // ==========================================
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navCenter = document.getElementById('nav-center');
+
+    if (hamburgerBtn && navCenter) {
+        hamburgerBtn.addEventListener('click', () => {
+            hamburgerBtn.classList.toggle('active');
+            navCenter.classList.toggle('active');
+            triggerAudio(1100, 'square', 0.03);
+        });
+
+        // Cerrar al pulsar sobre cualquier enlace de navegación
+        navCenter.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburgerBtn.classList.remove('active');
+                navCenter.classList.remove('active');
+            });
+        });
+    }
 
     // ==========================================
     // CONMUTADOR Y RENDERIZADOR DE IDIOMA

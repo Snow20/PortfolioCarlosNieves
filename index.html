@@ -12,13 +12,19 @@
 <body>
     <canvas id="bg-canvas"></canvas>
 
-    
     <header class="animus-navbar">
         <div class="nav-left">
             <span class="diamond-icon">◆</span>
             <span class="brand">EXP-92 // <strong>NEURAL DOSSIER</strong></span>
         </div>
-        <nav class="nav-center">
+        
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-center" id="nav-center">
             <a href="#sujeto" class="active" data-i18n="nav_runner">[01] RUNNER</a>
             <a href="#skills" data-i18n="nav_skills">[02] CYBERWARE SKILLS</a>
             <a href="#memorias" data-i18n="nav_memorias">[03] ENGRAMS</a>
@@ -26,6 +32,7 @@
             <a href="#protocolo" data-i18n="nav_protocolo">[05] CREDENCIALES</a>
             <a href="#contacto" data-i18n="nav_contacto">[06] NETLINK</a>
         </nav>
+        
         <div class="nav-right">
             <button class="nav-btn" id="lang-btn">[ 🌐 ES ]</button>
             <button class="nav-btn" id="theme-btn">[ 🌙 ARASAKA DARK ]</button>
@@ -33,7 +40,6 @@
         </div>
     </header>
 
-    
     <main class="hero-section" id="sujeto">
         <div class="hero-left">
             <div class="status-badge">
@@ -88,7 +94,6 @@
         </div>
     </main>
 
-    
     <section class="content-block cyber-skills-section" id="skills">
         <div class="block-container">
             <h3 class="section-title" data-i18n="block02_title">[02] MATRIZ DE HABILIDADES NEURALES</h3>
@@ -134,7 +139,7 @@
                     <span class="corner-bracket bottom-right"></span>
                     <div class="card-header">
                         <h4 data-i18n="skill_card_middleware">Middleware & Arquitecturas API</h4>
-                        <span class="cyber-badge purple">ENTERPRISE</span>
+                        <span class="cyber-badge purple" data-i18n="badge_enterprise">ENTERPRISE</span>
                     </div>
                     <div class="pills-container">
                         <span class="skill-pill">SOAP</span>
@@ -152,7 +157,7 @@
                     <span class="corner-bracket bottom-right"></span>
                     <div class="card-header">
                         <h4 data-i18n="skill_card_obs">Observabilidad & Logs</h4>
-                        <span class="cyber-badge cyan">L3 SUPPORT</span>
+                        <span class="cyber-badge cyan" data-i18n="badge_l3">L3 SUPPORT</span>
                     </div>
                     <div class="pills-container">
                         <span class="skill-pill">Splunk (SPL)</span>
@@ -169,7 +174,7 @@
                     <span class="corner-bracket bottom-right"></span>
                     <div class="card-header">
                         <h4 data-i18n="skill_card_devops">Contenedores & DevOps</h4>
-                        <span class="cyber-badge purple">INFRASTRUCTURE</span>
+                        <span class="cyber-badge purple" data-i18n="badge_infra">INFRASTRUCTURE</span>
                     </div>
                     <div class="pills-container">
                         <span class="skill-pill">Docker</span>
@@ -187,7 +192,7 @@
                     <span class="corner-bracket bottom-right"></span>
                     <div class="card-header">
                         <h4 data-i18n="skill_card_langs">Lenguajes de Programación</h4>
-                        <span class="cyber-badge cyan">ADVANCED</span>
+                        <span class="cyber-badge cyan" data-i18n="badge_advanced">ADVANCED</span>
                     </div>
                     <div class="pills-container">
                         <span class="skill-pill">Java</span>
@@ -222,7 +227,7 @@
                     <span class="corner-bracket bottom-right"></span>
                     <div class="card-header">
                         <h4 data-i18n="skill_card_db">Bases de Datos & Backend</h4>
-                        <span class="cyber-badge cyan">CORE</span>
+                        <span class="cyber-badge cyan" data-i18n="badge_core">CORE</span>
                     </div>
                     <div class="pills-container">
                         <span class="skill-pill">MySQL</span>
@@ -234,7 +239,6 @@
         </div>
     </section>
 
-    
     <section class="content-block cyber-memorias-section" id="memorias">
         <div class="block-container">
             <div class="block-header">
@@ -248,7 +252,6 @@
         </div>
     </section>
 
-    
     <section class="content-block cyber-architecture-section" id="arquitectura">
         <div class="block-container">
             <div class="block-header">
@@ -298,7 +301,6 @@
         </div>
     </section>
 
-   
     <section class="content-block cyber-protocol-section" id="protocolo">
         <div class="block-container">
             <div class="block-header">
@@ -349,7 +351,6 @@
         </div>
     </section>
 
-    
     <footer class="content-block cyber-contact-section" id="contacto">
         <div class="block-container">
             <div class="block-header">
@@ -417,7 +418,6 @@
         </div>
     </footer>
 
-    
     <div id="terminal-modal" class="terminal-modal-overlay">
         <div class="terminal-window">
             <div class="terminal-header">
