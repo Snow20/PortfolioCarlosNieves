@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ==========================================
     // DICCIONARIO TRADUCIDO COMPLETO (ES, EN, GL)
-    // Sin bloque Fenrirsoft en Experiencia
+    // Con nuevo nodo Anteva Servicios Informáticos (2026)
     // ==========================================
     const translations = {
         ES: {
@@ -55,6 +55,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
             block03_title: "SECUENCIA DE MEMORIAS (EXPERIENCIA PROFESIONAL)",
             timeline_html: `
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="marker-node">◆</span>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="cyber-skill-card timeline-card">
+                        <span class="corner-bracket top-left"></span>
+                        <span class="corner-bracket top-right"></span>
+                        <span class="corner-bracket bottom-left"></span>
+                        <span class="corner-bracket bottom-right"></span>
+                        <div class="card-header-row">
+                            <h4>Desarrollador Web (Prácticas Profesionales - SEPE)</h4>
+                            <span class="date-badge">2026</span>
+                        </div>
+                        <div class="company-tag">
+                            <span class="company-icon">🌐</span> ANTEVA SERVICIOS INFORMATICOS (Galicia, España)
+                        </div>
+                        <ul class="engram-bullets">
+                            <li>Ejecución de 80 horas de prácticas profesionales acreditadas dentro del <b>Certificado de Profesionalidad de Confección y Publicación de Páginas Web</b> (SEPE / Ministerio de Trabajo).</li>
+                            <li>Despliegue, configuración y publicación de plataformas web en servidores de producción.</li>
+                            <li>Optimización de rendimiento web, auditorías de accesibilidad y adaptación responsive.</li>
+                        </ul>
+                    </div>
+                </div>
+
                 <div class="timeline-item">
                     <div class="timeline-marker">
                         <span class="marker-node">◆</span>
@@ -190,6 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
             contact_email: "EMAIL DIRECTO",
             contact_linkedin: "PERFIL LINKEDIN",
             contact_github: "REPOSITORIOS GITHUB",
+            copyright_text: "© 2026 Carlos Nieves. copyright",
             
             term_modal_title: "EXP-92 CONSOLE // COMMAND TERMINAL",
             term_input_placeholder: "Escribe un comando (ej: help, bio, skills)...",
@@ -214,13 +240,16 @@ document.addEventListener('DOMContentLoaded', () => {
             </ul>`,
             term_exp_title: "SECUENCIA DE MEMORIAS (EXPERIENCIA PROFESIONAL):",
             term_exp_body: `<ul class="term-list">
-                <li>1. <b>12/2017 - 01/2025:</b> Telecomunicaciones Movilnet C.A. — Especialista de Soporte L3 (Aplicaciones & Servicios)<br>
+                <li>1. <b>2026:</b> ANTEVA SERVICIOS INFORMATICOS — Desarrollador Web (Prácticas Profesional - SEPE)<br>
+                &nbsp;&nbsp;&nbsp;• Prácticas profesionales acreditadas (80h) del Certificado de Confección y Publicación de Páginas Web.<br>
+                &nbsp;&nbsp;&nbsp;• Despliegue en producción, configuración, optimización de rendimiento y accesibilidad web.</li>
+                <li>2. <b>12/2017 - 01/2025:</b> Telecomunicaciones Movilnet C.A. — Especialista de Soporte L3 (Aplicaciones & Servicios)<br>
                 &nbsp;&nbsp;&nbsp;• Incidencias L3 en entornos Linux de alta disponibilidad (SOAP/REST).<br>
                 &nbsp;&nbsp;&nbsp;• Automatización con Bash para reducir MTTR y migración de EDIController con clústeres redundantes (100% Uptime).</li>
-                <li>2. <b>04/2016 - 06/2017:</b> Banesco Banco Universal C.A. — Analista Operación POS<br>
+                <li>3. <b>04/2016 - 06/2017:</b> Banesco Banco Universal C.A. — Analista Operación POS<br>
                 &nbsp;&nbsp;&nbsp;• Soporte técnico regional, gestión, sustitución y retiro de dispositivos POS.<br>
                 &nbsp;&nbsp;&nbsp;• Atención de requerimientos operacionales para aliados comerciales.</li>
-                <li>3. <b>02/2014 - 09/2014:</b> Drivers, System & Parts C.A. — Soporte Técnico L1/L2 & Programador<br>
+                <li>4. <b>02/2014 - 09/2014:</b> Drivers, System & Parts C.A. — Soporte Técnico L1/L2 & Programador<br>
                 &nbsp;&nbsp;&nbsp;• Soporte presencial/remoto L1/L2 y atención al público.<br>
                 &nbsp;&nbsp;&nbsp;• Desarrollo de aplicación personalizada en Java/Linux para gestión de tiempo de personal.</li>
             </ul>`,
@@ -288,6 +317,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
             block03_title: "MEMORY SEQUENCE (PROFESSIONAL EXPERIENCE)",
             timeline_html: `
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="marker-node">◆</span>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="cyber-skill-card timeline-card">
+                        <span class="corner-bracket top-left"></span>
+                        <span class="corner-bracket top-right"></span>
+                        <span class="corner-bracket bottom-left"></span>
+                        <span class="corner-bracket bottom-right"></span>
+                        <div class="card-header-row">
+                            <h4>Web Developer (Professional Internship - SEPE)</h4>
+                            <span class="date-badge">2026</span>
+                        </div>
+                        <div class="company-tag">
+                            <span class="company-icon">🌐</span> ANTEVA SERVICIOS INFORMATICOS (Galicia, Spain)
+                        </div>
+                        <ul class="engram-bullets">
+                            <li>Execution of 80 hours of accredited professional internship within the <b>Professional Certificate in Web Page Design and Publishing</b> (SEPE / Ministry of Labor).</li>
+                            <li>Deployment, configuration, and publishing of web platforms on production servers.</li>
+                            <li>Web performance optimization, accessibility audits, and responsive adaptation.</li>
+                        </ul>
+                    </div>
+                </div>
+
                 <div class="timeline-item">
                     <div class="timeline-marker">
                         <span class="marker-node">◆</span>
@@ -423,6 +477,7 @@ document.addEventListener('DOMContentLoaded', () => {
             contact_email: "DIRECT EMAIL",
             contact_linkedin: "LINKEDIN PROFILE",
             contact_github: "GITHUB REPOSITORIES",
+            copyright_text: "© 2026 Carlos Nieves. copyright",
             
             term_modal_title: "EXP-92 CONSOLE // COMMAND TERMINAL",
             term_input_placeholder: "Type a command (e.g. help, bio, skills)...",
@@ -447,13 +502,16 @@ document.addEventListener('DOMContentLoaded', () => {
             </ul>`,
             term_exp_title: "MEMORY SEQUENCE (WORK EXPERIENCE):",
             term_exp_body: `<ul class="term-list">
-                <li>1. <b>12/2017 - 01/2025:</b> Telecomunicaciones Movilnet C.A. — L3 Support Specialist (Apps & Services)<br>
+                <li>1. <b>2026:</b> ANTEVA SERVICIOS INFORMATICOS — Web Developer (Professional Internship - SEPE)<br>
+                &nbsp;&nbsp;&nbsp;• Accredited professional internship (80h) for Web Page Design and Publishing Certificate.<br>
+                &nbsp;&nbsp;&nbsp;• Production deployment, configuration, performance optimization, and web accessibility.</li>
+                <li>2. <b>12/2017 - 01/2025:</b> Telecomunicaciones Movilnet C.A. — L3 Support Specialist (Apps & Services)<br>
                 &nbsp;&nbsp;&nbsp;• L3 troubleshooting in high-availability Linux environments (SOAP/REST).<br>
                 &nbsp;&nbsp;&nbsp;• Bash automation to reduce MTTR and EDIController migration with redundant clusters (100% Uptime).</li>
-                <li>2. <b>04/2016 - 06/2017:</b> Banesco Banco Universal C.A. — POS Operations Analyst<br>
+                <li>3. <b>04/2016 - 06/2017:</b> Banesco Banco Universal C.A. — POS Operations Analyst<br>
                 &nbsp;&nbsp;&nbsp;• Regional tech support, management, replacement, and removal of POS terminals.<br>
                 &nbsp;&nbsp;&nbsp;• Resolution of operational requirements for commercial partners.</li>
-                <li>3. <b>02/2014 - 09/2014:</b> Drivers, System & Parts C.A. — L1/L2 Tech Support & Developer<br>
+                <li>4. <b>02/2014 - 09/2014:</b> Drivers, System & Parts C.A. — L1/L2 Tech Support & Developer<br>
                 &nbsp;&nbsp;&nbsp;• On-site/remote L1/L2 support and customer assistance.<br>
                 &nbsp;&nbsp;&nbsp;• Custom Java/Linux app development for employee time management.</li>
             </ul>`,
@@ -521,6 +579,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
             block03_title: "SECUENCIA DE MEMORIAS (EXPERIENCIA PROFESIONAL)",
             timeline_html: `
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="marker-node">◆</span>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="cyber-skill-card timeline-card">
+                        <span class="corner-bracket top-left"></span>
+                        <span class="corner-bracket top-right"></span>
+                        <span class="corner-bracket bottom-left"></span>
+                        <span class="corner-bracket bottom-right"></span>
+                        <div class="card-header-row">
+                            <h4>Desenvolvedor Web (Prácticas Profesionais - SEPE)</h4>
+                            <span class="date-badge">2026</span>
+                        </div>
+                        <div class="company-tag">
+                            <span class="company-icon">🌐</span> ANTEVA SERVICIOS INFORMATICOS (Galicia, España)
+                        </div>
+                        <ul class="engram-bullets">
+                            <li>Execución de 80 horas de prácticas profesionais acreditadas dentro do <b>Certificado de Profesionalidade de Confección e Publicación de Páxinas Web</b> (SEPE / Ministerio de Traballo).</li>
+                            <li>Despregamento, configuración e publicación de plataformas web en servidores de produción.</li>
+                            <li>Optimización de rendemento web, auditorías de accesibilidade e adaptación responsive.</li>
+                        </ul>
+                    </div>
+                </div>
+
                 <div class="timeline-item">
                     <div class="timeline-marker">
                         <span class="marker-node">◆</span>
@@ -612,7 +695,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <ul class="engram-bullets">
                             <li>Soporte técnico de primeiro e segundo nivel (L1/L2) presencial e remoto.</li>
-                            <li>Deseño e desenvolvemento de aplicación personalizada en <b>Java/Linux</b> para a xestión do tempo do persoal.</li>
+                            <li>Desenvolvemento de aplicación personalizada en <b>Java/Linux</b> para a xestión do tempo do persoal.</li>
                         </ul>
                     </div>
                 </div>
@@ -656,6 +739,7 @@ document.addEventListener('DOMContentLoaded', () => {
             contact_email: "CORREO DIRECTO",
             contact_linkedin: "PERFIL LINKEDIN",
             contact_github: "REPOSITORIOS GITHUB",
+            copyright_text: "© 2026 Carlos Nieves. copyright",
             
             term_modal_title: "EXP-92 CONSOLE // COMMAND TERMINAL",
             term_input_placeholder: "Escribe un comando (ex: help, bio, skills)...",
@@ -680,13 +764,16 @@ document.addEventListener('DOMContentLoaded', () => {
             </ul>`,
             term_exp_title: "SECUENCIA DE MEMORIAS (EXPERIENCIA LABORAL):",
             term_exp_body: `<ul class="term-list">
-                <li>1. <b>12/2017 - 01/2025:</b> Telecomunicaciones Movilnet C.A. — Especialista de Soporte L3 (Aplicacións e Servizos)<br>
+                <li>1. <b>2026:</b> ANTEVA SERVICIOS INFORMATICOS — Desenvolvedor Web (Prácticas Profesionais - SEPE)<br>
+                &nbsp;&nbsp;&nbsp;• Prácticas profesionais acreditadas (80h) do Certificado de Confección e Publicación de Páxinas Web.<br>
+                &nbsp;&nbsp;&nbsp;• Despregamento en produción, configuración, optimización de rendemento e accesibilidade web.</li>
+                <li>2. <b>12/2017 - 01/2025:</b> Telecomunicaciones Movilnet C.A. — Especialista de Soporte L3 (Aplicacións e Servizos)<br>
                 &nbsp;&nbsp;&nbsp;• Incidencias L3 en contornos Linux de alta dispoñibilidade (SOAP/REST).<br>
                 &nbsp;&nbsp;&nbsp;• Automatización con Bash para reducir MTTR e migración de EDIController con clústeres redundantes (100% Uptime).</li>
-                <li>2. <b>04/2016 - 06/2017:</b> Banesco Banco Universal C.A. — Analista Operación POS<br>
+                <li>3. <b>04/2016 - 06/2017:</b> Banesco Banco Universal C.A. — Analista Operación POS<br>
                 &nbsp;&nbsp;&nbsp;• Soporte técnico rexional, xestión, substitución e retiro de dispositivos POS.<br>
                 &nbsp;&nbsp;&nbsp;• Atención de requirimentos operacionais para aliados comerciais.</li>
-                <li>3. <b>02/2014 - 09/2014:</b> Drivers, System & Parts C.A. — Soporte Técnico L1/L2 e Programador<br>
+                <li>4. <b>02/2014 - 09/2014:</b> Drivers, System & Parts C.A. — Soporte Técnico L1/L2 e Programador<br>
                 &nbsp;&nbsp;&nbsp;• Soporte presencial/remoto L1/L2 e atención ao público.<br>
                 &nbsp;&nbsp;&nbsp;• Desenvolvemento de aplicación personalizada en Java/Linux para xestión de tempo de persoal.</li>
             </ul>`,
