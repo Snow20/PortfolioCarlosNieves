@@ -1083,6 +1083,12 @@ body.light-mode {
     color: var(--fenrir-accent);
     text-shadow: 0 0 8px var(--fenrir-accent);
 }
+.cert-sub {
+    font-size: 0.78rem;
+    color: var(--fenrir-text-muted);
+    display: block;
+    margin-top: 0.15rem;
+}
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {

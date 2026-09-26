@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
             proto_edu_content: `
                 <div class="edu-item">
                     <h5>Certificado de Profesionalidad: Confección y Publicación de Páginas Web</h5>
-                    <p class="institute">SEPE / Ministerio de Trabajo y Economía Social (España) - 560 horas (2026)</p>
+                    <p class="institute">SEPE / Ministerio de Trabajo y Economía Social (España) - 638 horas (2026)</p>
                     <p class="institute" style="font-size:0.8rem; margin-top:0.2rem;">Cualificación oficial con 80h de prácticas en empresa acreditando despliegue en servidor y optimización web.</p>
                 </div>
                 <div class="edu-item" style="margin-top:0.8rem;">
@@ -198,6 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `,
             proto_cert: "ORG CERTIFICACIONES DESTACADAS",
             proto_cert_content: `
+                <li><b>Back-End Development and APIs</b> — freeCodeCamp (09/2026)<br><span class="cert-sub">Node.js, Express, MongoDB, Mongoose, REST APIs (300h)</span></li>
                 <li><b>Developer Certification Suite</b> — freeCodeCamp (08/2026)<br><span class="cert-sub">Python, JavaScript, Front-End Dev Libraries, Responsive Web Design</span></li>
                 <li><b>B1 English for Developers</b> — freeCodeCamp (08/2026)</li>
                 <li><b>Cloud Computing</b> — Google Activate (08/2024)</li>
@@ -450,7 +451,7 @@ document.addEventListener('DOMContentLoaded', () => {
             proto_edu_content: `
                 <div class="edu-item">
                     <h5>Professional Certificate: Web Page Design and Publishing</h5>
-                    <p class="institute">SEPE / Ministry of Labor and Social Economy (Spain) - 560 hours (2026)</p>
+                    <p class="institute">SEPE / Ministry of Labor and Social Economy (Spain) - 638 hours (2026)</p>
                     <p class="institute" style="font-size:0.8rem; margin-top:0.2rem;">Official qualification including 80h internship in company accrediting server deployment and web optimization.</p>
                 </div>
                 <div class="edu-item" style="margin-top:0.8rem;">
@@ -460,6 +461,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `,
             proto_cert: "ORG KEY CERTIFICATIONS",
             proto_cert_content: `
+                <li><b>Back-End Development and APIs</b> — freeCodeCamp (09/2026)<br><span class="cert-sub">Node.js, Express, MongoDB, Mongoose, REST APIs (300h)</span></li>
                 <li><b>Developer Certification Suite</b> — freeCodeCamp (08/2026)<br><span class="cert-sub">Python, JavaScript, Front-End Dev Libraries, Responsive Web Design</span></li>
                 <li><b>B1 English for Developers</b> — freeCodeCamp (08/2026)</li>
                 <li><b>Cloud Computing</b> — Google Activate (08/2024)</li>
@@ -712,7 +714,7 @@ document.addEventListener('DOMContentLoaded', () => {
             proto_edu_content: `
                 <div class="edu-item">
                     <h5>Certificado de Profesionalidade: Confección e Publicación de Páxinas Web</h5>
-                    <p class="institute">SEPE / Ministerio de Traballo e Economía Social (España) - 560 horas (2026)</p>
+                    <p class="institute">SEPE / Ministerio de Traballo e Economía Social (España) - 638 horas (2026)</p>
                     <p class="institute" style="font-size:0.8rem; margin-top:0.2rem;">Cualificación oficial con 80h de prácticas en empresa acreditando despregamento en servidor e optimización web.</p>
                 </div>
                 <div class="edu-item" style="margin-top:0.8rem;">
@@ -722,6 +724,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `,
             proto_cert: "ORG CERTIFICACIÓNS DESTACADAS",
             proto_cert_content: `
+                <li><b>Back-End Development and APIs</b> — freeCodeCamp (09/2026)<br><span class="cert-sub">Node.js, Express, MongoDB, Mongoose, REST APIs (300h)</span></li>
                 <li><b>Developer Certification Suite</b> — freeCodeCamp (08/2026)<br><span class="cert-sub">Python, JavaScript, Front-End Dev Libraries, Responsive Web Design</span></li>
                 <li><b>B1 English for Developers</b> — freeCodeCamp (08/2026)</li>
                 <li><b>Cloud Computing</b> — Google Activate (08/2024)</li>
