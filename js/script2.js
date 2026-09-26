@@ -4,10 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ==========================================
     // DICCIONARIO TRADUCIDO COMPLETO (ES, EN, GL)
-    // Con nuevo nodo Anteva Servicios Informáticos (2026) y comandos de IA
+    // Con nuevo nodo Anteva Servicios Informáticos (2026)
     // ==========================================
     const translations = {
         ES: {
+            term_help_ai: "Realiza una consulta mediante IA sobre Carlos (ej: ask ¿qué experiencia tiene en Linux?).",
             nav_runner: "[01] RUNNER",
             nav_skills: "[02] CYBERWARE SKILLS",
             nav_memorias: "[03] ENGRAMS",
@@ -188,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
             proto_edu_content: `
                 <div class="edu-item">
                     <h5>Certificado de Profesionalidad: Confección y Publicación de Páginas Web</h5>
-                    <p class="institute">SEPE / Ministerio de Trabajo y Economía Social (España) - 560 horas (2026)</p>
+                    <p class="institute">SEPE / Ministerio de Trabajo y Economía Social (España) - 638 horas (2026)</p>
                     <p class="institute" style="font-size:0.8rem; margin-top:0.2rem;">Cualificación oficial con 80h de prácticas en empresa acreditando despliegue en servidor y optimización web.</p>
                 </div>
                 <div class="edu-item" style="margin-top:0.8rem;">
@@ -199,7 +200,6 @@ document.addEventListener('DOMContentLoaded', () => {
             proto_cert: "ORG CERTIFICACIONES DESTACADAS",
             proto_cert_content: `
                 <li><b>Back-End Development and APIs</b> — freeCodeCamp (09/2026)<br><span class="cert-sub">Node.js, Express, MongoDB, Mongoose, REST APIs (300h)</span></li>
-                <li><b>Certificado de Profesionalidad: Confección y Publicación de Páginas Web (IFCD0110)</b> — Xunta de Galicia / SEPE (09/2026)<br><span class="cert-sub">Acreditación oficial de 638h con prácticas en empresa</span></li>
                 <li><b>Developer Certification Suite</b> — freeCodeCamp (08/2026)<br><span class="cert-sub">Python, JavaScript, Front-End Dev Libraries, Responsive Web Design</span></li>
                 <li><b>B1 English for Developers</b> — freeCodeCamp (08/2026)</li>
                 <li><b>Cloud Computing</b> — Google Activate (08/2024)</li>
@@ -220,10 +220,9 @@ document.addEventListener('DOMContentLoaded', () => {
             copyright_text: "© 2026 Carlos Nieves. copyright",
             
             term_modal_title: "EXP-92 CONSOLE // COMMAND TERMINAL",
-            term_input_placeholder: "Escribe un comando (ej: help, bio, skills, ask)...",
+            term_input_placeholder: "Escribe un comando (ej: help, bio, skills)...",
             term_welcome: `==================================================\nEXP-92 CONSOLE // COMMAND TERMINAL\n==================================================\nEscribe <span class="term-highlight">help</span> para desplegar la lista de protocolos disponibles.`,
-            term_help_header: "PROTOCOLOS DE COMANDO DISPONIBLES:",
-            term_help_ai: "Consulta a la IA sobre la experiencia o perfil de Carlos (ej: ask ¿qué experiencia tiene en Linux?).",
+            term_help_header: "PROTOCOLOS DE COMANDO DISPOÑIBLES:",
             term_help_bio: "Muestra el resumen profesional del operador.",
             term_help_skills: "Consulta la matriz de habilidades técnicas.",
             term_help_exp: "Lista la secuencia de experiencias laborales.",
@@ -273,6 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
             term_unknown_cmd: 'Comando no reconocido: "%s". Escribe <span class="term-highlight">help</span> para consultar los comandos disponibles.'
         },
         EN: {
+            term_help_ai: "Ask the AI a question about Carlos (e.g., ask what experience he has in Linux?).",
             nav_runner: "[01] RUNNER",
             nav_skills: "[02] CYBERWARE SKILLS",
             nav_memorias: "[03] ENGRAMS",
@@ -453,7 +453,7 @@ document.addEventListener('DOMContentLoaded', () => {
             proto_edu_content: `
                 <div class="edu-item">
                     <h5>Professional Certificate: Web Page Design and Publishing</h5>
-                    <p class="institute">SEPE / Ministry of Labor and Social Economy (Spain) - 560 hours (2026)</p>
+                    <p class="institute">SEPE / Ministry of Labor and Social Economy (Spain) - 638 hours (2026)</p>
                     <p class="institute" style="font-size:0.8rem; margin-top:0.2rem;">Official qualification including 80h internship in company accrediting server deployment and web optimization.</p>
                 </div>
                 <div class="edu-item" style="margin-top:0.8rem;">
@@ -464,7 +464,6 @@ document.addEventListener('DOMContentLoaded', () => {
             proto_cert: "ORG KEY CERTIFICATIONS",
             proto_cert_content: `
                 <li><b>Back-End Development and APIs</b> — freeCodeCamp (09/2026)<br><span class="cert-sub">Node.js, Express, MongoDB, Mongoose, REST APIs (300h)</span></li>
-                <li><b>Official Professional Certificate: Web Page Design & Publishing (IFCD0110)</b> — Xunta de Galicia / SEPE (09/2026)<br><span class="cert-sub">Official 638h qualification including company internship</span></li>
                 <li><b>Developer Certification Suite</b> — freeCodeCamp (08/2026)<br><span class="cert-sub">Python, JavaScript, Front-End Dev Libraries, Responsive Web Design</span></li>
                 <li><b>B1 English for Developers</b> — freeCodeCamp (08/2026)</li>
                 <li><b>Cloud Computing</b> — Google Activate (08/2024)</li>
@@ -485,10 +484,9 @@ document.addEventListener('DOMContentLoaded', () => {
             copyright_text: "© 2026 Carlos Nieves. copyright",
             
             term_modal_title: "EXP-92 CONSOLE // COMMAND TERMINAL",
-            term_input_placeholder: "Type a command (e.g. help, bio, skills, ask)...",
+            term_input_placeholder: "Type a command (e.g. help, bio, skills)...",
             term_welcome: `==================================================\nEXP-92 CONSOLE // COMMAND TERMINAL\n==================================================\nType <span class="term-highlight">help</span> to display available protocols.`,
             term_help_header: "AVAILABLE COMMAND PROTOCOLS:",
-            term_help_ai: "Ask the AI a question about Carlos (e.g., ask what experience he has in Linux?).",
             term_help_bio: "Displays the operator's professional summary.",
             term_help_skills: "Queries the technical skills matrix.",
             term_help_exp: "Lists the work experience sequence.",
@@ -538,6 +536,7 @@ document.addEventListener('DOMContentLoaded', () => {
             term_unknown_cmd: 'Unrecognized command: "%s". Type <span class="term-highlight">help</span> to view available commands.'
         },
         GL: {
+            term_help_ai: "Fai unha consulta mediante IA sobre Carlos (ex: ask que experiencia ten en Linux?).",
             nav_runner: "[01] RUNNER",
             nav_skills: "[02] CYBERWARE SKILLS",
             nav_memorias: "[03] ENGRAMS",
@@ -718,7 +717,7 @@ document.addEventListener('DOMContentLoaded', () => {
             proto_edu_content: `
                 <div class="edu-item">
                     <h5>Certificado de Profesionalidade: Confección e Publicación de Páxinas Web</h5>
-                    <p class="institute">SEPE / Ministerio de Traballo e Economía Social (España) - 560 horas (2026)</p>
+                    <p class="institute">SEPE / Ministerio de Traballo e Economía Social (España) - 638 horas (2026)</p>
                     <p class="institute" style="font-size:0.8rem; margin-top:0.2rem;">Cualificación oficial con 80h de prácticas en empresa acreditando despregamento en servidor e optimización web.</p>
                 </div>
                 <div class="edu-item" style="margin-top:0.8rem;">
@@ -729,7 +728,6 @@ document.addEventListener('DOMContentLoaded', () => {
             proto_cert: "ORG CERTIFICACIÓNS DESTACADAS",
             proto_cert_content: `
                 <li><b>Back-End Development and APIs</b> — freeCodeCamp (09/2026)<br><span class="cert-sub">Node.js, Express, MongoDB, Mongoose, REST APIs (300h)</span></li>
-                <li><b>Certificado de Profesionalidade: Confección e publicación de páxinas web (IFCD0110)</b> — Xunta de Galicia / SEPE (09/2026)<br><span class="cert-sub">Cualificación oficial de 638h con prácticas en empresa</span></li>
                 <li><b>Developer Certification Suite</b> — freeCodeCamp (08/2026)<br><span class="cert-sub">Python, JavaScript, Front-End Dev Libraries, Responsive Web Design</span></li>
                 <li><b>B1 English for Developers</b> — freeCodeCamp (08/2026)</li>
                 <li><b>Cloud Computing</b> — Google Activate (08/2024)</li>
@@ -750,10 +748,9 @@ document.addEventListener('DOMContentLoaded', () => {
             copyright_text: "© 2026 Carlos Nieves. copyright",
             
             term_modal_title: "EXP-92 CONSOLE // COMMAND TERMINAL",
-            term_input_placeholder: "Escribe un comando (ex: help, bio, skills, ask)...",
+            term_input_placeholder: "Escribe un comando (ex: help, bio, skills)...",
             term_welcome: `==================================================\nEXP-92 CONSOLE // COMMAND TERMINAL\n==================================================\nEscribe <span class="term-highlight">help</span> para despregar os protocolos dispoñibles.`,
             term_help_header: "PROTOCOLOS DE COMANDO DISPOÑIBLES:",
-            term_help_ai: "Fai unha consulta mediante IA sobre Carlos (ex: ask que experiencia ten en Linux?).",
             term_help_bio: "Mosa o resumo profesional do operador.",
             term_help_skills: "Consulta a matriz de habilidades técnicas.",
             term_help_exp: "Lista a secuencia de experiencias laborais.",
@@ -972,48 +969,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (terminalInput) {
-        terminalInput.addEventListener('keydown', async (e) => {
+        terminalInput.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') {
                 const rawInput = terminalInput.value;
-                const cmd = rawInput.trim();
+                const cmd = rawInput.trim().toLowerCase();
                 
                 if (cmd === '') return;
 
-                // Mostrar el comando tecleado por el usuario
                 const echoDiv = document.createElement('div');
                 echoDiv.className = 'cmd-echo';
                 echoDiv.innerHTML = `<span class="prompt-user">RUNNER@EXP-92:~$</span> ${escapeHTML(rawInput)}`;
                 terminalOutput.appendChild(echoDiv);
 
+                const responseDiv = document.createElement('div');
+                responseDiv.innerHTML = processCommand(cmd);
+                terminalOutput.appendChild(responseDiv);
+
                 terminalInput.value = '';
-
-                const lowerCmd = cmd.toLowerCase();
-
-                // Intercepta comandos de IA (ask ... o ai ...)
-                if (lowerCmd.startsWith('ask ') || lowerCmd.startsWith('ai ')) {
-                    const query = cmd.substring(cmd.indexOf(' ') + 1);
-                    
-                    const loadingDiv = document.createElement('div');
-                    loadingDiv.className = 'term-highlight';
-                    loadingDiv.innerHTML = `⚡ [AI CORE] Procesando consulta neural: "${escapeHTML(query)}"...`;
-                    terminalOutput.appendChild(loadingDiv);
-                    terminalOutput.scrollTop = terminalOutput.scrollHeight;
-
-                    // Llama a la función global expuesta desde js/ai-services.js
-                    const aiResponse = typeof queryAI === 'function' ? await queryAI(query) : "Error: js/ai-services.js no está cargado correctamente.";
-                    
-                    loadingDiv.remove();
-
-                    const responseDiv = document.createElement('div');
-                    responseDiv.innerHTML = `<span class="term-highlight">🤖 [EXP-92 AI]:</span><br>${escapeHTML(aiResponse).replace(/\n/g, '<br>')}`;
-                    terminalOutput.appendChild(responseDiv);
-                } else {
-                    // Procesar comandos estáticos normales
-                    const responseDiv = document.createElement('div');
-                    responseDiv.innerHTML = processCommand(lowerCmd);
-                    terminalOutput.appendChild(responseDiv);
-                }
-
                 terminalOutput.scrollTop = terminalOutput.scrollHeight;
             }
         });
@@ -1033,7 +1005,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 return `
 <div class="term-section-title">${t.term_help_header}</div>
 <ul class="term-list">
-    <li><span class="term-highlight">ask [pregunta] / ai [pregunta]</span> - ${t.term_help_ai}</li>
     <li><span class="term-highlight">bio / subject</span> - ${t.term_help_bio}</li>
     <li><span class="term-highlight">skills</span> - ${t.term_help_skills}</li>
     <li><span class="term-highlight">exp</span> - ${t.term_help_exp}</li>
@@ -1086,12 +1057,7 @@ ${t.term_contact_body}`;
                 return '';
 
             default:
-                const suggestion = typeof getClosestCommand === 'function' ? getClosestCommand(cmd) : null;
-                let errorMsg = t.term_unknown_cmd.replace('%s', escapeHTML(cmd));
-                if (suggestion) {
-                    errorMsg += `<br><span class="term-highlight">💡 Sugerencia: ¿Quisiste decir "${suggestion}"?</span>`;
-                }
-                return `<span class="term-error">${errorMsg}</span>`;
+                return `<span class="term-error">${t.term_unknown_cmd.replace('%s', escapeHTML(cmd))}</span>`;
         }
     }
 
