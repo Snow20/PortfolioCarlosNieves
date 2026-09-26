@@ -1,0 +1,24 @@
+# Carlos Nieves - Senior L3 Application Support Engineer & Developer
+
+> Senior L3 Application Support Engineer, Linux & Middleware Specialist, and Web Developer based in Carballo, Galicia, Spain.
+
+## Summary
+Carlos Nieves has over 8 years of experience in high-availability enterprise environments, L3 incident resolution, SOAP/REST API architectures, Linux administration, and Bash automation.
+
+## Core Technical Skills
+- **Core Systems:** Linux/Unix, Bash Shell Scripting, Systemd, Journalctl, SecureCRT.
+- **Middleware & APIs:** SOAP, REST, EDIController, High Availability Clusters.
+- **Observability & DevOps:** Splunk (SPL), ELK Stack, Docker, Kubernetes, Git, Terraform.
+- **Backend & Web:** Java, Python, Node.js, Express, JavaScript, MySQL, HTML5, CSS3.
+
+## Certified Qualifications
+- **Back-End Development and APIs (300 hours):** freeCodeCamp (09/2026).
+- **Confección e Publicación de Páxinas Web (IFCD0110 - 638 hours):** Xunta de Galicia / SEPE (09/2026).
+- **Developer Certification Suite:** freeCodeCamp (08/2026).
+- **B1 English for Developers:** freeCodeCamp (08/2026).
+
+## Contact & Links
+- **Portfolio:** https://portfoliocarlosnieves.pages.dev/
+- **Email:** carlos.a.n.batatimo@gmail.com
+- **LinkedIn:** https://www.linkedin.com/in/carlos-nievesb
+- **GitHub:** https://github.com/Snow20
