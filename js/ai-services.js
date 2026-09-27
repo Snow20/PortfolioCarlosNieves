@@ -19,22 +19,23 @@ async function queryAI(userPrompt) {
     const URL = '/api/gemini';
 
     try {
-        const response = await fetch(URL, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                contents: [{
-                    parts: [
-                        { text: AI_CONTEXT_PROMPT },
-                        { text: `Consulta del usuario: ${userPrompt}` }
-                    ]
-                }],
-                generationConfig: {
-                    maxOutputTokens: 200,
-                    temperature: 0.3
-                }
-            })
-        });
+        // Dentro de js/ai-services.js en la función queryAI
+const response = await fetch(URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+        contents: [{
+            parts: [
+                { text: AI_CONTEXT_PROMPT },
+                { text: `Consulta del usuario: ${userPrompt}` }
+            ]
+        }],
+        generationConfig: {
+            maxOutputTokens: 350, // Aumentado para evitar frases cortadas
+            temperature: 0.4
+        }
+    })
+});
 
         const data = await response.json();
 
