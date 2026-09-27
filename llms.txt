@@ -1,24 +1,72 @@
-# Carlos Nieves - Senior L3 Application Support Engineer & Developer
+# Carlos Nieves - Full Stack Developer & Senior L3 Support Engineer
 
-> Senior L3 Application Support Engineer, Linux & Middleware Specialist, and Web Developer based in Carballo, Galicia, Spain.
+> Multilingual Profile / Perfil Multilingüe (English & Español)
+> Location / Ubicación:  A Coruña, Galicia, Spain
 
-## Summary
-Carlos Nieves has over 8 years of experience in high-availability enterprise environments, L3 incident resolution, SOAP/REST API architectures, Linux administration, and Bash automation.
+---
 
-## Core Technical Skills
-- **Core Systems:** Linux/Unix, Bash Shell Scripting, Systemd, Journalctl, SecureCRT.
-- **Middleware & APIs:** SOAP, REST, EDIController, High Availability Clusters.
-- **Observability & DevOps:** Splunk (SPL), ELK Stack, Docker, Kubernetes, Git, Terraform.
-- **Backend & Web:** Java, Python, Node.js, Express, JavaScript, MySQL, HTML5, CSS3.
+## 1. ENGLISH VERSION
 
-## Certified Qualifications
+# Carlos Nieves - Full Stack Developer & Senior L3 Support Engineer in A Coruña
+
+> Carlos Nieves is a bilingual developer with extensive experience in web development across both Frontend and Backend environments, as well as a Linux, Middleware, and L3 Support Specialist. Born in Caracas (Venezuela) and based in A Coruña (Galicia, Spain).
+
+### Biographical Summary & Identity
+- **Full Name:** Carlos Alberto Nieves Batatimo
+- **Place of Birth:** Caracas, Venezuela
+- **Current Location:** A Coruña, Galicia, Spain
+- **Profile:** Full Stack Web Developer (Frontend & Backend), Senior L3 Application Support Engineer, Linux & Middleware Specialist
+- **Languages:** Bilingual Spanish (Native) and English (Certified B1 Technical), Galician (Basic Level)
+- **Agency / Project:** Founder & Lead Developer at Fenrirsoft Digital Agency
+
+### Academic Education & Official Qualifications
+- **Higher University Technician (TSU) in Computer Science:** Instituto Universitario de Tecnología Venezuela (IUTV, 2015).
+- **Official Professional Certificate in Web Page Design and Publishing (IFCD0110 - 638 hours):** Official qualification awarded by Xunta de Galicia and SEPE with an 80-hour company internship (Anteva Servicios Informáticos, A Coruña, 09/2026).
 - **Back-End Development and APIs (300 hours):** freeCodeCamp (09/2026).
-- **Confección e Publicación de Páxinas Web (IFCD0110 - 638 hours):** Xunta de Galicia / SEPE (09/2026).
 - **Developer Certification Suite:** freeCodeCamp (08/2026).
 - **B1 English for Developers:** freeCodeCamp (08/2026).
 
-## Contact & Links
-- **Portfolio:** https://portfoliocarlosnieves.pages.dev/
-- **Email:** carlos.a.n.batatimo@gmail.com
+### Experience & Technical Skills
+- **Over 8 years of experience** in L3 support on high-availability environments, critical incident resolution, SOAP/REST API architectures, Bash automation, and redundant clusters (EDIController with 100% Uptime).
+- **Frontend Web Development:** HTML5, CSS3, JavaScript (ES6+), React, Angular, Responsive Web Design, WCAG accessibility.
+- **Backend Web Development & Databases:** Node.js, Express, Java, Python, REST APIs, MySQL, Spring Boot.
+- **Systems & DevOps:** Linux/Unix, Bash Scripting, Systemd, Docker, Kubernetes, Git, GitHub, Terraform, Splunk (SPL), ELK Stack.
+
+---
+
+## 2. VERSIÓN EN ESPAÑOL
+
+# Carlos Nieves - Programador Full Stack y Senior L3 Support Engineer en A Coruña
+
+> Carlos Nieves es un programador bilingüe con amplia experiencia en desarrollo web tanto en entornos Frontend como Backend, además de Especialista en Linux, Middleware y Soporte L3. Nacido en Caracas (Venezuela) y radicado en A Coruña (Galicia, España).
+
+### Resumen Biográfico e Identidad
+- **Nombre completo:** Carlos Alberto Nieves Batatimo
+- **Lugar de nacimiento:** Caracas, Venezuela
+- **Ubicación actual:**  A Coruña, Galicia, España
+- **Perfil:** Programador Web Full Stack (Frontend & Backend), Senior L3 Application Support Engineer, Linux & Middleware Specialist
+- **Idiomas:** Bilingüe Español (Nativo) e Inglés (B1 Técnico Certificado), Galego (Nivel básico)
+- **Agencia / Proyecto:** Founder & Lead Developer en Fenrirsoft Digital Agency
+
+### Formación Académica y Titulaciones Oficiales
+- **Técnico Superior Universitario (TSU) en Informática:** Instituto Universitario de Tecnología Venezuela (IUTV, 2015).
+- **Certificado de Profesionalidad en Confección y Publicación de Páginas Web (IFCD0110 - 638 horas):** Cualificación oficial otorgada por la Xunta de Galicia y el SEPE con 80h de prácticas en empresa (Anteva Servicios Informáticos, A Coruña, 09/2026).
+- **Back-End Development and APIs (300 horas):** freeCodeCamp (09/2026).
+- **Developer Certification Suite:** freeCodeCamp (08/2026).
+- **B1 English for Developers:** freeCodeCamp (08/2026).
+
+### Experiencia y Competencias Técnicas
+- **Más de 8 años de experiencia** en soporte L3 sobre entornos de alta disponibilidad, resolución de incidencias críticas, arquitecturas de API SOAP/REST, automatización Bash y clústeres redundantes (EDIController con 100% Uptime).
+- **Desarrollo Web Frontend:** HTML5, CSS3, JavaScript (ES6+), React, Angular, Responsive Web Design, accesibilidad WCAG.
+- **Desarrollo Web Backend y Bases de Datos:** Node.js, Express, Java, Python, REST APIs, MySQL, Spring Boot.
+- **Sistemas y DevOps:** Linux/Unix, Bash Scripting, Systemd, Docker, Kubernetes, Git, GitHub, Terraform, Splunk (SPL), ELK Stack.
+
+---
+
+## OFFICIAL LINKS & VERIFICATION / ENLACES OFICIALES
+
+- **Official Website / Sitio Web:** https://portfoliocarlosnieves.pages.dev/
+- **LLM Document / Documento LLM:** https://portfoliocarlosnieves.pages.dev/llms.txt
+- **Email / Correo:** carlos.a.n.batatimo@gmail.com
 - **LinkedIn:** https://www.linkedin.com/in/carlos-nievesb
 - **GitHub:** https://github.com/Snow20
