@@ -26,24 +26,29 @@ async function queryAI(userPrompt) {
                 contents: [{
                     parts: [
                         { text: AI_CONTEXT_PROMPT },
-                        { text: `Pregunta del usuario: ${userPrompt}` }
+                        { text: `Consulta del usuario: ${userPrompt}` }
                     ]
                 }],
                 generationConfig: {
                     maxOutputTokens: 200,
-                    temperature: 0.4
+                    temperature: 0.3
                 }
             })
         });
 
         const data = await response.json();
-        if (data.candidates && data.candidates[0].content.parts[0].text) {
-            return data.candidates[0].content.parts[0].text;
-        } else {
-            return "Error: Respuesta no procesada por el núcleo de IA.";
+
+        if (data.error) {
+            return `Error de API (${data.error.code || 'HTTP'}): ${data.error.message || JSON.stringify(data.error)}`;
         }
+
+        if (data.candidates && data.candidates[0]?.content?.parts[0]?.text) {
+            return data.candidates[0].content.parts[0].text;
+        }
+
+        return `Error inesperado en respuesta: ${JSON.stringify(data)}`;
     } catch (error) {
-        return "Error de conexión con la red de datos neurales (API Error).";
+        return `Error de red o servidor: ${error.message}`;
     }
 }
 

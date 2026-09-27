@@ -969,43 +969,39 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (terminalInput) {
-    terminalInput.addEventListener('keydown', async (e) => {
-        if (e.key === 'Enter') {
-            const rawInput = terminalInput.value;
-            const cmd = rawInput.trim();
-            
-            if (cmd === '') return;
-
-            const echoDiv = document.createElement('div');
-            echoDiv.className = 'cmd-echo';
-            echoDiv.innerHTML = `<span class="prompt-user">RUNNER@EXP-92:~$</span> ${escapeHTML(rawInput)}`;
-            terminalOutput.appendChild(echoDiv);
-
-            terminalInput.value = '';
-            const lowerCmd = cmd.toLowerCase();
-
-            // Manejo de 'ask' o 'ai' sin parámetros
-            if (lowerCmd === 'ask' || lowerCmd === 'ai') {
-                const responseDiv = document.createElement('div');
-                responseDiv.innerHTML = `<span class="term-highlight">💡 Uso del comando IA:</span><br>Debes incluir una pregunta después del comando.<br><em>Ejemplo: ask ¿cuál es la experiencia de Carlos en Linux?</em>`;
-                terminalOutput.appendChild(responseDiv);
-            } 
-            // Manejo de 'ask <pregunta>' o 'ai <pregunta>'
-            else if (lowerCmd.startsWith('ask ') || lowerCmd.startsWith('ai ')) {
-                const query = cmd.substring(cmd.indexOf(' ') + 1).trim();
+        terminalInput.addEventListener('keydown', async (e) => {
+            if (e.key === 'Enter') {
+                const rawInput = terminalInput.value;
+                const cmd = rawInput.trim();
                 
-                if (!query) {
+                if (cmd === '') return;
+
+                const echoDiv = document.createElement('div');
+                echoDiv.className = 'cmd-echo';
+                echoDiv.innerHTML = `<span class="prompt-user">RUNNER@EXP-92:~$</span> ${escapeHTML(rawInput)}`;
+                terminalOutput.appendChild(echoDiv);
+
+                terminalInput.value = '';
+                const lowerCmd = cmd.toLowerCase();
+
+                // Comandos estáticos nativos de la consola
+                const staticCmds = ['help', 'bio', 'subject', 'skills', 'exp', 'projects', 'contact', 'theme', 'clear', 'exit'];
+
+                if (staticCmds.includes(lowerCmd)) {
                     const responseDiv = document.createElement('div');
-                    responseDiv.innerHTML = `<span class="term-highlight">💡 Uso del comando IA:</span><br>Escribe una pregunta después de <strong>ask</strong>.`;
+                    responseDiv.innerHTML = processCommand(lowerCmd);
                     terminalOutput.appendChild(responseDiv);
                 } else {
+                    // Cualquier otra entrada (palabras clave, preguntas) se procesa directamente con la IA
+                    const cleanQuery = cmd.replace(/^(ask|ai)\s+/i, '').trim();
+
                     const loadingDiv = document.createElement('div');
                     loadingDiv.className = 'term-highlight';
-                    loadingDiv.innerHTML = `⚡ [AI CORE] Procesando consulta neural: "${escapeHTML(query)}"...`;
+                    loadingDiv.innerHTML = `⚡ [AI CORE] Procesando: "${escapeHTML(cleanQuery)}"...`;
                     terminalOutput.appendChild(loadingDiv);
                     terminalOutput.scrollTop = terminalOutput.scrollHeight;
 
-                    const aiResponse = typeof queryAI === 'function' ? await queryAI(query) : "Error: js/ai-services.js no está cargado correctamente.";
+                    const aiResponse = typeof queryAI === 'function' ? await queryAI(cleanQuery) : "Error: js/ai-services.js no está cargado correctamente.";
                     
                     loadingDiv.remove();
 
@@ -1013,18 +1009,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     responseDiv.innerHTML = `<span class="term-highlight">🤖 [EXP-92 AI]:</span><br>${escapeHTML(aiResponse).replace(/\n/g, '<br>')}`;
                     terminalOutput.appendChild(responseDiv);
                 }
-            } 
-            // Comandos estáticos
-            else {
-                const responseDiv = document.createElement('div');
-                responseDiv.innerHTML = processCommand(lowerCmd);
-                terminalOutput.appendChild(responseDiv);
-            }
 
-            terminalOutput.scrollTop = terminalOutput.scrollHeight;
-        }
-    });
-}
+                terminalOutput.scrollTop = terminalOutput.scrollHeight;
+            }
+        });
+    }
     function escapeHTML(str) {
         return str.replace(/[&<>'"]/g, 
             tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
