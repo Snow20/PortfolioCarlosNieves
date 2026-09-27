@@ -1090,37 +1090,69 @@ body.light-mode {
     margin-top: 0.15rem;
 }
 
-/* FIX FOR DANI AI SMALL FLOATING ICON */
-.dani-widget {
+/* RESET ABSOLUTO DANI AI */
+#dani-chat-widget {
     position: fixed !important;
     bottom: 20px !important;
     right: 20px !important;
-    z-index: 99999 !important;
-    width: auto !important;
-    height: auto !important;
-}
-
-.dani-avatar-btn {
+    z-index: 999999 !important;
     width: 60px !important;
     height: 60px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#dani-toggle-btn {
+    width: 60px !important;
+    height: 60px !important;
+    min-width: 60px !important;
+    min-height: 60px !important;
+    max-width: 60px !important;
+    max-height: 60px !important;
     border-radius: 50% !important;
     background: #0d0e15 !important;
     border: 2px solid #00f3ff !important;
     cursor: pointer !important;
-    padding: 6px !important;
-    box-sizing: border-box !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     box-shadow: 0 0 15px rgba(0, 243, 255, 0.5) !important;
+    padding: 6px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
 }
 
+#dani-toggle-btn svg,
 .dani-cat-icon {
-    width: 100% !important;
-    height: 100% !important;
-    max-width: 48px !important;
-    max-height: 48px !important;
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+    max-width: 40px !important;
+    max-height: 40px !important;
     display: block !important;
+}
+
+#dani-chat-window {
+    position: fixed !important;
+    bottom: 90px !important;
+    right: 20px !important;
+    width: 350px !important;
+    max-width: calc(100vw - 40px) !important;
+    height: 480px !important;
+    max-height: calc(100vh - 120px) !important;
+    background: #0f111a !important;
+    border: 1px solid #00f3ff !important;
+    border-radius: 12px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 243, 255, 0.3) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    z-index: 999999 !important;
+    overflow: hidden !important;
+}
+
+#dani-chat-window.hidden {
+    display: none !important;
 }
 
 /* RESPONSIVE */
