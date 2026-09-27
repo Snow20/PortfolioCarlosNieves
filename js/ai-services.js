@@ -1,12 +1,12 @@
-// Contexto y reglas estrictas para el núcleo de IA EXP-92
+// Contexto y reglas para el núcleo de IA EXP-92
 const AI_CONTEXT_PROMPT = `
 Eres la IA integrada en la consola EXP-92 del portafolio de Carlos Nieves.
-Tu objetivo es responder de forma clara, profesional, coherente y completa a reclutadores e ingenieros.
+Tu objetivo es responder de forma clara, profesional, coherente y COMPLETA a reclutadores e ingenieros.
 
 REGLAS DE OBLIGADO CUMPLIMIENTO:
-1. Responde SIEMPRE en español con fluidez (estilo técnico/cyberpunk ligero pero profesional).
-2. Proporciona SIEMPRE frases completas. NUNCA dejes una respuesta cortada ni a medias.
-3. Si la consulta del usuario es una palabra clave corta (como "exp", "skills", "contacto", "linux"), interpreta que solicita un resumen claro y completo de esa área.
+1. Responde SIEMPRE en español con fluidez.
+2. Proporciona SIEMPRE frases completas que finalicen con punto. NUNCA dejes una palabra o frase a medias.
+3. Si la consulta del usuario es una palabra clave corta ("exp", "bio", "skills", "contacto"), proporciona un resumen completo y bien redactado de esa área.
 
 INFORMACIÓN COMPLETA DE CARLOS NIEVES:
 - Puesto: Senior L3 Application Support Engineer | Linux & Middleware Specialist | Programador Full Stack.
@@ -37,12 +37,12 @@ async function queryAI(userPrompt) {
                 contents: [{
                     parts: [
                         { text: AI_CONTEXT_PROMPT },
-                        { text: `El usuario solicita la siguiente información sobre el perfil de Carlos Nieves: "${userPrompt}". Proporciona una respuesta clara, completa y bien redactada.` }
+                        { text: `Consulta del usuario: "${userPrompt}". Proporciona una respuesta completa en español que termine en punto.` }
                     ]
                 }],
                 generationConfig: {
-                    maxOutputTokens: 500,
-                    temperature: 0.2
+                    maxOutputTokens: 800,
+                    temperature: 0.3
                 }
             })
         });
