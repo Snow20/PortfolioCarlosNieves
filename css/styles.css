@@ -1090,6 +1090,39 @@ body.light-mode {
     margin-top: 0.15rem;
 }
 
+/* FIX FOR DANI AI SMALL FLOATING ICON */
+.dani-widget {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 99999 !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+.dani-avatar-btn {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    background: #0d0e15 !important;
+    border: 2px solid #00f3ff !important;
+    cursor: pointer !important;
+    padding: 6px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.5) !important;
+}
+
+.dani-cat-icon {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 48px !important;
+    max-height: 48px !important;
+    display: block !important;
+}
+
 /* RESPONSIVE */
 @media (max-width: 1024px) {
     .hero-section {
