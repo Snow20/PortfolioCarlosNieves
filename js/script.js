@@ -199,7 +199,6 @@ document.addEventListener('DOMContentLoaded', () => {
             proto_cert: "ORG CERTIFICACIONES DESTACADAS",
             proto_cert_content: `
                 <li><b>Back-End Development and APIs</b> — freeCodeCamp (09/2026)<br><span class="cert-sub">Node.js, Express, MongoDB, Mongoose, REST APIs (300h)</span></li>
-                <li><b>Certificado de Profesionalidad: Confección y Publicación de Páginas Web (IFCD0110)</b> — Xunta de Galicia / SEPE (09/2026)<br><span class="cert-sub">Acreditación oficial de 638h con prácticas en empresa</span></li>
                 <li><b>Developer Certification Suite</b> — freeCodeCamp (08/2026)<br><span class="cert-sub">Python, JavaScript, Front-End Dev Libraries, Responsive Web Design</span></li>
                 <li><b>B1 English for Developers</b> — freeCodeCamp (08/2026)</li>
                 <li><b>Cloud Computing</b> — Google Activate (08/2024)</li>
@@ -464,7 +463,6 @@ document.addEventListener('DOMContentLoaded', () => {
             proto_cert: "ORG KEY CERTIFICATIONS",
             proto_cert_content: `
                 <li><b>Back-End Development and APIs</b> — freeCodeCamp (09/2026)<br><span class="cert-sub">Node.js, Express, MongoDB, Mongoose, REST APIs (300h)</span></li>
-                <li><b>Official Professional Certificate: Web Page Design & Publishing (IFCD0110)</b> — Xunta de Galicia / SEPE (09/2026)<br><span class="cert-sub">Official 638h qualification including company internship</span></li>
                 <li><b>Developer Certification Suite</b> — freeCodeCamp (08/2026)<br><span class="cert-sub">Python, JavaScript, Front-End Dev Libraries, Responsive Web Design</span></li>
                 <li><b>B1 English for Developers</b> — freeCodeCamp (08/2026)</li>
                 <li><b>Cloud Computing</b> — Google Activate (08/2024)</li>
@@ -729,7 +727,6 @@ document.addEventListener('DOMContentLoaded', () => {
             proto_cert: "ORG CERTIFICACIÓNS DESTACADAS",
             proto_cert_content: `
                 <li><b>Back-End Development and APIs</b> — freeCodeCamp (09/2026)<br><span class="cert-sub">Node.js, Express, MongoDB, Mongoose, REST APIs (300h)</span></li>
-                <li><b>Certificado de Profesionalidade: Confección e publicación de páxinas web (IFCD0110)</b> — Xunta de Galicia / SEPE (09/2026)<br><span class="cert-sub">Cualificación oficial de 638h con prácticas en empresa</span></li>
                 <li><b>Developer Certification Suite</b> — freeCodeCamp (08/2026)<br><span class="cert-sub">Python, JavaScript, Front-End Dev Libraries, Responsive Web Design</span></li>
                 <li><b>B1 English for Developers</b> — freeCodeCamp (08/2026)</li>
                 <li><b>Cloud Computing</b> — Google Activate (08/2024)</li>
@@ -972,65 +969,62 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (terminalInput) {
-        terminalInput.addEventListener('keydown', async (e) => {
-            if (e.key === 'Enter') {
-                const rawInput = terminalInput.value;
-                const cmd = rawInput.trim();
+    terminalInput.addEventListener('keydown', async (e) => {
+        if (e.key === 'Enter') {
+            const rawInput = terminalInput.value;
+            const cmd = rawInput.trim();
+            
+            if (cmd === '') return;
+
+            const echoDiv = document.createElement('div');
+            echoDiv.className = 'cmd-echo';
+            echoDiv.innerHTML = `<span class="prompt-user">RUNNER@EXP-92:~$</span> ${escapeHTML(rawInput)}`;
+            terminalOutput.appendChild(echoDiv);
+
+            terminalInput.value = '';
+            const lowerCmd = cmd.toLowerCase();
+
+            // Manejo de 'ask' o 'ai' sin parámetros
+            if (lowerCmd === 'ask' || lowerCmd === 'ai') {
+                const responseDiv = document.createElement('div');
+                responseDiv.innerHTML = `<span class="term-highlight">💡 Uso del comando IA:</span><br>Debes incluir una pregunta después del comando.<br><em>Ejemplo: ask ¿cuál es la experiencia de Carlos en Linux?</em>`;
+                terminalOutput.appendChild(responseDiv);
+            } 
+            // Manejo de 'ask <pregunta>' o 'ai <pregunta>'
+            else if (lowerCmd.startsWith('ask ') || lowerCmd.startsWith('ai ')) {
+                const query = cmd.substring(cmd.indexOf(' ') + 1).trim();
                 
-                if (cmd === '') return;
-
-                // Mostrar el comando tecleado por el usuario
-                const echoDiv = document.createElement('div');
-                echoDiv.className = 'cmd-echo';
-                echoDiv.innerHTML = `<span class="prompt-user">RUNNER@EXP-92:~$</span> ${escapeHTML(rawInput)}`;
-                terminalOutput.appendChild(echoDiv);
-
-                terminalInput.value = '';
-
-                const lowerCmd = cmd.toLowerCase();
-
-                // 1. Si escriben solo "ask" o "ai" sin la pregunta
-                if (lowerCmd === 'ask' || lowerCmd === 'ai') {
+                if (!query) {
                     const responseDiv = document.createElement('div');
-                    responseDiv.innerHTML = `<span class="term-highlight">💡 Uso del comando IA:</span><br>Debes incluir una pregunta después del comando.<br><em>Ejemplo: ask ¿cuál es su experiencia en Linux?</em>`;
+                    responseDiv.innerHTML = `<span class="term-highlight">💡 Uso del comando IA:</span><br>Escribe una pregunta después de <strong>ask</strong>.`;
                     terminalOutput.appendChild(responseDiv);
-                } 
-                // 2. Si escriben "ask <pregunta>" o "ai <pregunta>"
-                else if (lowerCmd.startsWith('ask ') || lowerCmd.startsWith('ai ')) {
-                    const query = cmd.substring(cmd.indexOf(' ') + 1).trim();
+                } else {
+                    const loadingDiv = document.createElement('div');
+                    loadingDiv.className = 'term-highlight';
+                    loadingDiv.innerHTML = `⚡ [AI CORE] Procesando consulta neural: "${escapeHTML(query)}"...`;
+                    terminalOutput.appendChild(loadingDiv);
+                    terminalOutput.scrollTop = terminalOutput.scrollHeight;
+
+                    const aiResponse = typeof queryAI === 'function' ? await queryAI(query) : "Error: js/ai-services.js no está cargado correctamente.";
                     
-                    if (!query) {
-                        const responseDiv = document.createElement('div');
-                        responseDiv.innerHTML = `<span class="term-highlight">💡 Uso del comando IA:</span><br>Escribe una pregunta después de <strong>ask</strong>.`;
-                        terminalOutput.appendChild(responseDiv);
-                    } else {
-                        const loadingDiv = document.createElement('div');
-                        loadingDiv.className = 'term-highlight';
-                        loadingDiv.innerHTML = `⚡ [AI CORE] Procesando consulta neural: "${escapeHTML(query)}"...`;
-                        terminalOutput.appendChild(loadingDiv);
-                        terminalOutput.scrollTop = terminalOutput.scrollHeight;
+                    loadingDiv.remove();
 
-                        // Llama a la función de js/ai-services.js
-                        const aiResponse = typeof queryAI === 'function' ? await queryAI(query) : "Error: js/ai-services.js no está cargado correctamente.";
-                        
-                        loadingDiv.remove();
-
-                        const responseDiv = document.createElement('div');
-                        responseDiv.innerHTML = `<span class="term-highlight">🤖 [EXP-92 AI]:</span><br>${escapeHTML(aiResponse).replace(/\n/g, '<br>')}`;
-                        terminalOutput.appendChild(responseDiv);
-                    }
-                } 
-                // 3. Procesar comandos estáticos (help, bio, skills, etc.)
-                else {
                     const responseDiv = document.createElement('div');
-                    responseDiv.innerHTML = processCommand(lowerCmd);
+                    responseDiv.innerHTML = `<span class="term-highlight">🤖 [EXP-92 AI]:</span><br>${escapeHTML(aiResponse).replace(/\n/g, '<br>')}`;
                     terminalOutput.appendChild(responseDiv);
                 }
-
-                terminalOutput.scrollTop = terminalOutput.scrollHeight;
+            } 
+            // Comandos estáticos
+            else {
+                const responseDiv = document.createElement('div');
+                responseDiv.innerHTML = processCommand(lowerCmd);
+                terminalOutput.appendChild(responseDiv);
             }
-        });
-    }
+
+            terminalOutput.scrollTop = terminalOutput.scrollHeight;
+        }
+    });
+}
     function escapeHTML(str) {
         return str.replace(/[&<>'"]/g, 
             tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)

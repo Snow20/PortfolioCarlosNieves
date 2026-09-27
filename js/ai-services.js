@@ -16,13 +16,7 @@ Si te preguntan algo no relacionado con el perfil profesional o tecnológico de 
 
 // Función para consultar a la API de Gemini
 async function queryAI(userPrompt) {
-    // Reemplaza con tu API Key de Google AI Studio (Gemini)
-    const API_KEY = "TU_GEMINI_API_KEY"; 
-    const URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
-
-    if (!API_KEY || API_KEY === "TU_GEMINI_API_KEY") {
-        return "⚠️ Error: API Key no configurada en js/ai-services.js.";
-    }
+    const URL = '/api/gemini';
 
     try {
         const response = await fetch(URL, {
