@@ -552,85 +552,8 @@
         </div>
     </div>
  
-    <!-- WIDGET DE CHAT DANI AI -->
-    <div id="dani-chat-widget" class="dani-widget">
-        <!-- Botón flotante -->
-        <button id="dani-toggle-btn" class="dani-avatar-btn" title="Hablar con Dani AI"
-            aria-label="Abrir chat con Dani AI">
-            <svg class="dani-cat-icon" width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <!-- Cabeza de gato negra -->
-                <path
-                    d="M 20,35 L 10,10 L 38,22 C 45,19 55,19 62,22 L 90,10 L 80,35 C 92,48 92,68 80,82 C 68,95 32,95 20,82 C 8,68 8,48 20,35 Z"
-                    fill="#0d0e15" stroke="#00f3ff" stroke-width="3" />
-                <!-- Interior de orejas (Detalle rosa/neón arcade) -->
-                <polygon points="18,18 28,30 35,22" fill="#ff0055" />
-                <polygon points="82,18 72,30 65,22" fill="#ff0055" />
-                <!-- Ojos cibernéticos / arcade -->
-                <ellipse cx="33" cy="52" rx="6" ry="8" fill="#00f3ff" />
-                <ellipse cx="67" cy="52" rx="6" ry="8" fill="#00f3ff" />
-                <ellipse cx="33" cy="52" rx="2" ry="6" fill="#0d0e15" />
-                <ellipse cx="67" cy="52" rx="2" ry="6" fill="#0d0e15" />
-                <!-- Nariz y boca -->
-                <polygon points="50,62 46,67 54,67" fill="#ff0055" />
-                <path d="M 44,72 Q 50,76 50,69 Q 50,76 56,72" fill="none" stroke="#00f3ff" stroke-width="2"
-                    stroke-linecap="round" />
-                <!-- Media Luna neón en la frente -->
-                <path d="M 50,26 A 8,8 0 1,1 44,38 A 6,6 0 1,0 50,26 Z" fill="#ffd700" stroke="#ffaa00"
-                    stroke-width="1" />
-            </svg>
-            <span class="dani-badge-pulse"></span>
-        </button>
 
-        <!-- Ventana de Chat -->
-        <div id="dani-chat-window" class="dani-window hidden">
-            <div class="dani-header">
-                <div class="dani-header-info">
-                    <div class="dani-mini-avatar">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M 20,35 L 10,10 L 38,22 C 45,19 55,19 62,22 L 90,10 L 80,35 C 92,48 92,68 80,82 C 68,95 32,95 20,82 Z"
-                                fill="#0d0e15" stroke="#00f3ff" stroke-width="3" />
-                            <ellipse cx="33" cy="52" rx="5" ry="7" fill="#00f3ff" />
-                            <ellipse cx="67" cy="52" rx="5" ry="7" fill="#00f3ff" />
-                            <path d="M 50,26 A 8,8 0 1,1 44,38 A 6,6 0 1,0 50,26 Z" fill="#ffd700" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h4>Dani <span class="dani-tag">AI Assistant</span></h4>
-                        <span class="dani-status">● En línea | Asistente de Carlos</span>
-                    </div>
-                </div>
-                <button id="dani-close-btn" class="dani-close">&times;</button>
-            </div>
-
-            <div id="dani-messages" class="dani-messages-body">
-                <div class="dani-msg dani-msg-ai">
-                    ¡Hola! Soy <strong>Dani</strong> 🐾. Puedo responderte cualquier duda sobre la experiencia,
-                    estudios, proyectos o contacto de <strong>Carlos Nieves</strong>. ¿Qué quieres saber?
-                </div>
-                <!-- Sugerencias rápidas -->
-                <div class="dani-chips">
-                    <button class="dani-chip" data-query="¿Resumen de la experiencia laboral de Carlos?">💼
-                        Experiencia</button>
-                    <button class="dani-chip" data-query="¿Qué tecnologías y habilidades domina?">🛠️
-                        Habilidades</button>
-                    <button class="dani-chip" data-query="¿Cuáles son sus estudios y certificaciones?">🎓
-                        Estudios</button>
-                    <button class="dani-chip" data-query="¿Cómo puedo contactar con Carlos?">📬 Contacto</button>
-                </div>
-            </div>
-
-            <div class="dani-input-area">
-                <input type="text" id="dani-user-input" placeholder="Pregunta sobre Carlos..." autocomplete="off">
-                <button id="dani-send-btn" aria-label="Enviar pregunta">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="22" y1="2" x2="11" y2="13"></line>
-                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </div>
+   
 
     <!-- Script del Asistente Dani -->
     <script src="js/dani-ai.js?v=2.0"></script>
