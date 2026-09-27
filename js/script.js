@@ -989,26 +989,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const lowerCmd = cmd.toLowerCase();
 
-                // Intercepta comandos de IA (ask ... o ai ...)
-                if (lowerCmd.startsWith('ask ') || lowerCmd.startsWith('ai ')) {
-                    const query = cmd.substring(cmd.indexOf(' ') + 1);
-                    
-                    const loadingDiv = document.createElement('div');
-                    loadingDiv.className = 'term-highlight';
-                    loadingDiv.innerHTML = `⚡ [AI CORE] Procesando consulta neural: "${escapeHTML(query)}"...`;
-                    terminalOutput.appendChild(loadingDiv);
-                    terminalOutput.scrollTop = terminalOutput.scrollHeight;
-
-                    // Llama a la función global expuesta desde js/ai-services.js
-                    const aiResponse = typeof queryAI === 'function' ? await queryAI(query) : "Error: js/ai-services.js no está cargado correctamente.";
-                    
-                    loadingDiv.remove();
-
+                // 1. Si escriben solo "ask" o "ai" sin la pregunta
+                if (lowerCmd === 'ask' || lowerCmd === 'ai') {
                     const responseDiv = document.createElement('div');
-                    responseDiv.innerHTML = `<span class="term-highlight">🤖 [EXP-92 AI]:</span><br>${escapeHTML(aiResponse).replace(/\n/g, '<br>')}`;
+                    responseDiv.innerHTML = `<span class="term-highlight">💡 Uso del comando IA:</span><br>Debes incluir una pregunta después del comando.<br><em>Ejemplo: ask ¿cuál es su experiencia en Linux?</em>`;
                     terminalOutput.appendChild(responseDiv);
-                } else {
-                    // Procesar comandos estáticos normales
+                } 
+                // 2. Si escriben "ask <pregunta>" o "ai <pregunta>"
+                else if (lowerCmd.startsWith('ask ') || lowerCmd.startsWith('ai ')) {
+                    const query = cmd.substring(cmd.indexOf(' ') + 1).trim();
+                    
+                    if (!query) {
+                        const responseDiv = document.createElement('div');
+                        responseDiv.innerHTML = `<span class="term-highlight">💡 Uso del comando IA:</span><br>Escribe una pregunta después de <strong>ask</strong>.`;
+                        terminalOutput.appendChild(responseDiv);
+                    } else {
+                        const loadingDiv = document.createElement('div');
+                        loadingDiv.className = 'term-highlight';
+                        loadingDiv.innerHTML = `⚡ [AI CORE] Procesando consulta neural: "${escapeHTML(query)}"...`;
+                        terminalOutput.appendChild(loadingDiv);
+                        terminalOutput.scrollTop = terminalOutput.scrollHeight;
+
+                        // Llama a la función de js/ai-services.js
+                        const aiResponse = typeof queryAI === 'function' ? await queryAI(query) : "Error: js/ai-services.js no está cargado correctamente.";
+                        
+                        loadingDiv.remove();
+
+                        const responseDiv = document.createElement('div');
+                        responseDiv.innerHTML = `<span class="term-highlight">🤖 [EXP-92 AI]:</span><br>${escapeHTML(aiResponse).replace(/\n/g, '<br>')}`;
+                        terminalOutput.appendChild(responseDiv);
+                    }
+                } 
+                // 3. Procesar comandos estáticos (help, bio, skills, etc.)
+                else {
                     const responseDiv = document.createElement('div');
                     responseDiv.innerHTML = processCommand(lowerCmd);
                     terminalOutput.appendChild(responseDiv);
@@ -1018,7 +1031,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
     function escapeHTML(str) {
         return str.replace(/[&<>'"]/g, 
             tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
