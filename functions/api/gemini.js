@@ -14,8 +14,8 @@ export async function onRequestPost(context) {
       });
     }
 
-    // Endpoint actualizado a gemini-2.0-flash (o gemini-1.5-flash-latest)
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey.trim()}`;
+    // Endpoint actualizado al modelo recomendado gemini-3.8-flash
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key=${apiKey.trim()}`;
 
     const response = await fetch(url, {
       method: 'POST',
