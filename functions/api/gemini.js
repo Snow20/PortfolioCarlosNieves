@@ -14,7 +14,8 @@ export async function onRequestPost(context) {
       });
     }
 
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey.trim()}`;
+    // Endpoint actualizado a gemini-2.0-flash (o gemini-1.5-flash-latest)
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey.trim()}`;
 
     const response = await fetch(url, {
       method: 'POST',
@@ -29,7 +30,7 @@ export async function onRequestPost(context) {
     });
   } catch (err) {
     return new Response(JSON.stringify({ 
-      error: { message: err.message || "Error procesando solicitud en la función serverless." } 
+      error: { message: err.message || "Error procesando la solicitud en Cloudflare." } 
     }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }
