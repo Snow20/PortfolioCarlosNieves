@@ -3,7 +3,7 @@ export async function onRequestPost(context) {
 
     if (!apiKey) {
         return new Response(JSON.stringify({ 
-            error: { message: "GEMINI_API_KEY no configurada en Cloudflare." } 
+            error: { message: "GEMINI_API_KEY no configurada en las variables de Cloudflare." } 
         }), {
             status: 500,
             headers: { 'Content-Type': 'application/json' }
@@ -13,27 +13,16 @@ export async function onRequestPost(context) {
     try {
         const body = await context.request.json();
         
-        // Endpoint actualizado para v1beta con gemini-2.5-flash
-        const primaryUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+        // Endpoint actualizado con el modelo Gemini 2.5 Flash
+        const googleUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
 
-        let response = await fetch(primaryUrl, {
+        const response = await fetch(googleUrl, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(body)
         });
 
-        let data = await response.json();
-
-        // Fallback automatico a gemini-2.0-flash si el modelo primario no responde
-        if (response.status === 404 || (data.error && data.error.code === 404)) {
-            const fallbackUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-            response = await fetch(fallbackUrl, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(body)
-            });
-            data = await response.json();
-        }
+        const data = await response.json();
 
         return new Response(JSON.stringify(data), {
             status: response.status,
@@ -41,7 +30,7 @@ export async function onRequestPost(context) {
         });
     } catch (err) {
         return new Response(JSON.stringify({ 
-            error: { message: `Error en la Cloudflare Function: ${err.message}` } 
+            error: { message: `Error en Cloudflare Function: ${err.message}` } 
         }), {
             status: 500,
             headers: { 'Content-Type': 'application/json' }
