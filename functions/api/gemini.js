@@ -1,110 +1,74 @@
 export async function onRequestPost(context) {
-const apiKey = context.env.GEMINI_API_KEY;
+    // Lee la clave de API (acepta tanto GROQ_API_KEY como GEMINI_API_KEY)
+    const apiKey = context.env.GROQ_API_KEY || context.env.GEMINI_API_KEY;
 
-if (!apiKey) {
-    return new Response(
-        JSON.stringify({
-            error: {
-                message:
-                    "GEMINI_API_KEY no está configurada en las variables de entorno de Cloudflare."
-            }
-        }),
-        {
+    if (!apiKey) {
+        return new Response(JSON.stringify({ 
+            error: { message: "GROQ_API_KEY no configurada en las variables de Cloudflare." } 
+        }), {
             status: 500,
-            headers: {
-                "Content-Type": "application/json"
-            }
-        }
-    );
-}
-
-try {
-    const body = await context.request.json();
-
-    const userInput = body.input;
-
-    if (!userInput || typeof userInput !== "string") {
-        return new Response(
-            JSON.stringify({
-                error: {
-                    message: "La petición debe contener un campo 'input' de texto."
-                }
-            }),
-            {
-                status: 400,
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            }
-        );
+            headers: { 'Content-Type': 'application/json' }
+        });
     }
 
-    const googleUrl =
-        "https://generativelanguage.googleapis.com/v1beta/interactions";
+    try {
+        const body = await context.request.json();
+        
+        // Extrae el contexto y prompt original enviado desde dani-ai.js
+        const promptText = body.contents?.[0]?.parts?.map(p => p.text).join("\n\n") || "";
 
-    const requestBody = {
-        model: "gemini-3.8-flash",
-        input: userInput,
-        generation_config: {
-            thinking_level: "low",
-            max_output_tokens: 1200,
-            temperature: 0.3
-        }
-    };
+        // Petición al motor de inferencia ultra rápido de Groq (Llama 3.3 70B)
+        const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+            method: "POST",
+            headers: {
+                "Authorization": `Bearer ${apiKey}`,
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                model: "llama-3.3-70b-versatile",
+                messages: [
+                    { role: "user", content: promptText }
+                ],
+                temperature: 0.2,
+                max_tokens: 600
+            })
+        });
 
-    const response = await fetch(googleUrl, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "x-goog-api-key": apiKey
-        },
-        body: JSON.stringify(requestBody)
-    });
+        const data = await response.json();
 
-    const data = await response.json();
-
-    if (!response.ok) {
-        return new Response(
-            JSON.stringify({
-                error: {
-                    message:
-                        data?.error?.message ||
-                        "Google Gemini devolvió un error.",
-                    code: data?.error?.code || response.status,
-                    status: data?.error?.status || response.status
-                }
-            }),
-            {
+        if (!response.ok) {
+            return new Response(JSON.stringify({ 
+                error: { message: data.error?.message || "Error en el servidor de Groq" } 
+            }), {
                 status: response.status,
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            }
-        );
-    }
+                headers: { 'Content-Type': 'application/json' }
+            });
+        }
 
-    return new Response(JSON.stringify(data), {
-        status: 200,
-        headers: {
-            "Content-Type": "application/json"
-        }
-    });
-} catch (error) {
-    return new Response(
-        JSON.stringify({
-            error: {
-                message:
-                    error instanceof Error
-                        ? error.message
-                        : "Error desconocido en Cloudflare Function."
-            }
-        }),
-        {
+        // Formatea la respuesta de Groq para mantener compatibilidad con dani-ai.js
+        const formattedData = {
+            candidates: [
+                {
+                    content: {
+                        parts: [
+                            { text: data.choices?.[0]?.message?.content || "No se obtuvo respuesta." }
+                        ]
+                    }
+                }
+            ]
+        };
+
+        return new Response(JSON.stringify(formattedData), {
+            status: 200,
+            headers: { 'Content-Type': 'application/json' }
+        });
+
+    } catch (err) {
+        return new Response(JSON.stringify({ 
+            error: { message: `Error en Cloudflare Function: ${err.message}` } 
+        }), {
             status: 500,
-            headers: {
-                "Content-Type": "application/json"
-            }
-        }
-    );
-}
+            headers: { 'Content-Type': 'application/json' }
+        });
+    }
 }
