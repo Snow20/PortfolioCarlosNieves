@@ -1023,6 +1023,21 @@ body.light-mode .skill-pill {
     transform: translateY(-3px);
 }
 
+/* REPOSICIONAMIENTO PARA EVITAR SOLAPAMIENTO DE BOTONES */
+.neon-back-to-top {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 90px !important; /* Desplazado a la izquierda para dejar sitio al gato Dani */
+    z-index: 99990 !important;
+}
+
+#dani-chat-widget {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 99999 !important;
+}
+
 .neon-arrow {
     font-size: 0.9rem;
     line-height: 1;
