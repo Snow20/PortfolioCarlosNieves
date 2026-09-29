@@ -11,39 +11,23 @@
     --font-sans: 'Rajdhani', sans-serif;
 
     /* =========================================
-       PROFESSIONAL LIGHT THEME
+       PROFESSIONAL LIGHT THEME (CUIDADOSO CON LA VISTA)
        ========================================= */
-
     --fenrir-light-bg: #EEF1F5;
-
     --fenrir-light-bg-secondary: #E7EBF0;
-
     --fenrir-light-surface: #FFFFFF;
-
     --fenrir-light-surface-soft: #F7F8FA;
-
     --fenrir-light-text: #18202A;
-
     --fenrir-light-text-muted: #5E6875;
-
     --fenrir-light-border: #CBD3DC;
-
     --fenrir-light-border-accent: rgba(125, 95, 255, 0.30);
-
-    --fenrir-light-cyan: #00AFC0;
-
+    --fenrir-light-cyan: #00838F;
     --fenrir-light-purple: #6855D9;
-
     --fenrir-light-grid: rgba(80, 100, 120, 0.055);
-
     --fenrir-light-shadow: rgba(20, 30, 45, 0.08);
-
     --fenrir-light-cyan-glow: rgba(0, 210, 211, 0.08);
-
     --fenrir-light-purple-glow: rgba(125, 95, 255, 0.06);
-
 }
-
 
 * {
     box-sizing: border-box;
@@ -62,12 +46,58 @@ body {
     min-height: 100vh;
 }
 
+/* =========================================
+   MODO CLARO (ADAPTACIÓN DE VARIABLES MATE)
+   ========================================= */
 body.light-mode {
-    --fenrir-dark: #eef2f5;
-    --fenrir-card-bg: rgba(255, 255, 255, 0.90);
-    --fenrir-text: #0a0b10;
-    --fenrir-cyan: #00838f;
-    --fenrir-border: rgba(125, 95, 255, 0.25);
+    background-color: var(--fenrir-light-bg);
+    color: var(--fenrir-light-text);
+    --fenrir-dark: var(--fenrir-light-bg);
+    --fenrir-card-bg: var(--fenrir-light-surface);
+    --fenrir-text: var(--fenrir-light-text);
+    --fenrir-text-muted: var(--fenrir-light-text-muted);
+    --fenrir-cyan: var(--fenrir-light-cyan);
+    --fenrir-border: var(--fenrir-light-border);
+    background-image:
+        radial-gradient(circle at 80% 20%, var(--fenrir-light-purple-glow) 0%, transparent 40%),
+        radial-gradient(circle at 20% 80%, var(--fenrir-light-cyan-glow) 0%, transparent 40%);
+}
+
+body.light-mode .animus-navbar {
+    background: rgba(238, 241, 245, 0.95);
+    border-bottom: 1px solid var(--fenrir-light-border);
+}
+
+body.light-mode .content-block,
+body.light-mode .kpi-metric-card,
+body.light-mode .arch-card,
+body.light-mode .cyber-skill-card {
+    background: var(--fenrir-light-surface);
+    border-color: var(--fenrir-light-border);
+    box-shadow: 0 4px 12px var(--fenrir-light-shadow);
+}
+
+body.light-mode .cyber-control-panel,
+body.light-mode .cyber-search-container {
+    background: var(--fenrir-light-surface-soft);
+    border-color: var(--fenrir-light-border);
+}
+
+body.light-mode .cyber-tab {
+    color: var(--fenrir-light-text-muted);
+    border-color: var(--fenrir-light-border);
+}
+
+body.light-mode .cyber-tab.active {
+    background: rgba(0, 131, 143, 0.12);
+    color: var(--fenrir-light-cyan);
+    border-color: var(--fenrir-light-cyan);
+}
+
+body.light-mode .skill-pill {
+    background: var(--fenrir-light-bg-secondary);
+    color: var(--fenrir-light-text-muted);
+    border-color: var(--fenrir-light-border);
 }
 
 #bg-canvas {
@@ -245,7 +275,7 @@ body.light-mode {
     margin-bottom: 2rem;
 }
 
-/* METRICS GRID */
+/* METRICS GRID HERO */
 .metrics-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -475,7 +505,7 @@ body.light-mode {
     opacity: 0.6;
 }
 
-/* GRID Y TARJETAS */
+/* GRID Y TARJETAS GENERALES */
 .cyber-cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
@@ -570,16 +600,16 @@ body.light-mode {
 .pills-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.4rem;
 }
 
 .skill-pill {
     font-family: var(--font-mono);
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     background: rgba(10, 11, 16, 0.85);
     color: var(--fenrir-text-muted);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 0.35rem 0.65rem;
+    border: 1px solid var(--fenrir-border);
+    padding: 0.25rem 0.55rem;
     border-radius: 3px;
     transition: color 0.2s, border-color 0.2s;
 }
@@ -713,18 +743,84 @@ body.light-mode {
     color: var(--fenrir-text);
 }
 
-/* BLOCK 04: ARQUITECTURA */
+/* ==========================================================================
+   BLOCK 04: NODOS ARQUITECTÓNICOS Y KPIS (UNIFICADO Y SIN DUPLICADOS)
+   ========================================================================== */
+.cyber-architecture-section {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+/* 1. GRID DE KPIS (MARGEN INFERIOR DE HOLGURA PARA NO PEGARSE CON LOS PROYECTOS) */
+.kpi-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 3.5rem;
+}
+
+.kpi-metric-card {
+    position: relative;
+    background: var(--fenrir-card-bg);
+    border: 1px solid var(--fenrir-border);
+    padding: 1.2rem 1rem;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.kpi-metric-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--fenrir-cyan);
+    box-shadow: 0 4px 15px rgba(0, 210, 211, 0.15);
+}
+
+.kpi-metric-value {
+    font-family: var(--font-mono);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--fenrir-cyan);
+    margin-bottom: 0.3rem;
+    line-height: 1;
+}
+
+.kpi-metric-label {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--fenrir-text);
+    letter-spacing: 0.5px;
+    margin-bottom: 0.35rem;
+}
+
+.kpi-metric-subtext {
+    font-size: 0.75rem;
+    color: var(--fenrir-text-muted);
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* 2. GRID DE PROYECTOS COMPACTO Y COMPARTIMENTADO */
 .arch-cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.75rem;
 }
 
 .arch-card {
+    background: var(--fenrir-card-bg);
+    border: 1px solid var(--fenrir-border);
+    padding: 1.4rem 1.25rem !important;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 230px;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.arch-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--fenrir-cyan);
 }
 
 .arch-card-header {
@@ -747,11 +843,33 @@ body.light-mode {
 }
 
 .arch-description {
-    font-size: 0.92rem;
+    font-size: 0.88rem;
     color: var(--fenrir-text-muted);
     line-height: 1.5;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
     flex-grow: 1;
+}
+
+.metrics-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin: 0.4rem 0 0.85rem 0;
+}
+
+.metric-highlight {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--fenrir-cyan);
+    font-weight: 600;
+}
+
+.project-card-action {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--fenrir-cyan);
+    font-weight: bold;
+    margin-top: 0.5rem;
 }
 
 /* BLOCK 05: CREDENCIALES */
@@ -998,14 +1116,6 @@ body.light-mode {
     gap: 0.8rem;
 }
 
-.terminal-output::-webkit-scrollbar {
-    width: 6px;
-}
-
-.terminal-output::-webkit-scrollbar-thumb {
-    background: var(--fenrir-border);
-}
-
 .terminal-input-line {
     display: flex;
     align-items: center;
@@ -1031,71 +1141,6 @@ body.light-mode {
     width: 100%;
 }
 
-.cmd-echo {
-    color: var(--fenrir-accent);
-    font-weight: bold;
-}
-
-.term-section-title {
-    color: var(--fenrir-cyan);
-    font-weight: bold;
-    border-bottom: 1px dashed var(--fenrir-border);
-    padding-bottom: 0.2rem;
-    margin-bottom: 0.4rem;
-}
-
-.term-list {
-    list-style: none;
-    padding-left: 0;
-}
-
-.term-list li {
-    margin-bottom: 0.3rem;
-    color: var(--fenrir-text-muted);
-}
-
-.term-highlight {
-    color: var(--fenrir-cyan);
-    font-weight: bold;
-}
-
-.term-error {
-    color: #ff4757;
-}
-
-/* DESTELLO DE TEMA */
-.theme-switch-flash {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    z-index: 9999;
-    background: radial-gradient(circle at center, rgba(0, 210, 211, 0.35) 0%, transparent 70%);
-    animation: animusPulse 0.45s cubic-bezier(0.1, 0.9, 0.2, 1) forwards;
-}
-
-@keyframes animusPulse {
-    0% {
-        opacity: 0;
-        transform: scale(0.7);
-        filter: blur(10px);
-    }
-
-    50% {
-        opacity: 1;
-        transform: scale(1.05);
-        filter: blur(2px);
-    }
-
-    100% {
-        opacity: 0;
-        transform: scale(1.2);
-        filter: blur(15px);
-    }
-}
-
 /* COPYRIGHT FOOTER BAR */
 .cyber-copyright-bar {
     margin-top: 2rem;
@@ -1119,13 +1164,6 @@ body.light-mode {
     text-shadow: 0 0 8px var(--fenrir-accent);
 }
 
-.cert-sub {
-    font-size: 0.78rem;
-    color: var(--fenrir-text-muted);
-    display: block;
-    margin-top: 0.15rem;
-}
-
 /* RESET ABSOLUTO DANI AI */
 #dani-chat-widget {
     position: fixed !important;
@@ -1134,17 +1172,11 @@ body.light-mode {
     z-index: 999999 !important;
     width: 60px !important;
     height: 60px !important;
-    margin: 0 !important;
-    padding: 0 !important;
 }
 
 #dani-toggle-btn {
     width: 60px !important;
     height: 60px !important;
-    min-width: 60px !important;
-    min-height: 60px !important;
-    max-width: 60px !important;
-    max-height: 60px !important;
     border-radius: 50% !important;
     background: #0d0e15 !important;
     border: 2px solid #00f3ff !important;
@@ -1153,42 +1185,6 @@ body.light-mode {
     align-items: center !important;
     justify-content: center !important;
     box-shadow: 0 0 15px rgba(0, 243, 255, 0.5) !important;
-    padding: 6px !important;
-    box-sizing: border-box !important;
-    overflow: hidden !important;
-}
-
-#dani-toggle-btn svg,
-.dani-cat-icon {
-    width: 40px !important;
-    height: 40px !important;
-    min-width: 40px !important;
-    min-height: 40px !important;
-    max-width: 40px !important;
-    max-height: 40px !important;
-    display: block !important;
-}
-
-#dani-chat-window {
-    position: fixed !important;
-    bottom: 90px !important;
-    right: 20px !important;
-    width: 350px !important;
-    max-width: calc(100vw - 40px) !important;
-    height: 480px !important;
-    max-height: calc(100vh - 120px) !important;
-    background: #0f111a !important;
-    border: 1px solid #00f3ff !important;
-    border-radius: 12px !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 243, 255, 0.3) !important;
-    display: flex !important;
-    flex-direction: column !important;
-    z-index: 999999 !important;
-    overflow: hidden !important;
-}
-
-#dani-chat-window.hidden {
-    display: none !important;
 }
 
 /* RESPONSIVE */
@@ -1239,46 +1235,12 @@ body.light-mode {
         transform: translateX(0);
     }
 
-    .nav-center a {
-        font-size: 1.1rem;
-        padding: 0.6rem 1.2rem;
-        width: 80%;
-        text-align: center;
-    }
-
-    .nav-right {
-        gap: 0.3rem;
-    }
-
-    .nav-btn {
-        font-size: 0.68rem;
-        padding: 0.25rem 0.4rem;
-    }
-
     .hero-title {
         font-size: 2.2rem;
     }
 
-    .hero-subtitle {
-        font-size: 1.05rem;
-    }
-
     .metrics-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .action-bar {
-        flex-direction: column;
-    }
-
-    .btn {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .timeline-item {
-        grid-template-columns: 20px 1fr;
-        gap: 0.5rem;
     }
 
     .arch-cards-grid {
@@ -1287,12 +1249,5 @@ body.light-mode {
 
     .content-block {
         padding: 1.2rem;
-    }
-
-    .neon-back-to-top {
-        bottom: 1.2rem;
-        right: 1.2rem;
-        width: 42px;
-        height: 42px;
     }
 }
