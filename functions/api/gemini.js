@@ -3,7 +3,7 @@ export async function onRequestPost(context) {
 
     if (!apiKey) {
         return new Response(JSON.stringify({ 
-            error: { message: "GEMINI_API_KEY no configurada en Cloudflare." } 
+            error: { message: "GEMINI_API_KEY no configurada en las variables de Cloudflare." } 
         }), {
             status: 500,
             headers: { 'Content-Type': 'application/json' }
@@ -13,43 +13,48 @@ export async function onRequestPost(context) {
     try {
         const body = await context.request.json();
 
-        // 1. Consultar la lista de modelos disponibles para tu clave
-        const listModelsUrl = `https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`;
-        const modelsResponse = await fetch(listModelsUrl);
-        const modelsData = await modelsResponse.json();
+        // Lista de modelos a probar en orden de prioridad
+        const candidateModels = [
+            'gemini-1.5-flash-8b',
+            'gemini-1.5-flash',
+            'gemini-2.5-flash',
+            'gemini-1.5-pro'
+        ];
 
-        let targetModel = null;
+        let lastResponseData = null;
+        let lastStatus = 500;
 
-        if (modelsData.models && Array.isArray(modelsData.models)) {
-            // Buscar un modelo activo que contenga 'flash' y soporte 'generateContent'
-            const flashModel = modelsData.models.find(m => 
-                m.name.includes('flash') && 
-                m.supportedGenerationMethods && 
-                m.supportedGenerationMethods.includes('generateContent')
-            );
-            if (flashModel) {
-                targetModel = flashModel.name; // Ej: 'models/gemini-1.5-flash' o 'models/gemini-2.0-flash'
+        for (const model of candidateModels) {
+            const googleUrl = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+
+            const response = await fetch(googleUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(body)
+            });
+
+            const data = await response.json();
+
+            // Si la respuesta es exitosa (200 OK) y trae candidatos, la devolvemos inmediatamente
+            if (response.ok && data.candidates && data.candidates.length > 0) {
+                return new Response(JSON.stringify(data), {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' }
+                });
+            }
+
+            lastResponseData = data;
+            lastStatus = response.status;
+
+            // Si el error NO es por sobrecarga (429 / High Demand) o modelo no encontrado (404), detenemos el bucle
+            if (response.status !== 429 && response.status !== 404 && (!data.error || !data.error.message.includes('high demand'))) {
+                break;
             }
         }
 
-        // Si no detecta ninguno en la lista, usa el valor solicitado por la API
-        if (!targetModel) {
-            targetModel = 'models/gemini-1.5-flash';
-        }
-
-        // 2. Ejecutar la petición al modelo detectado
-        const generateUrl = `https://generativelanguage.googleapis.com/v1beta/${targetModel}:generateContent?key=${apiKey}`;
-
-        const response = await fetch(generateUrl, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(body)
-        });
-
-        const data = await response.json();
-
-        return new Response(JSON.stringify(data), {
-            status: response.status,
+        // Si todos los modelos están saturados o fallan, se devuelve el último mensaje de error recibido
+        return new Response(JSON.stringify(lastResponseData), {
+            status: lastStatus,
             headers: { 'Content-Type': 'application/json' }
         });
 
