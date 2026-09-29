@@ -1,10 +1,9 @@
 export async function onRequestPost(context) {
-    // Obtiene la API Key desde las variables de entorno configuradas en Cloudflare Pages
     const apiKey = context.env.GEMINI_API_KEY;
 
     if (!apiKey) {
         return new Response(JSON.stringify({ 
-            error: { message: "GEMINI_API_KEY no configurada en las variables de Cloudflare." } 
+            error: { message: "GEMINI_API_KEY no configurada en Cloudflare." } 
         }), {
             status: 500,
             headers: { 'Content-Type': 'application/json' }
@@ -14,8 +13,8 @@ export async function onRequestPost(context) {
     try {
         const body = await context.request.json();
         
-        // Endpoint oficial de la API de Gemini
-        const googleUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+        // Usamos la API v1 con el modelo estable de Gemini Flash
+        const googleUrl = `https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
 
         const response = await fetch(googleUrl, {
             method: 'POST',
