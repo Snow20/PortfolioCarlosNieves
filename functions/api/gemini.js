@@ -13,8 +13,8 @@ export async function onRequestPost(context) {
     try {
         const body = await context.request.json();
         
-        // Usamos la API v1 con el modelo estable de Gemini Flash
-        const googleUrl = `https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+        // Uso del identificador de modelo actualizado para la API v1beta
+        const googleUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
 
         const response = await fetch(googleUrl, {
             method: 'POST',
@@ -23,6 +23,21 @@ export async function onRequestPost(context) {
         });
 
         const data = await response.json();
+
+        // Fallback secundario si el modelo 2.5 no responde en la región
+        if (data.error && data.error.code === 404) {
+            const fallbackUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`;
+            const fallbackResponse = await fetch(fallbackUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(body)
+            });
+            const fallbackData = await fallbackResponse.json();
+            return new Response(JSON.stringify(fallbackData), {
+                status: fallbackResponse.status,
+                headers: { 'Content-Type': 'application/json' }
+            });
+        }
 
         return new Response(JSON.stringify(data), {
             status: response.status,
