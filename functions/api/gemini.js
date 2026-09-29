@@ -14,54 +14,62 @@ export async function onRequestPost(context) {
         const body = await context.request.json();
         const promptText = body.contents?.[0]?.parts?.map(p => p.text).join("\n\n") || "";
 
-        // Lista de modelos activos en Groq para reintentar automáticamente
-        const groqModels = [
-            "llama-3.3-70b-versatile",
-            "llama3-70b-8192",
-            "llama3-8b-8192",
-            "mixtral-8x7b-32768"
-        ];
+        // 1. Consultar la lista real de modelos activos en Groq para tu API Key
+        const modelsResponse = await fetch("https://api.groq.com/openai/v1/models", {
+            headers: { "Authorization": `Bearer ${apiKey}` }
+        });
+        const modelsData = await modelsResponse.json();
 
-        let lastError = null;
-
-        for (const model of groqModels) {
-            const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-                method: "POST",
-                headers: {
-                    "Authorization": `Bearer ${apiKey}`,
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    model: model,
-                    messages: [{ role: "user", content: promptText }],
-                    temperature: 0.2,
-                    max_tokens: 600
-                })
+        if (!modelsResponse.ok || !modelsData.data || modelsData.data.length === 0) {
+            return new Response(JSON.stringify({ 
+                error: { message: modelsData.error?.message || "No se pudo obtener la lista de modelos de Groq." } 
+            }), {
+                status: modelsResponse.status,
+                headers: { 'Content-Type': 'application/json' }
             });
+        }
 
-            const data = await response.json();
+        // 2. Filtrar y seleccionar un modelo activo (prioriza llama-3.3, llama3 u otros activos)
+        const activeModels = modelsData.data.map(m => m.id);
+        const selectedModel = activeModels.find(id => id.includes("llama-3.3")) ||
+                              activeModels.find(id => id.includes("llama-3.1")) ||
+                              activeModels.find(id => id.includes("llama3")) ||
+                              activeModels[0];
 
-            if (response.ok && data.choices?.[0]?.message?.content) {
-                // Formato compatible con dani-ai.js y ai-services.js
-                return new Response(JSON.stringify({
-                    candidates: [{
-                        content: {
-                            parts: [{ text: data.choices[0].message.content }]
-                        }
-                    }]
-                }), {
-                    status: 200,
-                    headers: { 'Content-Type': 'application/json' }
-                });
-            }
+        // 3. Petición de inferencia al modelo detectado
+        const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+            method: "POST",
+            headers: {
+                "Authorization": `Bearer ${apiKey}`,
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                model: selectedModel,
+                messages: [{ role: "user", content: promptText }],
+                temperature: 0.2,
+                max_tokens: 600
+            })
+        });
 
-            lastError = data.error?.message || `Error con modelo ${model}`;
+        const data = await response.json();
+
+        if (response.ok && data.choices?.[0]?.message?.content) {
+            return new Response(JSON.stringify({
+                candidates: [{
+                    content: {
+                        parts: [{ text: data.choices[0].message.content }]
+                    }
+                }]
+            }), {
+                status: 200,
+                headers: { 'Content-Type': 'application/json' }
+            });
         }
 
         return new Response(JSON.stringify({ 
-            error: { message: lastError } 
+            error: { message: data.error?.message || `Error con el modelo ${selectedModel}` } 
         }), {
-            status: 400,
+            status: response.status,
             headers: { 'Content-Type': 'application/json' }
         });
 
