@@ -27,73 +27,70 @@ INFORMACIÓN COMPLETA DE CARLOS NIEVES:
 `;
 
 async function queryAI(userPrompt) {
-    const URL = '/api/gemini';
+const URL = "/api/gemini";
 
-    try {
-        const response = await fetch(URL, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                contents: [{
-                    parts: [
-                        { text: AI_CONTEXT_PROMPT },
-                        { text: `Consulta del usuario: "${userPrompt}". Proporciona una respuesta completa en español que termine en punto.` }
-                    ]
-                }],
-                generationConfig: {
-                    maxOutputTokens: 800,
-                    temperature: 0.3
-                }
-            })
-        });
+try {
+    const input = `
 
-        const data = await response.json();
+${AI_CONTEXT_PROMPT}
 
-        if (data.error) {
-            return `Error de API (${data.error.code || 'HTTP'}): ${data.error.message || JSON.stringify(data.error)}`;
-        }
+CONSULTA DEL USUARIO:
+"${userPrompt}"
 
-        if (data.candidates && data.candidates[0]?.content?.parts[0]?.text) {
-            return data.candidates[0].content.parts[0].text.trim();
-        }
+INSTRUCCIONES FINALES:
 
-        return "Error inesperado: No se pudo procesar la respuesta del núcleo de IA.";
-    } catch (error) {
-        return `Error de red o servidor: ${error.message}`;
-    }
+Responde en español.
+Sé claro, profesional y completo.
+No inventes información sobre Carlos.
+Si la consulta es una palabra clave corta como "exp", "bio", "skills" o "contacto", proporciona un resumen útil del área correspondiente.
+
+Finaliza siempre la respuesta con una frase completa.
+`;
+
+  const response = await fetch(URL, {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+          input
+      })
+  });
+
+  const data = await response.json();
+
+  if (!response.ok || data.error) {
+      return `Error de API (${data.error?.code || response.status}): ${
+          data.error?.message || "Error desconocido."
+      }`;
+  }
+
+  if (data.output_text) {
+      return data.output_text.trim();
+  }
+
+  // Compatibilidad adicional por si Google devuelve los pasos
+  // pero no la propiedad output_text.
+  if (Array.isArray(data.steps)) {
+      const modelOutput = data.steps.find(
+          step => step.type === "model_output"
+      );
+
+      if (modelOutput?.content) {
+          const textContent = modelOutput.content
+              .filter(item => item.type === "text")
+              .map(item => item.text)
+              .join("");
+
+          if (textContent) {
+              return textContent.trim();
+          }
+      }
+  }
+
+  return "Error inesperado: Gemini no devolvió contenido de texto.";
+
+} catch (error) {
+return Error de red o servidor: ${error.message};
 }
-
-// Algoritmo de sugerencia para comandos incorrectos en la consola
-function getClosestCommand(inputCmd) {
-    const validCmds = ['help', 'bio', 'subject', 'skills', 'exp', 'projects', 'contact', 'theme', 'clear', 'exit', 'ask', 'ai'];
-    let closest = '';
-    let minDistance = Infinity;
-
-    validCmds.forEach(cmd => {
-        const dist = levenshteinDistance(inputCmd, cmd);
-        if (dist < minDistance) {
-            minDistance = dist;
-            closest = cmd;
-        }
-    });
-
-    return minDistance <= 2 ? closest : null;
-}
-
-function levenshteinDistance(a, b) {
-    const matrix = Array.from({ length: a.length + 1 }, () => Array(b.length + 1).fill(0));
-    for (let i = 0; i <= a.length; i++) matrix[i][0] = i;
-    for (let j = 0; j <= b.length; j++) matrix[0][j] = j;
-
-    for (let i = 1; i <= a.length; i++) {
-        for (let j = 1; j <= b.length; j++) {
-            const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-            matrix[i][j] = Math.min(
-                matrix[i - 1][j] + 1,
-                matrix[i][j - 1] + 1,
-                matrix[i - 1][j - 1] + cost
-            );
-        }
-    }
-    return matrix[a.length][b.length];
 }
