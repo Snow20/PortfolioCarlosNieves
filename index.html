@@ -114,12 +114,12 @@
         </button>
 
         <nav class="nav-center" id="nav-center">
-            <a href="#sujeto" class="active" data-i18n="nav_runner">[01] RUNNER</a>
-            <a href="#skills" data-i18n="nav_skills">[02] CYBERWARE SKILLS</a>
-            <a href="#memorias" data-i18n="nav_memorias">[03] ENGRAMS</a>
-            <a href="#arquitectura" data-i18n="nav_arquitectura">[04] CHASSIS</a>
+            <a href="#sujeto" class="active" data-i18n="nav_runner">[01] PROFILE</a>
+            <a href="#skills" data-i18n="nav_skills">[02] SKILLS</a>
+            <a href="#memorias" data-i18n="nav_memorias">[03] EXPERIENCE</a>
+            <a href="#arquitectura" data-i18n="nav_arquitectura">[04] PROJECTS</a>
             <a href="#protocolo" data-i18n="nav_protocolo">[05] CREDENCIALES</a>
-            <a href="#contacto" data-i18n="nav_contacto">[06] NETLINK</a>
+            <a href="#contacto" data-i18n="nav_contacto">[06] CONTACT</a>
         </nav>
 
         <div class="nav-right">
@@ -137,8 +137,8 @@
             </div>
 
             <h1 class="hero-title">CARLOS NIEVES</h1>
-            <h2 class="hero-subtitle" data-i18n="hero_subtitle">Senior L3 Application Support Engineer | Linux &
-                Middleware Specialist</h2>
+            <h2 class="hero-subtitle" data-i18n="hero_subtitle">Senior L3 Application Support Engineer | DevOps Support
+            </h2>
 
             <p class="hero-description" data-i18n="hero_desc">
                 Especializado en la gestión y diagnóstico de entornos de alta disponibilidad, resolución de incidencias
@@ -166,18 +166,21 @@
             </div>
 
             <div class="action-bar">
-                <a href="#contacto" class="btn btn-primary" data-i18n="btn_contact">⚡ INICIAR TRANSMISIÓN / CONTACTO</a>
-                <a href="https://github.com/Snow20" target="_blank" rel="noopener" class="btn btn-secondary"
-                    data-i18n="btn_github">📄 VER GITHUB (MD)</a>
+
                 <a href="assets/docs/Carlos Nieves CV 2026 ENG Galicia V2.pdf" download="Carlos_Nieves_CV_ENG.pdf"
                     class="btn btn-secondary" data-i18n="btn_cv_eng">
-                    📄 DESCARGAR CV Carlos Nieves ENG (PDF)
+                    📄 DOWNLOAD CV ENG (PDF)
                 </a>
                 <a href="assets/docs/Carlos Nieves CV 2026 ESP Galicia V2.pdf" download="Carlos_Nieves_CV_ESP.pdf"
                     class="btn btn-secondary" data-i18n="btn_cv_esp">
-                    📄 DESCARGAR CV Carlos Nieves ESP (PDF)
+                    📄 DESCARGAR CV ESP (PDF)
                 </a>
+                <a href="https://github.com/Snow20" target="_blank" rel="noopener" class="btn btn-secondary"
+                    data-i18n="btn_github">📄 VER PROYECTOS (MD)</a>
+                <a href="#contacto" class="btn btn-primary" data-i18n="btn_contact">⚡ INICIAR TRANSMISIÓN /
+                    CONTACTAR</a>
                 <button class="btn btn-tertiary" id="open-cli" data-i18n="btn_cli">&gt;_ ABRIR TERMINAL</button>
+
             </div>
         </div>
 
@@ -375,30 +378,100 @@
                     </p>
                     <div class="pills-container">
                         <span class="skill-pill">Linux</span>
-                        <span class="skill-pill">Bash</span>
+                        <span class="skill-pill">Bash Scripting</span>
+                        <span class="skill-pill">VMWare</span>
+                        <span class="skill-pill">Virtualization</span>
+                        <span class="skill-pill">Unix</span>
+                        <span class="skill-pill">TCP - IP</span>
                         <span class="skill-pill" data-i18n="pill_clusters">Clústeres Redundantes</span>
                     </div>
                 </div>
 
-                <div class="cyber-skill-card arch-card">
+                <div class="cyber-skill-card arch-card project-link-card"
+                    onclick="window.open('https://github.com/Snow20/MercadilloEcommerce', '_blank')" role="link"
+                    tabindex="0"
+                    onkeydown="if(event.key === 'Enter' || event.key === ' ') { window.open('https://github.com/Snow20/MercadilloEcommerce', '_blank'); }">
+
                     <span class="corner-bracket top-left"></span>
                     <span class="corner-bracket top-right"></span>
                     <span class="corner-bracket bottom-left"></span>
                     <span class="corner-bracket bottom-right"></span>
+
                     <div class="arch-card-header">
-                        <span class="arch-icon">🌐</span>
-                        <h4 data-i18n="proj2_title">Fenrirsoft Web Engine</h4>
+                        <span class="arch-icon">🐙</span>
+
+                        <h4 data-i18n="proj2_title">
+                            MercadilloEcommerce
+                        </h4>
                     </div>
-                    <p class="arch-description" data-i18n="proj2_desc">
-                        Infraestructura de despliegue continuo en Cloudflare Pages integrada con pipelines sincronizados
-                        en GitHub para la entrega de plataformas web empresariales.
+
+                    <p class="arch-description" data-i18n="proj2_desc2">
+                        Una plataforma de comercio electrónico de alto rendimiento y nivel empresarial, desarrollada con
+                        una arquitectura moderna desacoplada: frontend en Angular 18 con un sistema de diseño UI/UX
+                        personalizado inspirado en el mercadillo gallego, backend basado en .NET 9 Minimal APIs con
+                        arquitectura de pasarelas de pago múltiples (patrón Factory), mensajería asíncrona basada en
+                        eventos mediante MassTransit y RabbitMQ, un trabajador dedicado para la gestión de incidentes en
+                        ServiceNow e infraestructura como código (IaC) para el despliegue en Azure AKS.
                     </p>
+
                     <div class="pills-container">
-                        <span class="skill-pill">Cloudflare Pages</span>
-                        <span class="skill-pill">GitHub</span>
-                        <span class="skill-pill">CI/CD</span>
+                        <span class="skill-pill">Angular 18</span>
+                        <span class="skill-pill">ASP.NET Core 9.0</span>
+                        <span class="skill-pill">Python</span>
+                        <span class="skill-pill">Ansible</span>
+                        <span class="skill-pill">Terraform</span>
+                        <span class="skill-pill">NGINX alpine</span>
+                        <span class="skill-pill">RabbitMQ</span>
+                        <span class="skill-pill">Docker</span>
+                        <span class="skill-pill">Stripe</span>
                     </div>
+
+                    <div class="project-card-action">
+                        <span>↗ VIEW ON GITHUB</span>
+                    </div>
+
                 </div>
+
+                <div class="cyber-skill-card arch-card project-link-card"
+                    onclick="window.open('https://github.com/Snow20/MortgageBank-', '_blank')" role="link" tabindex="0"
+                    onkeydown="if(event.key === 'Enter' || event.key === ' ') { window.open('https://github.com/Snow20/MortgageBank-', '_blank'); }">
+
+                    <span class="corner-bracket top-left"></span>
+                    <span class="corner-bracket top-right"></span>
+                    <span class="corner-bracket bottom-left"></span>
+                    <span class="corner-bracket bottom-right"></span>
+
+                    <div class="arch-card-header">
+                        <span class="arch-icon">🏦</span>
+
+                        <h4 data-i18n="proj3_title">
+                            MortgageBank
+                        </h4>
+                    </div>
+
+                    <p class="arch-description" data-i18n="proj3_desc3">
+                        Plataforma de gestión hipotecaria basada en arquitectura
+                        full-stack y procesamiento asíncrono de eventos.
+                        Integración de Angular, Spring Boot, PostgreSQL, RabbitMQ
+                        y Docker, con referencias de despliegue mediante Kubernetes,
+                        Terraform y Ansible.
+                    </p>
+
+                    <div class="pills-container">
+                        <span class="skill-pill">Angular 19</span>
+                        <span class="skill-pill">Spring Boot 3</span>
+                        <span class="skill-pill">Java 21</span>
+                        <span class="skill-pill">PostgreSQL</span>
+                        <span class="skill-pill">RabbitMQ</span>
+                        <span class="skill-pill">Docker</span>
+                    </div>
+
+                    <div class="project-card-action">
+                        <span>↗ VIEW ON GITHUB</span>
+                    </div>
+
+                </div>
+
             </div>
         </div>
     </section>
@@ -551,12 +624,12 @@
             </div>
         </div>
     </div>
- 
 
-   
+
+
 
     <!-- Script del Asistente Dani -->
-     <!-- <script src="js/dani-ai.js?v=2.0"></script>-->
+    <!-- <script src="js/dani-ai.js?v=2.0"></script>-->
     <script src="js/ai-services.js?v=2.0"></script>
     <script src="js/script.js?v=2.0"></script>
 

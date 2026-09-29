@@ -9,7 +9,41 @@
     --fenrir-border: rgba(125, 95, 255, 0.35);
     --font-mono: 'Share Tech Mono', monospace;
     --font-sans: 'Rajdhani', sans-serif;
+
+    /* =========================================
+       PROFESSIONAL LIGHT THEME
+       ========================================= */
+
+    --fenrir-light-bg: #EEF1F5;
+
+    --fenrir-light-bg-secondary: #E7EBF0;
+
+    --fenrir-light-surface: #FFFFFF;
+
+    --fenrir-light-surface-soft: #F7F8FA;
+
+    --fenrir-light-text: #18202A;
+
+    --fenrir-light-text-muted: #5E6875;
+
+    --fenrir-light-border: #CBD3DC;
+
+    --fenrir-light-border-accent: rgba(125, 95, 255, 0.30);
+
+    --fenrir-light-cyan: #00AFC0;
+
+    --fenrir-light-purple: #6855D9;
+
+    --fenrir-light-grid: rgba(80, 100, 120, 0.055);
+
+    --fenrir-light-shadow: rgba(20, 30, 45, 0.08);
+
+    --fenrir-light-cyan-glow: rgba(0, 210, 211, 0.08);
+
+    --fenrir-light-purple-glow: rgba(125, 95, 255, 0.06);
+
 }
+
 
 * {
     box-sizing: border-box;
@@ -22,7 +56,7 @@ body {
     color: var(--fenrir-text);
     font-family: var(--font-sans);
     line-height: 1.5;
-    background-image: 
+    background-image:
         radial-gradient(circle at 80% 20%, rgba(125, 95, 255, 0.08) 0%, transparent 40%),
         radial-gradient(circle at 20% 80%, rgba(0, 210, 211, 0.05) 0%, transparent 40%);
     min-height: 100vh;
@@ -94,7 +128,8 @@ body.light-mode {
     border: 1px solid transparent;
 }
 
-.nav-center a:hover, .nav-center a.active {
+.nav-center a:hover,
+.nav-center a.active {
     color: var(--fenrir-text);
     border-color: var(--fenrir-border);
     background: rgba(125, 95, 255, 0.1);
@@ -346,13 +381,11 @@ body.light-mode {
     left: 0;
     width: 100%;
     height: 100%;
-    background: repeating-linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0.25),
-        rgba(0, 0, 0, 0.25) 1px,
-        transparent 1px,
-        transparent 3px
-    );
+    background: repeating-linear-gradient(0deg,
+            rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.25) 1px,
+            transparent 1px,
+            transparent 3px);
     pointer-events: none;
     z-index: 3;
 }
@@ -1049,11 +1082,13 @@ body.light-mode {
         transform: scale(0.7);
         filter: blur(10px);
     }
+
     50% {
         opacity: 1;
         transform: scale(1.05);
         filter: blur(2px);
     }
+
     100% {
         opacity: 0;
         transform: scale(1.2);
@@ -1083,6 +1118,7 @@ body.light-mode {
     color: var(--fenrir-accent);
     text-shadow: 0 0 8px var(--fenrir-accent);
 }
+
 .cert-sub {
     font-size: 0.78rem;
     color: var(--fenrir-text-muted);
@@ -1161,7 +1197,7 @@ body.light-mode {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
+
     .hero-right {
         max-width: 380px;
         margin: 0 auto;

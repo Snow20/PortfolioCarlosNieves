@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     let currentLang = 'ES';
 
     // ==========================================
@@ -8,27 +8,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     const translations = {
         ES: {
-            nav_runner: "[01] RUNNER",
-            nav_skills: "[02] CYBERWARE SKILLS",
-            nav_memorias: "[03] ENGRAMS",
-            nav_arquitectura: "[04] CHASSIS",
+            nav_runner: "[01] PROFILE",
+            nav_skills: "[02] SKILLS",
+            nav_memorias: "[03] EXPERIENCE",
+            nav_arquitectura: "[04] PROJECTS",
             nav_protocolo: "[05] CREDENCIALES",
-            nav_contacto: "[06] NETLINK",
-            
+            nav_contacto: "[06] CONTACT",
+
             hero_badge: "BIO-DATA LOADED // UPLINK COMPLETE",
-            hero_subtitle: "Senior L3 Application Support Engineer | Linux & Middleware Specialist",
+            hero_subtitle: "Senior L3 Application Support Engineer | DevOps Support",
             hero_desc: "Especializado en la gestión y diagnóstico de entornos de alta disponibilidad, resolución de incidencias L3 en arquitecturas SOAP/REST, automatización de sistemas Linux mediante Bash y garantía de continuidad operativa en plataformas bancarias y telecomunicaciones.",
             metric_l3: "AÑOS SOPORTE L3",
             metric_uptime: "UPTIME EDICONTROLLER",
             metric_critical: "ENTORNOS CRÍTICOS",
             metric_english: "INGLÉS TÉCNICO",
-            
-            btn_contact: "⚡ INICIAR TRANSMISIÓN / CONTACTO",
-            btn_github: "📄 VER GITHUB (MD)",
-            btn_cv_eng: "📄 DESCARGAR CV Carlos Nieves ENG (PDF)",
-            btn_cv_esp: "📄 DESCARGAR CV Carlos Nieves ESP (PDF)",
+
+            btn_contact: "⚡ INICIAR TRANSMISIÓN / CONTACTAR",
+            btn_github: "📄 VER PROYECTOS (MD)",
+            btn_cv_eng: "📄 DOWNLOAD CV ENG(PDF)",
+            btn_cv_esp: "📄 DESCARGAR CV ESP(PDF)",
             btn_cli: ">_ ABRIR TERMINAL",
-            
+
             block02_title: "[02] MATRIZ DE HABILIDADES NEURALES",
             tab_all: "TODOS LOS NODOS",
             tab_sistemas: "LINUX & CORE",
@@ -180,8 +180,12 @@ document.addEventListener('DOMContentLoaded', () => {
             block04_title: "NODOS ARQUITECTÓNICOS (PROYECTOS CLAVE)",
             proj1_title: "Plataforma EDIController",
             proj1_desc: "Arquitectura de alta disponibilidad para transferencia crítica de archivos bancarios. Implementación de clústeres redundantes sobre Linux con tolerancia a fallos y automatización en Bash.",
-            proj2_title: "Fenrirsoft Web Engine",
-            proj2_desc: "Infraestructura de despliegue continuo en Cloudflare Pages integrada con pipelines sincronizados en GitHub para la entrega de plataformas web empresariales.",
+
+            proj2_title: "MercadilloEcommerce",
+            proj2_desc2: "Una plataforma de comercio electrónico de alto rendimiento y nivel empresarial, desarrollada con una arquitectura moderna desacoplada: frontend en Angular 18 con un sistema de diseño UI/UX personalizado inspirado en el mercadillo gallego, backend basado en .NET 9 Minimal APIs con arquitectura de pasarelas de pago múltiples (patrón Factory), mensajería asíncrona basada en eventos mediante MassTransit y RabbitMQ, un trabajador dedicado para la gestión de incidentes en ServiceNow e infraestructura como código (IaC) para el despliegue en Azure AKS.",
+
+            proj3_title: "MortgageBank",
+            proj3_desc3: "Plataforma de gestión hipotecaria basada en arquitectura full-stack y procesamiento asíncrono de eventos. Integración de Angular, Spring Boot, PostgreSQL, RabbitMQ y Docker, con referencias de despliegue mediante Kubernetes, Terraform y Ansible.",
 
             block05_title: "CREDENCIALES Y PROTOCOLOS",
             proto_edu: "🎓 FORMACIÓN ACADÉMICA",
@@ -217,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
             contact_linkedin: "PERFIL LINKEDIN",
             contact_github: "REPOSITORIOS GITHUB",
             copyright_text: "© 2026 Carlos Nieves. copyright",
-            
+
             term_modal_title: "EXP-92 CONSOLE // COMMAND TERMINAL",
             term_input_placeholder: "Escribe un comando (ej: help, bio, skills, ask)...",
             term_welcome: `==================================================\nEXP-92 CONSOLE // COMMAND TERMINAL\n==================================================\nEscribe <span class="term-highlight">help</span> para desplegar la lista de protocolos disponibles.`,
@@ -272,27 +276,27 @@ document.addEventListener('DOMContentLoaded', () => {
             term_unknown_cmd: 'Comando no reconocido: "%s". Escribe <span class="term-highlight">help</span> para consultar los comandos disponibles.'
         },
         EN: {
-            nav_runner: "[01] RUNNER",
-            nav_skills: "[02] CYBERWARE SKILLS",
-            nav_memorias: "[03] ENGRAMS",
-            nav_arquitectura: "[04] CHASSIS",
+            nav_runner: "[01] PROFILE",
+            nav_skills: "[02] SKILLS",
+            nav_memorias: "[03] EXPERIENCE",
+            nav_arquitectura: "[04] PROJECTS",
             nav_protocolo: "[05] CREDENTIALS",
-            nav_contacto: "[06] NETLINK",
-            
+            nav_contacto: "[06] CONTACT",
+
             hero_badge: "BIO-DATA LOADED // UPLINK COMPLETE",
-            hero_subtitle: "Senior L3 Application Support Engineer | Linux & Middleware Specialist",
+            hero_subtitle: "Senior L3 Application Support Engineer | DevOps Support",
             hero_desc: "Specialized in managing and diagnosing high-availability environments, L3 incident resolution on SOAP/REST architectures, Linux automation via Bash, and operational continuity assurance across banking and telecom platforms.",
             metric_l3: "YEARS L3 SUPPORT",
             metric_uptime: "EDICONTROLLER UPTIME",
             metric_critical: "CRITICAL ENVIRONMENTS",
             metric_english: "TECHNICAL ENGLISH",
-            
+
             btn_contact: "⚡ START TRANSMISSION / CONTACT",
-            btn_github: "📄 VIEW GITHUB (MD)",
-            btn_cv_eng: "📄 DOWNLOAD CV Carlos Nieves ENG (PDF)",
-            btn_cv_esp: "📄 DOWNLOAD CV Carlos Nieves ESP (PDF)",
+            btn_github: "📄 VIEW PROJECTS (MD)",
+            btn_cv_eng: "📄 DOWNLOAD CV ENG(PDF)",
+            btn_cv_esp: "📄 DOWNLOAD CV ESP(PDF)",
             btn_cli: ">_ OPEN TERMINAL",
-            
+
             block02_title: "[02] NEURAL SKILLS MATRIX",
             tab_all: "ALL NODES",
             tab_sistemas: "LINUX & CORE",
@@ -444,8 +448,12 @@ document.addEventListener('DOMContentLoaded', () => {
             block04_title: "ARCHITECTURAL NODES (KEY PROJECTS)",
             proj1_title: "EDIController Platform",
             proj1_desc: "High-availability architecture for critical banking file transfers. Implementation of redundant clusters on Linux with fault tolerance and Bash automation.",
-            proj2_title: "Fenrirsoft Web Engine",
-            proj2_desc: "Continuous deployment infrastructure on Cloudflare Pages integrated with synchronized GitHub pipelines for enterprise web platforms.",
+
+            proj2_title: "MercadilloEcommerce",
+            proj2_desc2: "A high-performance, enterprise-grade e-commerce platform built with a modern decoupled architecture: Angular 18 frontend with a custom UI/UX design system inspired by the Galician market, .NET 9 Minimal APIs backend with a multi-payment-gateway architecture (Factory pattern), asynchronous event-driven messaging via MassTransit and RabbitMQ, a dedicated worker for ServiceNow incident management, and Infrastructure as Code (IaC) for deployment on Azure AKS.",
+
+            proj3_title: "MortgageBank",
+            proj3_desc3: "Mortgage management platform based on full-stack architecture and asynchronous event processing. Integration of Angular, Spring Boot, PostgreSQL, RabbitMQ, and Docker, with deployment using Kubernetes, Terraform, and Ansible.",
 
             block05_title: "CREDENTIALS AND PROTOCOLS",
             proto_edu: "🎓 ACADEMIC EDUCATION",
@@ -481,7 +489,7 @@ document.addEventListener('DOMContentLoaded', () => {
             contact_linkedin: "LINKEDIN PROFILE",
             contact_github: "GITHUB REPOSITORIES",
             copyright_text: "© 2026 Carlos Nieves. copyright",
-            
+
             term_modal_title: "EXP-92 CONSOLE // COMMAND TERMINAL",
             term_input_placeholder: "Type a command (e.g. help, bio, skills, ask)...",
             term_welcome: `==================================================\nEXP-92 CONSOLE // COMMAND TERMINAL\n==================================================\nType <span class="term-highlight">help</span> to display available protocols.`,
@@ -536,27 +544,27 @@ document.addEventListener('DOMContentLoaded', () => {
             term_unknown_cmd: 'Unrecognized command: "%s". Type <span class="term-highlight">help</span> to view available commands.'
         },
         GL: {
-            nav_runner: "[01] RUNNER",
-            nav_skills: "[02] CYBERWARE SKILLS",
-            nav_memorias: "[03] ENGRAMS",
-            nav_arquitectura: "[04] CHASSIS",
+            nav_runner: "[01] PROFILE",
+            nav_skills: "[02] SKILLS",
+            nav_memorias: "[03] EXPERIENCE",
+            nav_arquitectura: "[04] PROJECTS",
             nav_protocolo: "[05] CREDENCIAS",
-            nav_contacto: "[06] NETLINK",
-            
+            nav_contacto: "[06] CONTACT",
+
             hero_badge: "DATOS BIOLÓXICOS CARGADOS // ENLACE COMPLETO",
-            hero_subtitle: "Engenheiro Senior de Soporte L3 | Especialista en Linux e Middleware",
+            hero_subtitle: "Engenheiro Senior de Soporte L3 | DevOps Support",
             hero_desc: "Especializado na xestión e diagnóstico de contornos de alta dispoñibilidade, resolución de incidencias L3 en arquitecturas SOAP/REST, automatización de sistemas Linux mediante Bash e garantía de continuidade operativa en plataformas bancarias e telecomunicacións.",
             metric_l3: "ANOS SOPORTE L3",
             metric_uptime: "UPTIME EDICONTROLLER",
             metric_critical: "CONTORNOS CRÍTICOS",
             metric_english: "INGLÉS TÉCNICO",
-            
-            btn_contact: "⚡ INICIAR TRANSMISIÓN / CONTACTO",
-            btn_github: "📄 VER GITHUB (MD)",
-            btn_cv_eng: "📄 DESCARGAR CV Carlos Nieves ENG (PDF)",
-            btn_cv_esp: "📄 DESCARGAR CV Carlos Nieves ESP (PDF)",
+
+            btn_contact: "⚡ INICIAR TRANSMISIÓN / CONTACTAR",
+            btn_github: "📄 VER PROYECTOS (MD)",
+            btn_cv_eng: "📄 DOWNLOAD CV ENG(PDF)",
+            btn_cv_esp: "📄 DESCARGAR CV ESP(PDF)",
             btn_cli: ">_ ABRIR TERMINAL",
-            
+
             block02_title: "[02] MATRIZ DE HABILIDADES NEURAIS",
             tab_all: "TODOS OS NODOS",
             tab_sistemas: "LINUX & CORE",
@@ -708,8 +716,12 @@ document.addEventListener('DOMContentLoaded', () => {
             block04_title: "NODOS ARQUITECTÓNICOS (PROXECTOS CLAVE)",
             proj1_title: "Plataforma EDIController",
             proj1_desc: "Arquitectura de alta dispoñibilidade para transferencia crítica de ficheiros bancarios. Implementación de clústeres redundantes sobre Linux con tolerancia a fallos e automatización en Bash.",
-            proj2_title: "Fenrirsoft Web Engine",
-            proj2_desc: "Infraestrutura de despregamento continuo en Cloudflare Pages integrada con pipelines sincronizados en GitHub para a entrega de plataformas web empresariais.",
+            
+            proj2_title: "MercadilloEcommerce",
+            proj2_desc2: "Unha plataforma de comercio electrónico de alto rendemento e nivel empresarial, desenvolvida cunha arquitectura moderna desacoplada: frontend en Angular 18 cun sistema de deseño UI/UX personalizado inspirado no mercadillo galego, backend baseado en .NET 9 Minimal APIs cunha arquitectura de pasarelas de pagamento múltiples (patrón Factory), mensaxería asíncrona baseada en eventos mediante MassTransit e RabbitMQ, un traballador dedicado para a xestión de incidentes en ServiceNow e infraestrutura como código (IaC) para o despregamento en Azure AKS.",
+
+            proj3_title: "MortgageBank",
+            proj3_desc3: "Plataforma de xestión de hipotecas baseada nunha arquitectura full-stack e procesamento asíncrono de eventos. Integración de Angular, Spring Boot, PostgreSQL, RabbitMQ e Docker, co despregamento mediante Kubernetes, Terraform e Ansible.",  
 
             block05_title: "CREDENCIALES E PROTOCOLOS",
             proto_edu: "🎓 FORMACIÓN ACADÉMICA",
@@ -745,7 +757,7 @@ document.addEventListener('DOMContentLoaded', () => {
             contact_linkedin: "PERFIL LINKEDIN",
             contact_github: "REPOSITORIOS GITHUB",
             copyright_text: "© 2026 Carlos Nieves. copyright",
-            
+
             term_modal_title: "EXP-92 CONSOLE // COMMAND TERMINAL",
             term_input_placeholder: "Escribe un comando (ex: help, bio, skills, ask)...",
             term_welcome: `==================================================\nEXP-92 CONSOLE // COMMAND TERMINAL\n==================================================\nEscribe <span class="term-highlight">help</span> para despregar os protocolos dispoñibles.`,
@@ -760,7 +772,7 @@ document.addEventListener('DOMContentLoaded', () => {
             term_help_clear: "Limpa a pantalla da consola.",
             term_help_exit: "Pecha a sesión de terminal.",
             term_bio_title: "SUXETO: CARLOS NIEVES",
-            term_bio_desc: "Engenheiro Senior de Soporte L3 | Especialista en Linux e Middleware\n+8 anos de experiencia en contornos de alta dispoñibilidade, incidencias L3, arquitecturas SOAP/REST, automatización Bash e clústeres redundantes.\nUbicación: Carballo, A Coruña, Galicia, España",
+            term_bio_desc: "Engenheiro Senior de Soporte L3 | DevOps Support\n+8 anos de experiencia en contornos de alta dispoñibilidade, incidencias L3, arquitecturas SOAP/REST, automatización Bash e clústeres redundantes.\nUbicación: Carballo, A Coruña, Galicia, España",
             term_skills_title: "MATRIZ DE HABILIDADES:",
             term_skills_body: `<ul class="term-list">
                 <li>• <b>Sistemas Core:</b> Linux/Unix, Bash Shell, Systemd, Journalctl, SecureCRT</li>
@@ -916,18 +928,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeTerminalBtn = document.getElementById('close-terminal-btn');
     const terminalInput = document.getElementById('terminal-input');
     const terminalOutput = document.getElementById('terminal-output');
-    
+
     const cliNavBtn = document.getElementById('cli-btn');
     const openCliHeroBtn = document.getElementById('open-cli');
 
     function openTerminal() {
         if (!terminalModal) return;
         terminalModal.classList.add('active');
-        
+
         if (terminalOutput && terminalOutput.children.length === 0) {
             terminalOutput.innerHTML = `<div>${translations[currentLang].term_welcome.replace(/\n/g, '<br>')}</div>`;
         }
-        
+
         setTimeout(() => {
             if (terminalInput) terminalInput.focus();
         }, 100);
@@ -973,7 +985,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.key === 'Enter') {
                 const rawInput = terminalInput.value;
                 const cmd = rawInput.trim();
-                
+
                 if (cmd === '') return;
 
                 const echoDiv = document.createElement('div');
@@ -1002,7 +1014,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     terminalOutput.scrollTop = terminalOutput.scrollHeight;
 
                     const aiResponse = typeof queryAI === 'function' ? await queryAI(cleanQuery) : "Error: js/ai-services.js no está cargado correctamente.";
-                    
+
                     loadingDiv.remove();
 
                     const responseDiv = document.createElement('div');
@@ -1015,7 +1027,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     function escapeHTML(str) {
-        return str.replace(/[&<>'"]/g, 
+        return str.replace(/[&<>'"]/g,
             tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
         );
     }
@@ -1115,7 +1127,7 @@ ${t.term_contact_body}`;
 
             oscillator.start();
             oscillator.stop(context.currentTime + duration);
-        } catch (error) {}
+        } catch (error) { }
     }
 
     if (audioBtn) {
@@ -1191,7 +1203,7 @@ ${t.term_contact_body}`;
 });
 
 // Partículas de fondo
-const canvas = document.getElementById('bg-canvas');
+/*const canvas = document.getElementById('bg-canvas');
 if (canvas) {
     const ctx = canvas.getContext('2d');
     let width = canvas.width = window.innerWidth;
@@ -1252,4 +1264,4 @@ if (canvas) {
     }
 
     renderFrame();
-}
+}*/
