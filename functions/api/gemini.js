@@ -13,8 +13,8 @@ export async function onRequestPost(context) {
     try {
         const body = await context.request.json();
         
-        // Endpoint actualizado con el modelo Gemini 2.5 Flash
-        const googleUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+        // Identificador de modelo exacto solicitado por la API
+        const googleUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key=${apiKey}`;
 
         const response = await fetch(googleUrl, {
             method: 'POST',
