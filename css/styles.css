@@ -11,22 +11,22 @@
     --font-sans: 'Rajdhani', sans-serif;
 
     /* =========================================
-       PROFESSIONAL LIGHT THEME (CUIDADOSO CON LA VISTA)
+       PROFESSIONAL LIGHT THEME (OPTIMIZADO PARA ATS Y WCAG AA)
        ========================================= */
-    --fenrir-light-bg: #EEF1F5;
-    --fenrir-light-bg-secondary: #E7EBF0;
+    --fenrir-light-bg: #F4F6F9;
+    --fenrir-light-bg-secondary: #E2E8F0;
     --fenrir-light-surface: #FFFFFF;
-    --fenrir-light-surface-soft: #F7F8FA;
-    --fenrir-light-text: #18202A;
-    --fenrir-light-text-muted: #5E6875;
-    --fenrir-light-border: #CBD3DC;
-    --fenrir-light-border-accent: rgba(125, 95, 255, 0.30);
-    --fenrir-light-cyan: #00838F;
-    --fenrir-light-purple: #6855D9;
+    --fenrir-light-surface-soft: #F8FAFC;
+    --fenrir-light-text: #0F172A;
+    --fenrir-light-text-muted: #334155;
+    --fenrir-light-border: #CBD5E1;
+    --fenrir-light-border-accent: rgba(91, 33, 182, 0.30);
+    --fenrir-light-cyan: #00695C;
+    --fenrir-light-purple: #4C1D95;
     --fenrir-light-grid: rgba(80, 100, 120, 0.055);
-    --fenrir-light-shadow: rgba(20, 30, 45, 0.08);
-    --fenrir-light-cyan-glow: rgba(0, 210, 211, 0.08);
-    --fenrir-light-purple-glow: rgba(125, 95, 255, 0.06);
+    --fenrir-light-shadow: rgba(15, 23, 42, 0.08);
+    --fenrir-light-cyan-glow: rgba(0, 105, 92, 0.06);
+    --fenrir-light-purple-glow: rgba(76, 29, 149, 0.06);
 }
 
 * {
@@ -47,7 +47,7 @@ body {
 }
 
 /* =========================================
-   MODO CLARO (ADAPTACIÓN DE VARIABLES MATE)
+   MODO CLARO (SOBREESCRITURA COMPLETA DE MODO CLARO)
    ========================================= */
 body.light-mode {
     background-color: var(--fenrir-light-bg);
@@ -58,14 +58,28 @@ body.light-mode {
     --fenrir-text-muted: var(--fenrir-light-text-muted);
     --fenrir-cyan: var(--fenrir-light-cyan);
     --fenrir-border: var(--fenrir-light-border);
+    --fenrir-accent: var(--fenrir-light-purple);
     background-image:
         radial-gradient(circle at 80% 20%, var(--fenrir-light-purple-glow) 0%, transparent 40%),
         radial-gradient(circle at 20% 80%, var(--fenrir-light-cyan-glow) 0%, transparent 40%);
 }
 
 body.light-mode .animus-navbar {
-    background: rgba(238, 241, 245, 0.95);
-    border-bottom: 1px solid var(--fenrir-light-border);
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 2px solid var(--fenrir-light-border);
+    box-shadow: 0 2px 8px var(--fenrir-light-shadow);
+}
+
+body.light-mode .nav-center a {
+    color: var(--fenrir-light-text-muted);
+    font-weight: 600;
+}
+
+body.light-mode .nav-center a:hover,
+body.light-mode .nav-center a.active {
+    color: var(--fenrir-light-purple);
+    border-color: var(--fenrir-light-purple);
+    background: rgba(91, 33, 182, 0.08);
 }
 
 body.light-mode .content-block,
@@ -73,31 +87,135 @@ body.light-mode .kpi-metric-card,
 body.light-mode .arch-card,
 body.light-mode .cyber-skill-card {
     background: var(--fenrir-light-surface);
-    border-color: var(--fenrir-light-border);
+    border: 1.5px solid var(--fenrir-light-border);
     box-shadow: 0 4px 12px var(--fenrir-light-shadow);
 }
 
 body.light-mode .cyber-control-panel,
 body.light-mode .cyber-search-container {
-    background: var(--fenrir-light-surface-soft);
-    border-color: var(--fenrir-light-border);
+    background: var(--fenrir-light-surface);
+    border: 1.5px solid var(--fenrir-light-border);
+}
+
+body.light-mode #cyber-search-input {
+    color: var(--fenrir-light-text);
+}
+
+body.light-mode #cyber-search-input::placeholder {
+    color: #64748B;
 }
 
 body.light-mode .cyber-tab {
-    color: var(--fenrir-light-text-muted);
-    border-color: var(--fenrir-light-border);
+    color: #475569;
+    border-color: #CBD5E1;
+    font-weight: 600;
 }
 
 body.light-mode .cyber-tab.active {
-    background: rgba(0, 131, 143, 0.12);
-    color: var(--fenrir-light-cyan);
-    border-color: var(--fenrir-light-cyan);
+    background: #F3E8FF;
+    color: var(--fenrir-light-purple);
+    border-color: var(--fenrir-light-purple);
 }
 
 body.light-mode .skill-pill {
-    background: var(--fenrir-light-bg-secondary);
+    background: #F1F5F9;
+    color: #1E293B;
+    border: 1px solid #94A3B8;
+    font-weight: 600;
+}
+
+body.light-mode .hero-title {
+    color: #020617;
+}
+
+body.light-mode .hero-subtitle {
+    color: var(--fenrir-light-purple);
+    font-weight: 700;
+}
+
+body.light-mode .hero-description {
     color: var(--fenrir-light-text-muted);
-    border-color: var(--fenrir-light-border);
+    font-weight: 500;
+}
+
+body.light-mode .status-badge {
+    background: #E0F2FE;
+    color: #0369A1;
+    border-color: #0284C7;
+    font-weight: 700;
+}
+
+body.light-mode .metric-card {
+    background: var(--fenrir-light-surface);
+    border: 1.5px solid var(--fenrir-light-border);
+    box-shadow: 0 4px 10px var(--fenrir-light-shadow);
+}
+
+body.light-mode .metric-value,
+body.light-mode .kpi-metric-value {
+    color: var(--fenrir-light-purple);
+}
+
+body.light-mode .metric-label,
+body.light-mode .kpi-metric-label {
+    color: var(--fenrir-light-text);
+    font-weight: 700;
+}
+
+/* BOTONES AJUSTADOS PARA MODO CLARO CON ALTO CONTRASTE */
+body.light-mode .btn {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 5px var(--fenrir-light-shadow);
+}
+
+body.light-mode .btn-primary {
+    background: var(--fenrir-light-purple);
+    color: #FFFFFF !important;
+    border-color: var(--fenrir-light-purple);
+}
+
+body.light-mode .btn-primary:hover {
+    background: #3B0764;
+    box-shadow: 0 4px 12px rgba(76, 29, 149, 0.3);
+}
+
+body.light-mode .btn-secondary {
+    background: #FFFFFF;
+    color: #0F172A !important;
+    border: 1.5px solid #64748B;
+}
+
+body.light-mode .btn-secondary:hover {
+    background: #F1F5F9;
+    color: var(--fenrir-light-purple) !important;
+    border-color: var(--fenrir-light-purple);
+}
+
+body.light-mode .btn-tertiary {
+    background: #E0F2FE;
+    color: #0369A1 !important;
+    border: 1.5px solid #0284C7;
+}
+
+body.light-mode .btn-tertiary:hover {
+    background: #0284C7;
+    color: #FFFFFF !important;
+}
+
+body.light-mode .engram-bullets li {
+    color: var(--fenrir-light-text-muted);
+}
+
+body.light-mode .engram-bullets b {
+    color: #020617;
+}
+
+body.light-mode .date-badge {
+    background: #F1F5F9;
+    color: #334155;
+    border-color: #CBD5E1;
+    font-weight: 700;
 }
 
 #bg-canvas {

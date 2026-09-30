@@ -716,12 +716,12 @@ document.addEventListener('DOMContentLoaded', () => {
             block04_title: "NODOS ARQUITECTÓNICOS (PROXECTOS CLAVE)",
             proj1_title: "Plataforma EDIController",
             proj1_desc: "Arquitectura de alta dispoñibilidade para transferencia crítica de ficheiros bancarios. Implementación de clústeres redundantes sobre Linux con tolerancia a fallos e automatización en Bash.",
-            
+
             proj2_title: "MercadilloEcommerce",
             proj2_desc2: "Unha plataforma de comercio electrónico de alto rendemento e nivel empresarial, desenvolvida cunha arquitectura moderna desacoplada: frontend en Angular 18 cun sistema de deseño UI/UX personalizado inspirado no mercadillo galego, backend baseado en .NET 9 Minimal APIs cunha arquitectura de pasarelas de pagamento múltiples (patrón Factory), mensaxería asíncrona baseada en eventos mediante MassTransit e RabbitMQ, un traballador dedicado para a xestión de incidentes en ServiceNow e infraestrutura como código (IaC) para o despregamento en Azure AKS.",
 
             proj3_title: "MortgageBank",
-            proj3_desc3: "Plataforma de xestión de hipotecas baseada nunha arquitectura full-stack e procesamento asíncrono de eventos. Integración de Angular, Spring Boot, PostgreSQL, RabbitMQ e Docker, co despregamento mediante Kubernetes, Terraform e Ansible.",  
+            proj3_desc3: "Plataforma de xestión de hipotecas baseada nunha arquitectura full-stack e procesamento asíncrono de eventos. Integración de Angular, Spring Boot, PostgreSQL, RabbitMQ e Docker, co despregamento mediante Kubernetes, Terraform e Ansible.",
 
             block05_title: "CREDENCIALES E PROTOCOLOS",
             proto_edu: "🎓 FORMACIÓN ACADÉMICA",
@@ -908,6 +908,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const terminalOutput = document.getElementById('terminal-output');
         if (terminalOutput && (terminalOutput.children.length === 0 || terminalOutput.children.length === 1)) {
             terminalOutput.innerHTML = `<div>${langData.term_welcome.replace(/\n/g, '<br>')}</div>`;
+        }
+
+        // COMUNICACIÓN CON EL WIDGET DANI AI PARA CAMBIAR IDIOMA
+        if (typeof window.updateDaniLanguage === 'function') {
+            window.updateDaniLanguage(langCode);
         }
     }
 

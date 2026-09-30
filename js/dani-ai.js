@@ -8,21 +8,73 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!toggleBtn || !chatWindow) return;
 
-    // SYSTEM PROMPT MULTILINGÜE (ESPAÑOL, INGLÉS, GALEGO NORMATIVO)
-    const DANI_PROMPT_CONTEXT = `
+    // Idioma activo por defecto
+    let currentLanguage = 'ES';
+
+    // DICCIONARIO MULTILINGÜE DE LA INTERFAZ DE DANI
+    const DANI_I18N = {
+        ES: {
+            status: "Gato asistente sobre el perfil de Carlos",
+            welcome: "¡Hola! Soy <strong>Dani</strong> 🐾, el asistente virtual sobre el perfil profesional de Carlos Nieves. ¿Qué te gustaría consultar sobre su experiencia, tecnologías o proyectos?",
+            placeholder: "Pregunta sobre Carlos...",
+            thinking: "<em>Dani está pensando... 🐾</em>",
+            error_api: "⚠️ Error en la API",
+            error_process: "Non puiden procesar a consulta neste momento, miau 🐾.",
+            error_conn: "Error de conexión con el backend de Dani.",
+            chips: [
+                { text: "💼 Experiencia", query: "¿Cuál es la experiencia laboral de Carlos?" },
+                { text: "🛠️ Tecnologías", query: "¿Qué tecnologías domina?" },
+                { text: "🚀 Proyectos", query: "¿Cuáles son sus proyectos clave?" },
+                { text: "📬 Contacto", query: "¿Cómo puedo contactar con Carlos?" }
+            ],
+            prompt_instructions: "RESPONDING RULE: Respond strictly in professional Spanish."
+        },
+        EN: {
+            status: "Virtual cat assistant for Carlos's profile",
+            welcome: "Hello! I'm <strong>Dani</strong> 🐾, the virtual assistant for Carlos Nieves's professional profile. What would you like to know about his experience, skills, or projects?",
+            placeholder: "Ask about Carlos...",
+            thinking: "<em>Dani is thinking... 🐾</em>",
+            error_api: "⚠️ API Error",
+            error_process: "Could not process query at this time, meow 🐾.",
+            error_conn: "Connection error with Dani's backend.",
+            chips: [
+                { text: "💼 Experience", query: "What is Carlos's work experience?" },
+                { text: "🛠️ Technologies", query: "What technologies does he master?" },
+                { text: "🚀 Projects", query: "What are his key projects?" },
+                { text: "📬 Contact", query: "How can I contact Carlos?" }
+            ],
+            prompt_instructions: "RESPONDING RULE: Respond strictly in professional English."
+        },
+        GL: {
+            status: "Gato asistente sobre o perfil de Carlos",
+            welcome: "Ola! Soi <strong>Dani</strong> 🐾, o asistente virtual sobre o perfil profesional de Carlos Nieves. Que che gustaría consultar sobre a súa experiencia, tecnoloxías ou proxectos?",
+            placeholder: "Pregunta sobre Carlos...",
+            thinking: "<em>Dani está pensando... 🐾</em>",
+            error_api: "⚠️ Erro na API",
+            error_process: "Non puiden procesar a consulta neste momento, miau 🐾.",
+            error_conn: "Erro de conexión co backend de Dani.",
+            chips: [
+                { text: "💼 Experiencia", query: "Cal é a experiencia laboral de Carlos?" },
+                { text: "🛠️️ Tecnoloxías", query: "Que tecnoloxías domina?" },
+                { text: "🚀 Proxectos", query: "Cais son os seus proxectos clave?" },
+                { text: "📬 Contacto", query: "Como podo contactar con Carlos?" }
+            ],
+            prompt_instructions: "RESPONDING RULE: Respond strictly in proper normative Galician (Galego normativo RAG). Use words like 'desenvolvemento', 'conectividade', 'experiencia', 'grazas'."
+        }
+    };
+
+    // SYSTEM PROMPT COMPLETO
+    function getSystemPrompt(langCode) {
+        const i18n = DANI_I18N[langCode] || DANI_I18N.ES;
+        return `
 You are Dani, the official AI virtual assistant for Carlos Alberto Nieves Batatimo's portfolio.
 Your graphical representation is a minimalist cybernetic black cat with a golden crescent moon on its forehead.
 
-MULTILINGUAL RULE (VERY IMPORTANT):
-1. Detect the user's language automatically and reply strictly in that language.
-2. Supported languages: Spanish, English, and Normative Galician (Galego normativo RAG).
-3. If the user writes in Galician, respond strictly in proper normative Galician (e.g., use "desenvolvemento", "conectividade", "experiencia", "grazas").
-4. If the user writes in English, respond in professional English.
-5. If the user writes in Spanish, respond in fluent Spanish.
+${i18n.prompt_instructions}
 
 SCOPE RESTRICTION:
 - Your ONLY purpose is to answer questions about Carlos Nieves's professional background, technical skills, projects, and contact info.
-- If the user asks about unrelated topics (e.g., cooking, general news, random code), answer politely in the user's language: "I only answer questions about Carlos Nieves's professional background, meow 🐾."
+- If the user asks about unrelated topics (e.g., cooking, general news, random code), answer politely in the target language: "I only answer questions about Carlos Nieves's professional background, meow 🐾."
 
 COMPLETE DATA OF CARLOS NIEVES:
 - Full Name: Carlos Alberto Nieves Batatimo.
@@ -40,6 +92,33 @@ COMPLETE DATA OF CARLOS NIEVES:
 - Technologies: Linux, Bash, Docker, Kubernetes, Terraform, Ansible, .NET Core, Angular, React, Node.js, Express, Java, Spring Boot, Python, PostgreSQL, MySQL, RabbitMQ, Dynatrace, ServiceNow.
 - Contact: Email: carlos.a.n.batatimo@gmail.com | Phone/WhatsApp: +34 633 191 597 | GitHub: github.com/Snow20 | LinkedIn: linkedin.com/in/carlos-nievesb.
 `;
+    }
+
+    // FUNCIÓN EXPORTADA PARA CAMBIAR EL IDIOMA DE DANI EN TIEMPO REAL
+    window.updateDaniLanguage = function(langCode) {
+        if (!DANI_I18N[langCode]) return;
+        currentLanguage = langCode;
+        const data = DANI_I18N[langCode];
+
+        // 1. Actualizar el estado en el header
+        const statusEl = document.querySelector('.dani-status');
+        if (statusEl) statusEl.textContent = data.status;
+
+        // 2. Actualizar placeholder
+        if (userInput) userInput.placeholder = data.placeholder;
+
+        // 3. Reconstruir el mensaje de bienvenida y las tarjetas (chips)
+        const welcomeMsg = messagesBody.querySelector('.dani-msg-ai');
+        if (welcomeMsg) {
+            let chipsHTML = '<div class="dani-chips">';
+            data.chips.forEach(chip => {
+                chipsHTML += `<button class="dani-chip" data-query="${chip.query}">${chip.text}</button>`;
+            });
+            chipsHTML += '</div>';
+
+            welcomeMsg.innerHTML = `${data.welcome}${chipsHTML}`;
+        }
+    };
 
     toggleBtn.addEventListener('click', () => {
         chatWindow.classList.toggle('hidden');
@@ -74,21 +153,22 @@ COMPLETE DATA OF CARLOS NIEVES:
     async function processUserQuery(query) {
         appendMessage(query, 'user');
 
+        const i18n = DANI_I18N[currentLanguage] || DANI_I18N.ES;
+
         const loadingDiv = document.createElement('div');
         loadingDiv.className = 'dani-msg dani-msg-ai';
-        loadingDiv.innerHTML = '<em>Dani está pensando... 🐾</em>';
+        loadingDiv.innerHTML = i18n.thinking;
         messagesBody.appendChild(loadingDiv);
         messagesBody.scrollTop = messagesBody.scrollHeight;
 
         try {
-            // Llamada directa a la Cloudflare Function desplegada en /api/gemini
             const response = await fetch('/api/gemini', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     contents: [{
                         parts: [
-                            { text: DANI_PROMPT_CONTEXT },
+                            { text: getSystemPrompt(currentLanguage) },
                             { text: `User Query: "${query}"` }
                         ]
                     }]
@@ -102,13 +182,13 @@ COMPLETE DATA OF CARLOS NIEVES:
                 const replyText = data.candidates[0].content.parts[0].text.trim();
                 appendMessage(replyText, 'ai');
             } else if (data.error) {
-                appendMessage(`⚠️ Error en la API: ${data.error.message}`, 'ai');
+                appendMessage(`${i18n.error_api}: ${data.error.message}`, 'ai');
             } else {
-                appendMessage('Non puiden procesar a consulta neste momento, miau 🐾.', 'ai');
+                appendMessage(i18n.error_process, 'ai');
             }
         } catch (err) {
             loadingDiv.remove();
-            appendMessage('Error de conexión con el backend de Dani.', 'ai');
+            appendMessage(i18n.error_conn, 'ai');
         }
     }
 
