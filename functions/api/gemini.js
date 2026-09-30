@@ -14,7 +14,7 @@ export async function onRequestPost(context) {
         const body = await context.request.json();
         const promptText = body.contents?.[0]?.parts?.map(p => p.text).join("\n\n") || "";
 
-        // 1. Consultar la lista real de modelos activos en Groq para tu API Key
+        // 1. Consultar la lista de modelos activos en Groq
         const modelsResponse = await fetch("https://api.groq.com/openai/v1/models", {
             headers: { "Authorization": `Bearer ${apiKey}` }
         });
@@ -29,14 +29,19 @@ export async function onRequestPost(context) {
             });
         }
 
-        // 2. Filtrar y seleccionar un modelo activo (prioriza llama-3.3, llama-3.1 o llama3)
-        const activeModels = modelsData.data.map(m => m.id);
+        // 2. Filtrar descartando modelos de terceros/termo-restringidos (como canopylabs/...)
+        const activeModels = modelsData.data
+            .map(m => m.id)
+            .filter(id => !id.includes("/") && !id.includes("whisper") && !id.includes("guard"));
+
+        // Priorizar estrictamente la serie Meta Llama
         const selectedModel = activeModels.find(id => id.includes("llama-3.3")) ||
                               activeModels.find(id => id.includes("llama-3.1")) ||
                               activeModels.find(id => id.includes("llama3")) ||
-                              activeModels[0];
+                              activeModels[0] ||
+                              "llama-3.3-70b-versatile";
 
-        // 3. Petición de inferencia ajustando max_tokens a 500 para evitar desbordamientos de cuota del modelo
+        // 3. Petición de inferencia con max_tokens en 500
         const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
             method: "POST",
             headers: {
