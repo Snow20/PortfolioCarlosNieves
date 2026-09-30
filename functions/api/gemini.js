@@ -29,14 +29,14 @@ export async function onRequestPost(context) {
             });
         }
 
-        // 2. Filtrar y seleccionar un modelo activo (prioriza llama-3.3, llama3 u otros activos)
+        // 2. Filtrar y seleccionar un modelo activo (prioriza llama-3.3, llama-3.1 o llama3)
         const activeModels = modelsData.data.map(m => m.id);
         const selectedModel = activeModels.find(id => id.includes("llama-3.3")) ||
                               activeModels.find(id => id.includes("llama-3.1")) ||
                               activeModels.find(id => id.includes("llama3")) ||
                               activeModels[0];
 
-        // 3. Petición de inferencia al modelo detectado
+        // 3. Petición de inferencia ajustando max_tokens a 500 para evitar desbordamientos de cuota del modelo
         const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
             method: "POST",
             headers: {
@@ -47,7 +47,7 @@ export async function onRequestPost(context) {
                 model: selectedModel,
                 messages: [{ role: "user", content: promptText }],
                 temperature: 0.2,
-                max_tokens: 600
+                max_tokens: 500
             })
         });
 
