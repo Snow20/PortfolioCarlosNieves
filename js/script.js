@@ -202,6 +202,18 @@ document.addEventListener('DOMContentLoaded', () => {
             `,
             proto_cert: "ORG CERTIFICACIONES DESTACADAS",
             proto_cert_content: `
+                <li>
+                    <img src="assets/img/python-essentials-1.1_CarlosNieves.png" alt="Python Essentials 1" class="cert-badge-img">
+                    <div><b>Python Essentials 1</b> — Cisco Networking Academy (10/2026)<br><span class="cert-sub">Fundamentos de programación, sintaxis y control en Python.</span></div>
+                </li>
+                <li>
+                    <img src="assets/img/LinuxEssentialsbadge.png" alt="Linux Essentials" class="cert-badge-img">
+                    <div><b>Linux Essentials</b> — Cisco Networking Academy & NDG (10/2026)<br><span class="cert-sub">Administración, navegación CLI, permisos y seguridad en Linux.</span></div>
+                </li>
+                <li>
+                    <img src="assets/img/JavaScript Essentials1Badge.png" alt="JavaScript Essentials 1" class="cert-badge-img">
+                    <div><b>JavaScript Essentials 1</b> — Cisco Networking Academy (10/2026)<br><span class="cert-sub">Lógica, sintaxe e fundamentos de programación en JavaScript.</span></div>
+                </li>
                 <li><b>Back-End Development and APIs</b> — freeCodeCamp (09/2026)<br><span class="cert-sub">Node.js, Express, MongoDB, Mongoose, REST APIs (300h)</span></li>
                 <li><b>Developer Certification Suite</b> — freeCodeCamp (08/2026)<br><span class="cert-sub">Python, JavaScript, Front-End Dev Libraries, Responsive Web Design</span></li>
                 <li><b>B1 English for Developers</b> — freeCodeCamp (08/2026)</li>
@@ -470,6 +482,18 @@ document.addEventListener('DOMContentLoaded', () => {
             `,
             proto_cert: "ORG KEY CERTIFICATIONS",
             proto_cert_content: `
+                <li>
+                    <img src="assets/img/python-essentials-1.1_CarlosNieves.png" alt="Python Essentials 1" class="cert-badge-img">
+                    <div><b>Python Essentials 1</b> — Cisco Networking Academy (10/2026)<br><span class="cert-sub">Programming fundamentals, syntax and control structures in Python.</span></div>
+                </li>
+                <li>
+                    <img src="assets/img/LinuxEssentialsbadge.png" alt="Linux Essentials" class="cert-badge-img">
+                    <div><b>Linux Essentials</b> — Cisco Networking Academy & NDG (10/2026)<br><span class="cert-sub">Administration, CLI navigation, permissions and security in Linux.</span></div>
+                </li>
+                <li>
+                    <img src="assets/img/JavaScript Essentials1Badge.png" alt="JavaScript Essentials 1" class="cert-badge-img">
+                    <div><b>JavaScript Essentials 1</b> — Cisco Networking Academy (10/2026)<br><span class="cert-sub">Logic, syntax and programming fundamentals in JavaScript.</span></div>
+                </li>
                 <li><b>Back-End Development and APIs</b> — freeCodeCamp (09/2026)<br><span class="cert-sub">Node.js, Express, MongoDB, Mongoose, REST APIs (300h)</span></li>
                 <li><b>Developer Certification Suite</b> — freeCodeCamp (08/2026)<br><span class="cert-sub">Python, JavaScript, Front-End Dev Libraries, Responsive Web Design</span></li>
                 <li><b>B1 English for Developers</b> — freeCodeCamp (08/2026)</li>
@@ -738,6 +762,18 @@ document.addEventListener('DOMContentLoaded', () => {
             `,
             proto_cert: "ORG CERTIFICACIÓNS DESTACADAS",
             proto_cert_content: `
+                <li>
+                    <img src="assets/img/python-essentials-1.1_CarlosNieves.png" alt="Python Essentials 1" class="cert-badge-img">
+                    <div><b>Python Essentials 1</b> — Cisco Networking Academy (10/2026)<br><span class="cert-sub">Fundamentos de programación, sintaxe e control en Python.</span></li>
+                </li>
+                <li>
+                    <img src="assets/img/LinuxEssentialsbadge.png" alt="Linux Essentials" class="cert-badge-img">
+                    <div><b>Linux Essentials</b> — Cisco Networking Academy & NDG (10/2026)<br><span class="cert-sub">Administración, navegación CLI, permisos e seguridade en Linux.</span></li>
+                </li>
+                <li>
+                    <img src="assets/img/JavaScript Essentials1Badge.png" alt="JavaScript Essentials 1" class="cert-badge-img">
+                    <div><b>JavaScript Essentials 1</b> — Cisco Networking Academy (10/2026)<br><span class="cert-sub">Lóxica, sintaxe e fundamentos de programación en JavaScript.</span></li>
+                </li>
                 <li><b>Back-End Development and APIs</b> — freeCodeCamp (09/2026)<br><span class="cert-sub">Node.js, Express, MongoDB, Mongoose, REST APIs (300h)</span></li>
                 <li><b>Developer Certification Suite</b> — freeCodeCamp (08/2026)<br><span class="cert-sub">Python, JavaScript, Front-End Dev Libraries, Responsive Web Design</span></li>
                 <li><b>B1 English for Developers</b> — freeCodeCamp (08/2026)</li>
