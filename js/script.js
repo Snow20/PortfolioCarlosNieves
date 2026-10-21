@@ -202,17 +202,26 @@ document.addEventListener('DOMContentLoaded', () => {
             `,
             proto_cert: "ORG CERTIFICACIONES DESTACADAS",
             proto_cert_content: `
-                <li>
+                <li class="cert-item-with-badge">
                     <img src="assets/img/python-essentials-1.1_CarlosNieves.png" alt="Python Essentials 1" class="cert-badge-img">
-                    <div><b>Python Essentials 1</b> — Cisco Networking Academy (10/2026)<br><span class="cert-sub">Fundamentos de programación, sintaxis y control en Python.</span></div>
+                    <div class="cert-text-content">
+                        <b>Python Essentials 1</b> — Cisco Networking Academy (10/2026)<br>
+                        <span class="cert-sub">Fundamentos de programación, sintaxis y control en Python.</span>
+                    </div>
                 </li>
-                <li>
+                <li class="cert-item-with-badge">
                     <img src="assets/img/LinuxEssentialsbadge.png" alt="Linux Essentials" class="cert-badge-img">
-                    <div><b>Linux Essentials</b> — Cisco Networking Academy & NDG (10/2026)<br><span class="cert-sub">Administración, navegación CLI, permisos y seguridad en Linux.</span></div>
+                    <div class="cert-text-content">
+                        <b>Linux Essentials</b> — Cisco Networking Academy & NDG (10/2026)<br>
+                        <span class="cert-sub">Administración, navegación CLI, permisos y seguridad en Linux.</span>
+                    </div>
                 </li>
-                <li>
+                <li class="cert-item-with-badge">
                     <img src="assets/img/JavaScript Essentials1Badge.png" alt="JavaScript Essentials 1" class="cert-badge-img">
-                    <div><b>JavaScript Essentials 1</b> — Cisco Networking Academy (10/2026)<br><span class="cert-sub">Lógica, sintaxe e fundamentos de programación en JavaScript.</span></div>
+                    <div class="cert-text-content">
+                        <b>JavaScript Essentials 1</b> — Cisco Networking Academy (10/2026)<br>
+                        <span class="cert-sub">Lógica, sintaxe e fundamentos de programación en JavaScript.</span>
+                    </div>
                 </li>
                 <li><b>Back-End Development and APIs</b> — freeCodeCamp (09/2026)<br><span class="cert-sub">Node.js, Express, MongoDB, Mongoose, REST APIs (300h)</span></li>
                 <li><b>Developer Certification Suite</b> — freeCodeCamp (08/2026)<br><span class="cert-sub">Python, JavaScript, Front-End Dev Libraries, Responsive Web Design</span></li>
@@ -762,17 +771,26 @@ document.addEventListener('DOMContentLoaded', () => {
             `,
             proto_cert: "ORG CERTIFICACIÓNS DESTACADAS",
             proto_cert_content: `
-                <li>
+                <li class="cert-item-with-badge">
                     <img src="assets/img/python-essentials-1.1_CarlosNieves.png" alt="Python Essentials 1" class="cert-badge-img">
-                    <div><b>Python Essentials 1</b> — Cisco Networking Academy (10/2026)<br><span class="cert-sub">Fundamentos de programación, sintaxe e control en Python.</span></li>
+                    <div class="cert-text-content">
+                        <b>Python Essentials 1</b> — Cisco Networking Academy (10/2026)<br>
+                        <span class="cert-sub">Fundamentos de programación, sintaxis y control en Python.</span>
+                    </div>
                 </li>
-                <li>
+                <li class="cert-item-with-badge">
                     <img src="assets/img/LinuxEssentialsbadge.png" alt="Linux Essentials" class="cert-badge-img">
-                    <div><b>Linux Essentials</b> — Cisco Networking Academy & NDG (10/2026)<br><span class="cert-sub">Administración, navegación CLI, permisos e seguridade en Linux.</span></li>
+                    <div class="cert-text-content">
+                        <b>Linux Essentials</b> — Cisco Networking Academy & NDG (10/2026)<br>
+                        <span class="cert-sub">Administración, navegación CLI, permisos y seguridad en Linux.</span>
+                    </div>
                 </li>
-                <li>
+                <li class="cert-item-with-badge">
                     <img src="assets/img/JavaScript Essentials1Badge.png" alt="JavaScript Essentials 1" class="cert-badge-img">
-                    <div><b>JavaScript Essentials 1</b> — Cisco Networking Academy (10/2026)<br><span class="cert-sub">Lóxica, sintaxe e fundamentos de programación en JavaScript.</span></li>
+                    <div class="cert-text-content">
+                        <b>JavaScript Essentials 1</b> — Cisco Networking Academy (10/2026)<br>
+                        <span class="cert-sub">Lógica, sintaxe e fundamentos de programación en JavaScript.</span>
+                    </div>
                 </li>
                 <li><b>Back-End Development and APIs</b> — freeCodeCamp (09/2026)<br><span class="cert-sub">Node.js, Express, MongoDB, Mongoose, REST APIs (300h)</span></li>
                 <li><b>Developer Certification Suite</b> — freeCodeCamp (08/2026)<br><span class="cert-sub">Python, JavaScript, Front-End Dev Libraries, Responsive Web Design</span></li>
